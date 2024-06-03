@@ -2,9 +2,11 @@
 
 Remixed Kanagawa colourscheme with muted colors. For Neovim.
 
+![screenshot](https://github.com/sho-87/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924)
+
 ## 💡 Motivation
 
-I love the original [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) colourscheme, but I found the colours of the dark themes a bit too distracting. What I wanted was a more muted theme overall, combining the less saturated syntax colours of the dragon theme, while keeping the blue background of the wave theme.
+I love the original [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) colourscheme, but I found some of the colours of the dark themes a bit too bright and distracting. What I wanted was a more muted theme overall, combining the less saturated syntax colours of the dragon theme, while keeping the blue background of the wave theme.
 
 kanagawa-paper combines both the dragon and wave themes, with a few additions and tweaks to work better with certain plugins.
 

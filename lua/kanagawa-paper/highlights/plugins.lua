@@ -5,67 +5,69 @@ local M = {}
 function M.setup(colors, opts)
 	opts = opts or require("kanagawa-paper.config").options
 	local theme = colors.theme
+	local palette = colors.palette
+
 	return {
-		-- Neovcs
-		-- NeovcsBranch = {},
-		-- NeovcsRemote = {},
-		-- NeovcsDiffDelete = { fg = theme.vcs.removed, bg = theme.diff.delete },
-		-- NeovcsDiffAdd = { fg = theme.vcs.added, bg = theme.diff.add },
-		-- NeovcsHunkHeader = { fg = theme.syn.identifier },
-		-- NeovcsDiffContextHighlight = { bg = theme.diff.change },
-
-		-- vcsSigns
-		-- vcsSignsAdd = { link = "diffAdded" },
-		-- vcsSignsChange = { link = "diffChanged" },
-		-- vcsSignsDelete = { link = "diffDeleted" },
-		-- vcsSignsDeleteLn = { bg = theme.diff.delete },
-
 		-- Gitsigns
 		GitSignsAdd = { fg = theme.vcs.added, bg = theme.ui.bg_gutter },
 		GitSignsChange = { fg = theme.vcs.changed, bg = theme.ui.bg_gutter },
 		GitSignsDelete = { fg = theme.vcs.removed, bg = theme.ui.bg_gutter },
+
 		-- Neogit
 		NeogitDiffContextHighlight = { bg = theme.diff.change }, --[[  guibg=#333333 guifg=#b2b2b2 ]]
 		NeogitHunkHeader = { fg = theme.syn.fun }, --[[  guifg=#cccccc guibg=#404040 ]]
 		NeogitHunkHeaderHighlight = { fg = theme.syn.constant, bg = theme.diff.change }, --[[ guifg=#cccccc guibg=#4d4d4d ]]
 		NeogitDiffAddHighlight = { bg = theme.diff.add },
 		NeogitDiffDeleteHighlight = { bg = theme.diff.delete },
+
 		-- TreeSitter Extensions
 		TreesitterContext = { link = "Folded" },
 		TreesitterContextLineNumber = { fg = theme.ui.special, bg = theme.ui.bg_gutter },
+
 		-- Telescope
+		TelescopeTitle = { fg = palette.sumiInk0, bg = palette.dragonBlue, bold = true },
 		TelescopeBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
-		TelescopeTitle = { fg = theme.ui.special },
 		TelescopeSelection = { link = "CursorLine" },
 		TelescopeSelectionCaret = { link = "CursorLineNr" },
+		TelescopePromptNormal = { bg = theme.ui.bg_p2 },
+		TelescopePromptBorder = { fg = theme.ui.bg_p2, bg = theme.ui.bg_p2 },
 		TelescopeResultsClass = { link = "Structure" },
 		TelescopeResultsStruct = { link = "Structure" },
 		TelescopeResultsField = { link = "@field" },
 		TelescopeResultsMethod = { link = "Function" },
 		TelescopeResultsVariable = { link = "@variable" },
+		TeleScopeResultsTitle = { fg = palette.sumiInk0, bg = palette.dragonOrange, bold = true },
+		TelescopeResultsNormal = { fg = theme.ui.fg, bg = theme.ui.bg_p1 },
+		TelescopeResultsBorder = { fg = theme.ui.bg_p2, bg = theme.ui.bg_p1 },
+		TeleScopePreviewTitle = { fg = palette.sumiInk0, bg = palette.waveAqua1, bold = true },
+		TelescopePreviewNormal = { bg = theme.ui.bg },
+		TelescopePreviewBorder = { bg = theme.ui.bg, fg = theme.ui.bg_p2 },
+
 		-- NvimTree
+		-- NvimTreeIndentMarker           = {},
 		NvimTreeNormal = { link = "Normal" },
 		NvimTreeNormalNC = { link = "NvimTreeNormal" },
-		NvimTreeRootFolder = { fg = theme.syn.identifier, bold = true },
 		NvimTreeGitDirty = { fg = theme.vcs.changed },
 		NvimTreeGitNew = { fg = theme.vcs.added },
 		NvimTreeGitDeleted = { fg = theme.vcs.removed },
 		NvimTreeGitStaged = { fg = theme.vcs.added },
 		NvimTreeSpecialFile = { fg = theme.syn.special1 },
-		-- NvimTreeIndentMarker           = {},
 		NvimTreeImageFile = { fg = theme.syn.special2 },
 		NvimTreeSymlink = { link = "Type" },
 		NvimTreeFolderName = { link = "Directory" },
 		NvimTreeExecFile = { fg = theme.syn.string, bold = true },
+		NvimTreeRootFolder = { fg = palette.autumnRed, bold = true },
 		NvimTreeOpenedFile = { fg = theme.syn.special1, italic = true },
+		NvimTreeOpenedFolderName = { fg = palette.dragonBlue },
 		NvimTreeWinSeparator = { link = "WinSeparator" },
 		NvimTreeWindowPicker = { bg = theme.ui.bg_m1, fg = theme.syn.special1, bold = true },
+
 		-- NeoTree
 		NeoTreeTabInactive = { link = "TabLine" },
 		NeoTreeTabActive = { link = "TabLineSel" },
 		NeoTreeTabSeparatorInactive = { link = "NeoTreeTabInactive" },
 		NeoTreeTabSeparatorActive = { link = "NeoTreeTabActive" },
-		NeoTreeRootName = { fg = theme.syn.identifier, bold = true },
+		NeoTreeRootName = { fg = palette.dragonRed, bold = true },
 		NeoTreeModified = { link = "String" },
 		NeoTreeGitModified = { fg = theme.vcs.changed },
 		NeoTreeGitAdded = { fg = theme.vcs.added },
@@ -74,10 +76,17 @@ function M.setup(colors, opts)
 		NeoTreeGitConflict = { fg = theme.diag.error },
 		NeoTreeGitUntracked = { link = "NeoTreeGitModified", default = true },
 		NeoTreeGitUnstaged = { link = "NeoTreeGitModified", default = true },
-		NeoTreeIndentMarker = { link = "NonText" },
+		NeoTreeIndentMarker = { fg = theme.ui.indent },
+		NeoTreeFloatTitle = { fg = theme.ui.bg_m3, bg = palette.dragonGray3, bold = true },
+		NeoTreeFloatBorder = { bg = theme.ui.bg, fg = theme.ui.bg_p2 },
+		NeoTreeWinSeparator = { fg = theme.ui.bg_dim, bg = theme.ui.bg_dim },
+		NeoTreeFileNameOpened = { fg = theme.syn.special1, italic = true },
+		NeoTreeSymbolicLinkTarget = { link = "Type" },
+
 		-- WindowPicker
-		-- NvimWindowSwitch = { bg = theme.ui.bg_m3, fg = theme.diag.warning },
-		-- NvimWindowSwitchNC = { link = "NvimWindowSwitch" },
+		NvimWindowSwitch = { bg = theme.ui.bg_m3, fg = theme.diag.warning },
+		NvimWindowSwitchNC = { link = "NvimWindowSwitch" },
+
 		-- Dashboard
 		DashboardShortCut = { fg = theme.syn.special1 },
 		DashboardHeader = { fg = theme.vcs.removed },
@@ -86,6 +95,7 @@ function M.setup(colors, opts)
 		DashboardDesc = { fg = theme.syn.identifier },
 		DashboardKey = { fg = theme.syn.special1 },
 		DashboardIcon = { fg = theme.ui.special },
+
 		-- Notify
 		NotifyBackground = { bg = theme.ui.bg },
 		NotifyERRORBorder = { link = "DiagnosticError" },
@@ -106,6 +116,11 @@ function M.setup(colors, opts)
 		NotifyHINTTitle = { link = "DiagnosticHint" },
 		NotifyDEBUGTitle = { link = "Debug" },
 		NotifyTRACETitle = { link = "Comment" },
+
+		-- Incline
+		InclineNormal = { bg = palette.fujiWhite, fg = theme.ui.bg_dim },
+		InclineNormalNC = { bg = theme.ui.bg_p2, fg = palette.fujiWhite },
+
 		-- Dap-UI
 		-- DapUIVariable = { link = "Normal" },
 		DapUIScope = { link = "Special" }, -- guifg=#00F1F5"
@@ -136,12 +151,15 @@ function M.setup(colors, opts)
 		DapUIPlayPause = { fg = theme.syn.string }, --guifg=#A9FF68"
 		DapUIRestart = { fg = theme.syn.string }, --guifg=#A9FF68"
 		DapUIUnavailable = { fg = theme.syn.comment }, --guifg=#424242"
+
 		-- Floaterm
 		FloatermBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
-		-- NeoVim                         = {},
+
+		-- NeoVim
 		healthError = { fg = theme.diag.error },
 		healthSuccess = { fg = theme.diag.ok },
 		healthWarning = { fg = theme.diag.warning },
+
 		-- Cmp
 		CmpDocumentation = { link = "NormalFloat" },
 		CmpDocumentationBorder = { link = "FloatBorder" },
@@ -156,7 +174,6 @@ function M.setup(colors, opts)
 		CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" },
 		CmpItemKindDefault = { fg = theme.syn.deprecated },
 		CmpItemMenu = { fg = theme.syn.comment },
-
 		CmpItemKindText = { fg = theme.ui.fg },
 		CmpItemKindMethod = { link = "@function.method" },
 		CmpItemKindFunction = { link = "Function" },
@@ -185,20 +202,47 @@ function M.setup(colors, opts)
 		CmpItemKindCopilot = { link = "String" },
 
 		-- IndentBlankline
-		IndentBlanklineChar = { fg = theme.ui.whitespace },
-		IndentBlanklineSpaceChar = { fg = theme.ui.whitespace },
-		IndentBlanklineSpaceCharBlankline = { fg = theme.ui.whitespace },
+		IndentBlanklineChar = { fg = theme.ui.indent },
+		IndentBlanklineSpaceChar = { fg = theme.ui.indent },
+		IndentBlanklineSpaceCharBlankline = { fg = theme.ui.indent },
 		IndentBlanklineContextChar = { fg = theme.ui.special },
 		IndentBlanklineContextStart = { sp = theme.ui.special, underline = true },
-		IblIndent = { fg = theme.ui.whitespace },
-		IblWhitespace = { fg = theme.ui.whitespace },
+		IblIndent = { fg = theme.ui.indent },
+		IblWhitespace = { fg = theme.ui.indent },
 		IblScope = { fg = theme.ui.special },
+
 		-- Lazy
 		LazyProgressTodo = { fg = theme.ui.nontext },
 
 		-- Trouble
 		TroubleIndent = { fg = theme.ui.whitespace },
 		TroublePos = { fg = theme.ui.special },
+
+		-- Headlines
+		Headline1 = { bg = palette.waveBlue1, fg = theme.ui.fg, bold = true },
+		Headline2 = { bg = palette.winterRed, fg = theme.ui.fg, bold = true },
+		Headline3 = { bg = palette.winterYellow, fg = theme.ui.fg, bold = true },
+		Headline4 = { bg = palette.winterGreen, fg = theme.ui.fg, bold = true },
+		Headline5 = { bg = palette.dragonRed, fg = theme.ui.fg, bold = true },
+		Headline6 = { bg = palette.dragonGray, fg = theme.ui.fg, bold = true },
+
+		-- Raindow delimiters
+		RainbowDelimiterRed = { fg = palette.dragonRed },
+		RainbowDelimiterYellow = { fg = palette.dragonYellow },
+		RainbowDelimiterBlue = { fg = palette.dragonBlue },
+		RainbowDelimiterOrange = { fg = palette.dragonOrange2 },
+		RainbowDelimiterGreen = { fg = palette.dragonGreen },
+		RainbowDelimiterViolet = { fg = palette.dragonAsh },
+		RainbowDelimiterCyan = { fg = palette.dragonTeal },
+
+		-- Bufferline
+		BufferlineBufferSelected = { fg = palette.dragonWhite, bold = true },
+		BufferlineIndicatorSelected = { fg = palette.dragonBlue },
+		BufferlineModified = { fg = theme.vcs.changed },
+		BufferlineModifiedSelected = { fg = theme.vcs.changed },
+		BufferlineTabSelected = { bg = theme.ui.bg_p1, fg = palette.dragonWhite },
+		BufferlineTabClose = { fg = palette.dragonRed },
+		BufferlineCloseButtonSelected = { fg = palette.dragonRed },
 
 		-- Nvim-Navic
 		NavicIconsFile = { link = "Directory" },
@@ -257,6 +301,21 @@ function M.setup(colors, opts)
 		AerialEventIcon = { link = "Structure" },
 		AerialOperatorIcon = { link = "Operator" },
 		AerialTypeParameterIcon = { link = "Type" },
+
+		-- Satellite
+		SatelliteBar = { bg = palette.fujiGray },
+		SatelliteCursor = { fg = palette.fujiWhite },
+		SatelliteMark = { fg = palette.waveAqua2 },
+
+		-- Whichkey
+		WhichKey = { fg = palette.dragonRed },
+
+		-- Yanky
+		YankyYanked = { bg = palette.winterYellow },
+		YankyPut = { bg = palette.winterRed },
+
+		-- Spectre
+		SpectreFaint = { fg = palette.fujiGray, italic = false },
 	}
 end
 

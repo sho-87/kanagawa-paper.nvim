@@ -45,9 +45,11 @@ vim.cmd("colorscheme kanagawa-paper")
 ##### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 ```lua
+local kanagawa_paper = require("lualine.themes.kanagawa-paper")
+
 require('lualine').setup {
   options = {
-    theme = 'kanagawa-paper'
+    theme = kanagawa_paper
     -- ... your lualine config
   }
 }

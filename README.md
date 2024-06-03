@@ -60,9 +60,6 @@ require('lualine').setup {
 > ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme kanagawa-paper`.
 
 ```lua
-local colors = require("kanagawa-paper.colors").setup()
-local theme = colors.theme
-
 require('kanagawa-paper').setup({
   undercurl = true,
   transparent = false,

@@ -8,14 +8,14 @@ local M = {}
 ---@class KanagawaConfig
 local defaults = {
 	undercurl = true,
-	commentStyle = { italic = true },
-	functionStyle = {},
-	keywordStyle = { italic = true },
-	statementStyle = { bold = true },
-	typeStyle = {},
 	transparent = false,
-	dimInactive = false,
+	dimInactive = true,
 	terminalColors = true,
+	commentStyle = { italic = true },
+	functionStyle = { italic = false },
+	keywordStyle = { italic = false, bold = false },
+	statementStyle = { italic = false, bold = false },
+	typeStyle = { italic = false },
 	colors = { theme = {}, palette = {} },
 	---@type fun(colors: KanagawaColorsSpec): table<string, table>
 	overrides = function()

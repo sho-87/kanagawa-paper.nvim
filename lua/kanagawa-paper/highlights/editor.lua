@@ -1,11 +1,10 @@
--- local c = require("kanagawa.color")
 local M = {}
 
 ---@param colors KanagawaColors
----@param config? KanagawaConfig
-function M.setup(colors, config)
+---@param opts? KanagawaConfig
+function M.setup(colors, opts)
 	local theme = colors.theme
-	config = config or require("kanagawa-paper").config
+	opts = opts or require("kanagawa-paper.config").options
 
 	return {
 		-- ColorColumn	Used for the columns set with 'colorcolumn'.
@@ -41,7 +40,7 @@ function M.setup(colors, config)
 		-- ErrorMsg	Error messages on the command line.
 		ErrorMsg = { fg = theme.diag.error },
 		-- WinSeparator	Separators between window splits.
-		WinSeparator = { fg = theme.ui.bg_m3, bg = config.dimInactive and theme.ui.bg_dim or "NONE" },
+		WinSeparator = { fg = theme.ui.bg_m3, bg = opts.dimInactive and theme.ui.bg_dim or "NONE" },
 		VertSplit = { link = "WinSeparator" },
 		-- Folded		Line used for closed folds.
 		Folded = { fg = theme.ui.special, bg = theme.ui.bg_p1 },
@@ -74,7 +73,7 @@ function M.setup(colors, config)
 		-- NonText		'@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		NonText = { fg = theme.ui.nontext },
 		-- Normal		Normal text.
-		Normal = { fg = theme.ui.fg, bg = not config.transparent and theme.ui.bg or "NONE" },
+		Normal = { fg = theme.ui.fg, bg = not opts.transparent and theme.ui.bg or "NONE" },
 		-- NormalFloat	Normal text in floating windows.
 		NormalFloat = { fg = theme.ui.float.fg, bg = theme.ui.float.bg },
 		-- FloatBorder	Border of floating windows.
@@ -84,7 +83,7 @@ function M.setup(colors, config)
 		-- FloatFooter	Footer of floating windows.
 		FloatFooter = { fg = theme.ui.nontext, bg = theme.ui.float.bg_border },
 		-- NormalNC	Normal text in non-current windows.
-		NormalNC = config.dimInactive and { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim } or { link = "Normal" },
+		NormalNC = opts.dimInactive and { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim } or { link = "Normal" },
 		-- Pmenu		Popup menu: Normal item.
 		Pmenu = { fg = theme.ui.pmenu.fg, bg = theme.ui.pmenu.bg },
 		-- PmenuSel	Popup menu: Selected item.
@@ -102,13 +101,13 @@ function M.setup(colors, config)
 		-- SpecialKey	Unprintable characters: Text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		SpecialKey = { fg = theme.ui.special },
 		-- SpellBad	Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-		SpellBad = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.error },
+		SpellBad = { undercurl = opts.undercurl, underline = not opts.undercurl, sp = theme.diag.error },
 		-- SpellCap	Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-		SpellCap = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.warning },
+		SpellCap = { undercurl = opts.undercurl, underline = not opts.undercurl, sp = theme.diag.warning },
 		-- SpellLocal	Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-		SpellLocal = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.warning },
+		SpellLocal = { undercurl = opts.undercurl, underline = not opts.undercurl, sp = theme.diag.warning },
 		-- SpellRare	Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
-		SpellRare = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.warning },
+		SpellRare = { undercurl = opts.undercurl, underline = not opts.undercurl, sp = theme.diag.warning },
 		-- StatusLine	Status line of current window.
 		StatusLine = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
 		-- StatusLineNC	Status lines of not-current windows. Note: If this is equal to "StatusLine", Vim will use "^^^" in the status line of the current window.
@@ -134,7 +133,7 @@ function M.setup(colors, config)
 		-- WinBar		Window bar of current window.
 		Winbar = { fg = theme.ui.fg_dim, bg = "NONE" },
 		-- WinBarNC	Window bar of not-current windows.
-		WinbarNC = { fg = theme.ui.fg_dim, bg = config.dimInactive and theme.ui.bg_dim or "NONE" },
+		WinbarNC = { fg = theme.ui.fg_dim, bg = opts.dimInactive and theme.ui.bg_dim or "NONE" },
 
 		-- SignColumnSB = { link = "SignColumn" },
 		-- NormalSB = { link = "Normal" },
@@ -170,23 +169,23 @@ function M.setup(colors, config)
 		DiagnosticVirtualTextHint = { link = "DiagnosticHint" },
 
 		DiagnosticUnderlineError = {
-			undercurl = config.undercurl,
-			underline = not config.undercurl,
+			undercurl = opts.undercurl,
+			underline = not opts.undercurl,
 			sp = theme.diag.error,
 		},
 		DiagnosticUnderlineWarn = {
-			undercurl = config.undercurl,
-			underline = not config.undercurl,
+			undercurl = opts.undercurl,
+			underline = not opts.undercurl,
 			sp = theme.diag.warning,
 		},
 		DiagnosticUnderlineInfo = {
-			undercurl = config.undercurl,
-			underline = not config.undercurl,
+			undercurl = opts.undercurl,
+			underline = not opts.undercurl,
 			sp = theme.diag.info,
 		},
 		DiagnosticUnderlineHint = {
-			undercurl = config.undercurl,
-			underline = not config.undercurl,
+			undercurl = opts.undercurl,
+			underline = not opts.undercurl,
 			sp = theme.diag.hint,
 		},
 

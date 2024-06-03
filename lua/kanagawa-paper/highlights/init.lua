@@ -12,19 +12,19 @@ function M.highlight(highlights, termcolors)
 end
 
 ---@param colors KanagawaColors
----@param config? KanagawaConfig
-function M.setup(colors, config)
-	config = config or require("kanagawa-paper").config
+---@param opts? KanagawaConfig
+function M.setup(colors, opts)
+	opts = opts or require("kanagawa-paper.config").options
 
 	local highlights = {}
 	for _, highlight in ipairs({ "editor", "syntax", "treesitter", "lsp", "plugins" }) do
 		local mod = require("kanagawa-paper.highlights." .. highlight)
-		for hl, spec in pairs(mod.setup(colors, config)) do
+		for hl, spec in pairs(mod.setup(colors, opts)) do
 			highlights[hl] = spec
 		end
 	end
 
-	for hl, spec in pairs(config.overrides(colors)) do
+	for hl, spec in pairs(opts.overrides(colors)) do
 		if highlights[hl] and next(spec) then
 			highlights[hl].link = nil
 		end

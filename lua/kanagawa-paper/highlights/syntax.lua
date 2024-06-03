@@ -1,15 +1,14 @@
--- local c = require("kanagawa.color")
 local M = {}
 
 ---@param colors KanagawaColors
----@param config? KanagawaConfig
-function M.setup(colors, config)
+---@param opts? KanagawaConfig
+function M.setup(colors, opts)
 	local theme = colors.theme
-	config = config or require("kanagawa-paper").config
+	opts = opts or require("kanagawa-paper.config").options
 
 	return {
 		-- *Comment	any comment
-		Comment = vim.tbl_extend("force", { fg = theme.syn.comment }, config.commentStyle),
+		Comment = vim.tbl_extend("force", { fg = theme.syn.comment }, opts.commentStyle),
 
 		-- *Constant	any constant
 		Constant = { fg = theme.syn.constant },
@@ -27,17 +26,17 @@ function M.setup(colors, config)
 		-- *Identifier	any variable name
 		Identifier = { fg = theme.syn.identifier },
 		--  Function	function name (also: methods for classes)
-		Function = vim.tbl_extend("force", { fg = theme.syn.fun }, config.functionStyle),
+		Function = vim.tbl_extend("force", { fg = theme.syn.fun }, opts.functionStyle),
 
 		-- *Statement	any statement
-		Statement = vim.tbl_extend("force", { fg = theme.syn.statement }, config.statementStyle),
+		Statement = vim.tbl_extend("force", { fg = theme.syn.statement }, opts.statementStyle),
 		--  Conditional	if, then, else, endif, switch, etc.
 		--  Repeat		for, do, while, etc.
 		--  Label		case, default, etc.
 		--  Operator	"sizeof", "+", "*", etc.
 		Operator = { fg = theme.syn.operator },
 		--  Keyword	any other keyword
-		Keyword = vim.tbl_extend("force", { fg = theme.syn.keyword }, config.keywordStyle),
+		Keyword = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.keywordStyle),
 		--  Exception	try, catch, throw
 		Exception = { fg = theme.syn.special2 },
 
@@ -49,7 +48,7 @@ function M.setup(colors, config)
 		--  PreCondit	preprocessor #if, #else, #endif, etc.
 
 		-- *Type		int, long, char, etc.
-		Type = vim.tbl_extend("force", { fg = theme.syn.type }, config.typeStyle),
+		Type = vim.tbl_extend("force", { fg = theme.syn.type }, opts.typeStyle),
 		--  StorageClass	static, register, volatile, etc.
 		--  Structure	struct, union, enum, etc.
 		--  Typedef	A typedef

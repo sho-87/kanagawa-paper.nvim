@@ -1,10 +1,11 @@
 local M = {}
 
 ---@param colors KanagawaColors
----@param config? KanagawaConfig
-function M.setup(colors, config)
-	config = config or require("kanagawa-paper").config
+---@param opts? KanagawaConfig
+function M.setup(colors, opts)
+	opts = opts or require("kanagawa-paper.config").options
 	local theme = colors.theme
+
 	return {
 		-- @variable                       various variable names
 		["@variable"] = { fg = theme.ui.fg },
@@ -77,10 +78,10 @@ function M.setup(colors, config)
 		-- @keyword.modifier       keywords defining type modifiers (e.g. `const`, `static`, `public`)
 		-- @keyword.repeat         keywords related to loops (e.g. `for`, `while`)
 		-- @keyword.return         keywords like `return` and `yield`
-		["@keyword.return"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, config.keywordStyle),
+		["@keyword.return"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, opts.keywordStyle),
 		-- @keyword.debug          keywords related to debugging
 		-- @keyword.exception      keywords related to exceptions (e.g. `throw`, `catch`)
-		["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, config.statementStyle),
+		["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, opts.statementStyle),
 
 		["@keyword.luap"] = { link = "@string.regex" },
 		--

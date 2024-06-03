@@ -135,7 +135,7 @@ local M = {}
 ---@return { theme: ThemeColors, palette: PaletteColors}
 function M.setup(opts)
 	opts = opts or {}
-	local override_colors = opts.colors or require("kanagawa-paper").config.colors
+	local override_colors = opts.colors or require("kanagawa-paper.config").options.colors
 
 	-- Add to and/or override palette_colors
 	local updated_palette_colors = vim.tbl_extend("force", palette, override_colors.palette or {})

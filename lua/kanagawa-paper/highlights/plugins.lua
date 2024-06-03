@@ -1,9 +1,9 @@
 local M = {}
 
 ---@param colors KanagawaColors
----@param config? KanagawaConfig
-function M.setup(colors, config)
-	config = config or require("kanagawa-paper").config
+---@param opts? KanagawaConfig
+function M.setup(colors, opts)
+	opts = opts or require("kanagawa-paper.config").options
 	local theme = colors.theme
 	return {
 		-- Neovcs

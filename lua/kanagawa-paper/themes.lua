@@ -121,31 +121,25 @@ return function(palette)
 			},
 		},
 		syn = {
-			string = palette.springGreen,
+			string = palette.dragonGreen2,
 			variable = "none",
-			number = palette.sakuraPink,
-			constant = palette.surimiOrange,
-			identifier = palette.carpYellow,
-			-- parameter  = "#C3B1B1",
-			-- parameter  = "#B1ADC8",
-			-- parameter  = "#b8b4d0",
-			parameter = palette.oniViolet2,
-			-- parameter = "#d5a4a6",
-			-- parameter  = "#C8ADAD",
-			-- parameter  = "#d7a8a8",
-			fun = palette.crystalBlue,
-			statement = palette.oniViolet,
-			keyword = palette.oniViolet,
-			operator = palette.boatYellow2,
-			preproc = palette.waveRed, --lightBlue? deserves its own color
-			type = palette.waveAqua2,
-			regex = palette.boatYellow2,
+			number = palette.dragonPink,
+			constant = palette.dragonOrange,
+			identifier = palette.dragonYellow,
+			parameter = palette.dragonGray,
+			fun = palette.dragonBlue2,
+			statement = palette.dragonViolet,
+			keyword = palette.dragonViolet,
+			operator = palette.dragonRed,
+			preproc = palette.dragonRed,
+			type = palette.dragonAqua,
+			regex = palette.dragonRed,
 			deprecated = palette.katanaGray,
+			punct = palette.dragonGray2,
 			comment = palette.fujiGray,
-			punct = palette.springViolet2,
-			special1 = palette.springBlue,
-			special2 = palette.waveRed,
-			special3 = palette.peachRed,
+			special1 = palette.dragonTeal,
+			special2 = palette.dragonRed,
+			special3 = palette.dragonRed,
 		},
 		vcs = {
 			added = palette.autumnGreen,
@@ -159,31 +153,31 @@ return function(palette)
 			text = palette.winterYellow,
 		},
 		diag = {
-			ok = palette.springGreen,
 			error = palette.samuraiRed,
+			ok = palette.springGreen,
 			warning = palette.roninYellow,
 			info = palette.dragonBlue,
 			hint = palette.waveAqua1,
 		},
 		term = {
-			palette.sumiInk0, -- black
-			palette.autumnRed, -- red
-			palette.autumnGreen, -- green
-			palette.boatYellow2, -- yellow
-			palette.crystalBlue, -- blue
-			palette.oniViolet, -- magenta
-			palette.waveAqua1, -- cyan
+			palette.dragonBlack0, -- black
+			palette.dragonRed, -- red
+			palette.dragonGreen2, -- green
+			palette.dragonYellow, -- yellow
+			palette.dragonBlue2, -- blue
+			palette.dragonPink, -- magenta
+			palette.dragonAqua, -- cyan
 			palette.oldWhite, -- white
-			palette.fujiGray, -- bright black
-			palette.samuraiRed, -- bright red
-			palette.springGreen, -- bright green
+			palette.dragonGray, -- bright black
+			palette.waveRed, -- bright red
+			palette.dragonGreen, -- bright green
 			palette.carpYellow, -- bright yellow
 			palette.springBlue, -- bright blue
 			palette.springViolet1, -- bright magenta
 			palette.waveAqua2, -- bright cyan
-			palette.fujiWhite, -- bright white
-			palette.surimiOrange, -- extended color 1
-			palette.peachRed, -- extended color 2
+			palette.dragonWhite, -- bright white
+			palette.dragonOrange, -- extended color 1
+			palette.dragonOrange2, -- extended color 2
 		},
 	}
 end

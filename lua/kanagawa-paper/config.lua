@@ -9,6 +9,7 @@ local M = {}
 local defaults = {
 	undercurl = true,
 	transparent = false,
+	gutter = false,
 	dimInactive = true,
 	terminalColors = true,
 	commentStyle = { italic = true },

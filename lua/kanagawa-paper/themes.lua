@@ -61,6 +61,8 @@
 ---@field whitespace ColorSpec Whitespace
 ---@field bg_search ColorSpec
 ---@field bg_visual ColorSpec
+---@field win_separator ColorSpec
+---@field indent ColorSpec
 ---@field pmenu MenuElements
 ---@field float FloatElements
 
@@ -102,7 +104,7 @@ return function(palette)
 		},
 		ui = {
 			fg = palette.fujiWhite,
-			fg_dim = palette.oldWhite,
+			fg_dim = palette.fujiGray,
 			fg_reverse = palette.waveBlue1,
 
 			bg_dim = palette.sumiInk1,
@@ -116,13 +118,15 @@ return function(palette)
 			bg_p2 = palette.sumiInk5,
 
 			special = palette.springViolet1,
-			nontext = palette.sumiInk6,
+			nontext = palette.sumiInk5,
 			whitespace = palette.sumiInk6,
 
 			bg_search = palette.waveBlue1,
 			bg_visual = palette.waveBlue2,
 
-			win_separator = palette.dragonBlue,
+			win_separator = palette.dragonViolet,
+
+			indent = palette.sumiInk4,
 
 			pmenu = {
 				fg = palette.fujiWhite,

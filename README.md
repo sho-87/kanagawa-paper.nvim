@@ -58,35 +58,31 @@ require('lualine').setup {
 > ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme kanagawa-paper`.
 
 ```lua
--- Default options:
+local colors = require("kanagawa-paper.colors").setup()
+local theme = colors.theme
+
 require('kanagawa-paper').setup({
-    compile = false,             -- enable compiling the colorscheme
-    undercurl = true,            -- enable undercurls
-    commentStyle = { italic = true },
-    functionStyle = {},
-    keywordStyle = { italic = true},
-    statementStyle = { bold = true },
-    typeStyle = {},
-    transparent = false,         -- do not set background color
-    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
-    terminalColors = true,       -- define vim.g.terminal_color_{0,17}
-    colors = {                   -- add/modify theme and palette colors
-        palette = {},
-        theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
-    },
-    overrides = function(colors) -- add/modify highlights
-        return {}
-    end,
-    theme = "wave",              -- Load "wave" theme when 'background' option is not set
-    background = {               -- map the value of 'background' option to a theme
-        dark = "wave",           -- try "dragon" !
-        light = "lotus"
-    },
+  undercurl = true,
+  transparent = false,
+  gutter = false,
+  dimInactive = true,
+  terminalColors = true,
+  commentStyle = { italic = true },
+  functionStyle = { italic = false },
+  keywordStyle = { italic = false, bold = false },
+  statementStyle = { italic = false, bold = false },
+  typeStyle = { italic = false },
+  colors = { theme = {}, palette = {} }, -- override default palette and theme colors
+  overrides = function()  -- override highlight groups
+    return {}
+  end,
 })
 
 -- setup must be called before loading
 vim.cmd("colorscheme kanagawa-paper")
 ```
+
+The code that defines the default configuration can be found [here](lua/kanagawa-paper/config.lua)
 
 ## 🔧 Customizing Colors
 
@@ -99,40 +95,26 @@ In short, a `palette` defines all the available colors, while a `theme` maps the
 to specific `ThemeColors` and the same palette color may be assigned to multiple theme colors.
 
 You can change _both_ theme or palette colors using `config.colors`.
-All the palette color names can be found [here](lua/kanagawa/colors.lua),
-while their usage by each theme can be found [here](lua/kanagawa/themes.lua).
+All the palette color names can be found [here](lua/kanagawa-paper/colors.lua),
+while their usage by each theme can be found [here](lua/kanagawa-paper/themes.lua).
 
 ```lua
-require('kanagawa').setup({
-    ...,
+require('kanagawa-paper').setup({
     colors = {
         palette = {
-            -- change all usages of these colors
+            -- change all usages of these color names
             sumiInk0 = "#000000",
             fujiWhite = "#FFFFFF",
         },
         theme = {
-            -- change specific usages for a certain theme, or for all of them
-            wave = {
-                ui = {
-                    float = {
-                        bg = "none",
-                    },
-                },
-            },
-            dragon = {
-                syn = {
-                    parameter = "yellow",
-                },
-            },
-            all = {
-                ui = {
-                    bg_gutter = "none"
-                }
-            }
+          -- change specific usages for a certain theme
+          ui = {
+              float = {
+                  bg = colors.palette.sumiInk0,
+              },
+          },
         }
     },
-    ...
 })
 ```
 
@@ -140,8 +122,7 @@ You can also conveniently add/modify `hlgroups` using the `config.overrides` opt
 Supported keywords are the same for `:h nvim_set_hl` `{val}` parameter.
 
 ```lua
-require('kanagawa').setup({
-    ...,
+require('kanagawa-paper').setup({
     overrides = function(colors)
         return {
             -- Assign a static color to strings
@@ -150,7 +131,6 @@ require('kanagawa').setup({
             SomePluginHl = { fg = colors.theme.syn.type, bold = true },
         }
     end,
-    ...
 })
 ```
 
@@ -158,31 +138,12 @@ require('kanagawa').setup({
 
 ```lua
 -- Get the colors for the current theme
-local colors = require("kanagawa.colors").setup()
-  local palette_colors = colors.palette
+local colors = require("kanagawa-paper.colors").setup()
+local palette_colors = colors.palette
 local theme_colors = colors.theme
-
--- Get the colors for a specific theme
-local wave_colors = require("kanagawa.colors").setup({ theme = 'wave' })
 ```
 
 ### Common customizations
-
-#### Remove _gutter_ background
-
-Remove the background of `LineNr`, `{Sign,Fold}Column` and friends
-
-```lua
-colors = {
-    theme = {
-        all = {
-            ui = {
-                bg_gutter = "none"
-            }
-        }
-    }
-}
-```
 
 #### Transparent Floating Windows
 
@@ -196,8 +157,8 @@ overrides = function(colors)
         FloatBorder = { bg = "none" },
         FloatTitle = { bg = "none" },
 
-        -- Save an hlgroup with dark background and dimmed foreground
-        -- so that you can use it where your still want darker windows.
+        -- Save a hlgroup with dark background and dimmed foreground
+        -- so that you can use it where you still want darker windows.
         -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
         NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
 
@@ -215,25 +176,6 @@ the box:
 
 ```lua
 { "🭽", "▔", "🭾", "▕", "🭿", "▁", "🭼", "▏" }
-```
-
-#### Borderless Telescope
-
-Block-like _modern_ Telescope UI
-
-```lua
-overrides = function(colors)
-    local theme = colors.theme
-    return {
-        TelescopeTitle = { fg = theme.ui.special, bold = true },
-        TelescopePromptNormal = { bg = theme.ui.bg_p1 },
-        TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
-        TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
-        TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
-        TelescopePreviewNormal = { bg = theme.ui.bg_dim },
-        TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
-    }
-end,
 ```
 
 #### Dark completion (popup) menu

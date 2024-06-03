@@ -1,31 +1,32 @@
-local theme = require("kanagawa-paper.colors").setup().theme
+local colors = require("kanagawa-paper.colors").setup()
+local theme = colors.theme
 
 local kanagawa_paper = {}
 
 kanagawa_paper.normal = {
-	a = { bg = theme.syn.fun, fg = theme.ui.bg_m3 },
-	b = { bg = theme.diff.change, fg = theme.syn.fun },
-	c = { bg = theme.ui.bg_p1, fg = theme.ui.fg },
+	a = { bg = theme.modes.normal, fg = theme.ui.bg_m3 },
+	b = { bg = theme.ui.bg_p2, fg = theme.modes.normal },
+	c = { bg = theme.ui.bg_p1, fg = theme.ui.fg_dim },
 }
 
 kanagawa_paper.insert = {
-	a = { bg = theme.diag.ok, fg = theme.ui.bg },
-	b = { bg = theme.ui.bg, fg = theme.diag.ok },
+	a = { bg = theme.modes.insert, fg = theme.ui.bg },
+	b = { bg = theme.ui.bg_p2, fg = theme.modes.insert },
 }
 
 kanagawa_paper.command = {
-	a = { bg = theme.syn.operator, fg = theme.ui.bg },
-	b = { bg = theme.ui.bg, fg = theme.syn.operator },
+	a = { bg = theme.modes.command, fg = theme.ui.bg },
+	b = { bg = theme.ui.bg_p2, fg = theme.modes.command },
 }
 
 kanagawa_paper.visual = {
-	a = { bg = theme.syn.keyword, fg = theme.ui.bg },
-	b = { bg = theme.ui.bg, fg = theme.syn.keyword },
+	a = { bg = theme.modes.visual, fg = theme.ui.bg },
+	b = { bg = theme.ui.bg_p2, fg = theme.modes.visual },
 }
 
 kanagawa_paper.replace = {
-	a = { bg = theme.syn.constant, fg = theme.ui.bg },
-	b = { bg = theme.ui.bg, fg = theme.syn.constant },
+	a = { bg = theme.modes.replace, fg = theme.ui.bg },
+	b = { bg = theme.ui.bg_p2, fg = theme.modes.replace },
 }
 
 kanagawa_paper.inactive = {

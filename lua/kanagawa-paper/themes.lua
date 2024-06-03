@@ -37,6 +37,13 @@
 ---@field removed ColorSpec
 ---@field changed ColorSpec
 
+---@class ModeElements
+---@field normal ColorSpec
+---@field insert ColorSpec
+---@field visual ColorSpec
+---@field replace ColorSpec
+---@field command ColorSpec
+
 ---@class UiElements
 ---@field fg ColorSpec Default foreground
 ---@field fg_dim ColorSpec Dimmed foreground
@@ -77,6 +84,7 @@
 ---@field vcs VCSElements
 ---@field diff DiffElements
 ---@field ui UiElements
+---@field modes ModeElements
 ---@field term ColorSpec[]
 
 ---@param palette PaletteColors
@@ -85,6 +93,13 @@ return function(palette)
 	local gutter_bg = require("kanagawa-paper.config").options.gutter and palette.sumiInk4 or "none"
 
 	return {
+		modes = {
+			normal = palette.dragonYellow,
+			insert = palette.dragonRed,
+			visual = palette.dragonBlue,
+			replace = palette.dragonRed,
+			command = palette.dragonYellow,
+		},
 		ui = {
 			fg = palette.fujiWhite,
 			fg_dim = palette.oldWhite,

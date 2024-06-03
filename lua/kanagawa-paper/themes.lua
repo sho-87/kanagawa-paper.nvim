@@ -83,6 +83,7 @@
 ---@return ThemeColors
 return function(palette)
 	local gutter_bg = require("kanagawa-paper.config").options.gutter and palette.sumiInk4 or "none"
+
 	return {
 		ui = {
 			fg = palette.fujiWhite,
@@ -103,8 +104,10 @@ return function(palette)
 			nontext = palette.sumiInk6,
 			whitespace = palette.sumiInk6,
 
-			bg_search = palette.waveBlue2,
-			bg_visual = palette.waveBlue1,
+			bg_search = palette.waveBlue1,
+			bg_visual = palette.waveBlue2,
+
+			win_separator = palette.dragonBlue,
 
 			pmenu = {
 				fg = palette.fujiWhite,

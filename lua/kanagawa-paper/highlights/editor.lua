@@ -3,8 +3,8 @@ local M = {}
 ---@param colors KanagawaColors
 ---@param opts? KanagawaConfig
 function M.setup(colors, opts)
-	local theme = colors.theme
 	opts = opts or require("kanagawa-paper.config").options
+	local theme = colors.theme
 
 	return {
 		-- ColorColumn	Used for the columns set with 'colorcolumn'.
@@ -40,7 +40,7 @@ function M.setup(colors, opts)
 		-- ErrorMsg	Error messages on the command line.
 		ErrorMsg = { fg = theme.diag.error },
 		-- WinSeparator	Separators between window splits.
-		WinSeparator = { fg = theme.ui.bg_m3, bg = opts.dimInactive and theme.ui.bg_dim or "NONE" },
+		WinSeparator = { fg = theme.ui.win_separator, bg = opts.dimInactive and theme.ui.bg_dim or "NONE" },
 		VertSplit = { link = "WinSeparator" },
 		-- Folded		Line used for closed folds.
 		Folded = { fg = theme.ui.special, bg = theme.ui.bg_p1 },
@@ -141,10 +141,12 @@ function M.setup(colors, opts)
 		debugPC = { bg = theme.diff.delete },
 		debugBreakpoint = { fg = theme.syn.special1, bg = theme.ui.bg_gutter },
 
-		LspReferenceText = { bg = theme.diff.text },
+		LspReferenceText = { bg = "None", fg = theme.ui.fg, bold = true },
 		LspReferenceRead = { link = "LspReferenceText" },
 		LspReferenceWrite = { bg = theme.diff.text, underline = true },
-		-- LspInlayHint = { link = "NonText"},
+		LspInlayHint = { fg = theme.syn.comment, bg = theme.ui.bg_dim, italic = false },
+		LspSignatureActiveParameter = { fg = theme.diag.warning },
+		LspCodeLens = { fg = theme.syn.comment },
 
 		DiagnosticError = { fg = theme.diag.error },
 		DiagnosticWarn = { fg = theme.diag.warning },
@@ -189,9 +191,6 @@ function M.setup(colors, opts)
 			sp = theme.diag.hint,
 		},
 
-		LspSignatureActiveParameter = { fg = theme.diag.warning },
-		LspCodeLens = { fg = theme.syn.comment },
-
 		-- vcs
 		diffAdded = { fg = theme.vcs.added },
 		diffRemoved = { fg = theme.vcs.removed },
@@ -199,9 +198,6 @@ function M.setup(colors, opts)
 		diffChanged = { fg = theme.vcs.changed },
 		diffOldFile = { fg = theme.vcs.removed },
 		diffNewFile = { fg = theme.vcs.added },
-		-- diffFile = { fg = c.steelGray },
-		-- diffLine = { fg = c.steelGray },
-		-- diffIndexLine = { link = 'Identifier' },
 	}
 end
 

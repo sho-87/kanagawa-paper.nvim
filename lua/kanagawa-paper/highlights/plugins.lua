@@ -305,8 +305,8 @@ function M.setup(colors, opts)
 		AerialTypeParameterIcon = { link = "Type" },
 
 		-- Satellite
-		SatelliteBar = { bg = palette.fujiGray },
-		SatelliteCursor = { fg = palette.fujiWhite },
+		SatelliteBar = { bg = palette.sumiInk4 },
+		SatelliteCursor = { fg = palette.fujiGray },
 		SatelliteMark = { fg = palette.waveAqua2 },
 
 		-- Whichkey
@@ -318,6 +318,10 @@ function M.setup(colors, opts)
 
 		-- Spectre
 		SpectreFaint = { fg = palette.fujiGray, italic = false },
+
+		-- Noice
+		NoiceVirtualText = { fg = theme.ui.bg_search },
+		NoicePopupBorder = { fg = theme.ui.bg_p2, bg = theme.ui.bg_p1 },
 	}
 end
 

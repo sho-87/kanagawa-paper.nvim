@@ -241,8 +241,10 @@ function M.setup(colors, opts)
 		BufferlineModified = { fg = theme.vcs.changed },
 		BufferlineModifiedSelected = { fg = theme.vcs.changed },
 		BufferlineTabSelected = { bg = theme.ui.bg_p1, fg = palette.dragonWhite },
+		BufferlineTabSeparatorSelected = { link = "BufferlineTabSelected" },
 		BufferlineTabClose = { fg = palette.dragonRed },
 		BufferlineCloseButtonSelected = { fg = palette.dragonRed },
+		BufferlineCloseButton = { fg = "none" },
 
 		-- Nvim-Navic
 		NavicIconsFile = { link = "Directory" },

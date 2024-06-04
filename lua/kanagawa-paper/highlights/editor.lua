@@ -12,7 +12,7 @@ function M.setup(colors, opts)
 		-- Conceal		Placeholder characters substituted for concealed text (see 'conceallevel').
 		Conceal = { fg = theme.ui.special, bold = true },
 		-- CurSearch	Used for highlighting a search pattern under the cursor (see 'hlsearch').
-		CurSearch = { fg = theme.ui.fg, bg = theme.ui.bg_search, bold = true },
+		CurSearch = { fg = theme.ui.fg_dark, bg = theme.ui.bg_search, bold = true },
 		-- Cursor		Character under the cursor.
 		Cursor = { fg = theme.ui.bg, bg = theme.ui.fg },
 		-- lCursor		Character under the cursor when |language-mapping| is used (see 'guicursor').
@@ -97,7 +97,7 @@ function M.setup(colors, opts)
 		-- QuickFixLine	Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		QuickFixLine = { bg = theme.ui.bg_p1 },
 		-- Search		Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
-		Search = { fg = theme.ui.fg, bg = theme.ui.bg_search },
+		Search = { fg = theme.ui.fg_dark, bg = theme.ui.bg_search },
 		-- SpecialKey	Unprintable characters: Text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		SpecialKey = { fg = theme.ui.special },
 		-- SpellBad	Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.

@@ -48,6 +48,7 @@
 ---@field fg ColorSpec Default foreground
 ---@field fg_dim ColorSpec Dimmed foreground
 ---@field fg_reverse ColorSpec
+---@field fg_dark ColorSpec
 ---@field bg_dim ColorSpec Dimmed background
 ---@field bg_m3 ColorSpec
 ---@field bg_m2 ColorSpec
@@ -106,6 +107,7 @@ return function(palette)
 			fg = palette.fujiWhite,
 			fg_dim = palette.fujiGray,
 			fg_reverse = palette.waveBlue1,
+			fg_dark = palette.dragonBlack3,
 
 			bg_dim = palette.sumiInk1,
 			bg_gutter = gutter_bg,
@@ -121,7 +123,7 @@ return function(palette)
 			nontext = palette.sumiInk6,
 			whitespace = palette.sumiInk6,
 
-			bg_search = palette.waveBlue1,
+			bg_search = palette.springViolet1,
 			bg_visual = palette.waveBlue2,
 
 			win_separator = palette.dragonViolet,

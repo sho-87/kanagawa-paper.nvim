@@ -143,7 +143,7 @@ function M.setup(colors, opts)
 
 		LspReferenceText = { bg = "None", fg = theme.ui.fg, bold = true },
 		LspReferenceRead = { link = "LspReferenceText" },
-		LspReferenceWrite = { bg = theme.diff.text, underline = true },
+		LspReferenceWrite = { bg = "None", fg = theme.ui.fg, bold = true, underline = true },
 		LspInlayHint = { fg = theme.syn.comment, bg = theme.ui.bg_dim, italic = false },
 		LspSignatureActiveParameter = { fg = theme.diag.warning },
 		LspCodeLens = { fg = theme.syn.comment },

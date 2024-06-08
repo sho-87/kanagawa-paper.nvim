@@ -322,6 +322,7 @@ function M.setup(colors, opts)
 		-- Noice
 		NoiceVirtualText = { fg = theme.ui.bg_search },
 		NoicePopupBorder = { fg = theme.ui.bg_p2, bg = theme.ui.bg_p1 },
+		NoiceLspProgressTitle = { fg = theme.ui.bg_p1 },
 	}
 end
 

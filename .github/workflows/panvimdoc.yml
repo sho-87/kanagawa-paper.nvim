@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: panvimdoc
-        uses: kdheepak/panvimdoc@v4
+        uses: kdheepak/panvimdoc@v4.0.1
         with:
           vimdoc: kanagawa-paper.nvim
           pandoc: "README.md"
@@ -31,5 +31,5 @@ jobs:
           incrementheadinglevelby: 0 # Increment heading levels by specified number
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs: Auto generate vimdoc"
+          commit_message: "docs: auto generate vimdoc"
           branch: ${{ github.head_ref }}

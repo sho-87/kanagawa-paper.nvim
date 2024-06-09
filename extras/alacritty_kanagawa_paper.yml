@@ -1,8 +1,8 @@
-# Kanagawa Dragon Alacritty Colors
+# Kanagawa Paper Alacritty Colors
 colors:
   primary:
-    background: '#181616'
-    foreground: '#c5c9c5'
+    background: '#1F1F28'
+    foreground: '#DCD7BA'
 
   normal:
     black:   '#0d0c0c'
@@ -25,10 +25,10 @@ colors:
     white:   '#c5c9c5'
 
   selection:
-    background: '#2D4F67'
+    background: '#658594'
     foreground: '#C8C093'
 
   indexed_colors:
     - { index: 16, color: '#b6927b' }
-    - { index: 17, color: '#b98d7b' }
+    - { index: 17, color: '#ff5d62' }
 

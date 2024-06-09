@@ -4,14 +4,14 @@
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
 
 1. kanagawa-paper.nvim               |kanagawa-paper.nvim-kanagawa-paper.nvim|
-  - Motivation            |kanagawa-paper.nvim-kanagawa-paper.nvim-motivation|
-  - Requirements        |kanagawa-paper.nvim-kanagawa-paper.nvim-requirements|
-  - Installation        |kanagawa-paper.nvim-kanagawa-paper.nvim-installation|
-  - Usage                      |kanagawa-paper.nvim-kanagawa-paper.nvim-usage|
-  - Configuration      |kanagawa-paper.nvim-kanagawa-paper.nvim-configuration|
-  - Customizing Colors|kanagawa-paper.nvim-kanagawa-paper.nvim-customizing-colors|
-  - Extras                    |kanagawa-paper.nvim-kanagawa-paper.nvim-extras|
-  - Acknowledgements|kanagawa-paper.nvim-kanagawa-paper.nvim-acknowledgements|
+  - Motivation                                |kanagawa-paper.nvim-motivation|
+  - Requirements                            |kanagawa-paper.nvim-requirements|
+  - Installation                            |kanagawa-paper.nvim-installation|
+  - Usage                                          |kanagawa-paper.nvim-usage|
+  - Configuration                          |kanagawa-paper.nvim-configuration|
+  - Customizing Colors                |kanagawa-paper.nvim-customizing-colors|
+  - Extras                                        |kanagawa-paper.nvim-extras|
+  - Acknowledgements                    |kanagawa-paper.nvim-acknowledgements|
 2. Links                                           |kanagawa-paper.nvim-links|
 
 ==============================================================================
@@ -20,7 +20,7 @@ Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
 Remixed Kanagawa colourscheme with muted colors. For Neovim.
 
 
-MOTIVATION                *kanagawa-paper.nvim-kanagawa-paper.nvim-motivation*
+MOTIVATION                                    *kanagawa-paper.nvim-motivation*
 
 I love the original kanagawa.nvim <https://github.com/rebelot/kanagawa.nvim>
 colourscheme, but I found some of the colours of the dark themes a bit too
@@ -32,13 +32,13 @@ kanagawa-paper combines both the dragon and wave themes, with a few additions
 and tweaks to work better with certain plugins.
 
 
-REQUIREMENTS            *kanagawa-paper.nvim-kanagawa-paper.nvim-requirements*
+REQUIREMENTS                                *kanagawa-paper.nvim-requirements*
 
 - Neovim <https://github.com/neovim/neovim> >=
     0.8.0 <https://github.com/neovim/neovim/releases/tag/v0.8.0>
 
 
-INSTALLATION            *kanagawa-paper.nvim-kanagawa-paper.nvim-installation*
+INSTALLATION                                *kanagawa-paper.nvim-installation*
 
 Install the theme with your preferred package manager, such as lazy.nvim
 <https://github.com/folke/lazy.nvim>
@@ -53,7 +53,7 @@ Install the theme with your preferred package manager, such as lazy.nvim
 <
 
 
-USAGE                          *kanagawa-paper.nvim-kanagawa-paper.nvim-usage*
+USAGE                                              *kanagawa-paper.nvim-usage*
 
 
 VIM SCRIPT ~
@@ -87,7 +87,7 @@ LUALINE
 <
 
 
-CONFIGURATION          *kanagawa-paper.nvim-kanagawa-paper.nvim-configuration*
+CONFIGURATION                              *kanagawa-paper.nvim-configuration*
 
 
   Set the configuration **BEFORE** loading the color scheme with `colorscheme
@@ -118,7 +118,7 @@ The code that defines the default configuration can be found here
 <lua/kanagawa-paper/config.lua>
 
 
-CUSTOMIZING COLORS*kanagawa-paper.nvim-kanagawa-paper.nvim-customizing-colors*
+CUSTOMIZING COLORS                    *kanagawa-paper.nvim-customizing-colors*
 
 There are _two_ kinds of colors: `PaletteColors` and `ThemeColors`;
 `PaletteColors` are defined directly as RGB Hex strings, and have arbitrary
@@ -234,7 +234,7 @@ More uniform colors for the popup menu.
 <
 
 
-EXTRAS                        *kanagawa-paper.nvim-kanagawa-paper.nvim-extras*
+EXTRAS                                            *kanagawa-paper.nvim-extras*
 
 - alacritty <extras/alacritty_kanagawa.yml>
 - Alfred <extras/alfred.md>
@@ -255,7 +255,7 @@ EXTRAS                        *kanagawa-paper.nvim-kanagawa-paper.nvim-extras*
 - JSON compatible with many terminals <extras/Kanagawa.json> Check Gogh <https://github.com/Gogh-Co/Gogh#-terminals> for the list of supported terminals.
 
 
-ACKNOWLEDGEMENTS    *kanagawa-paper.nvim-kanagawa-paper.nvim-acknowledgements*
+ACKNOWLEDGEMENTS                        *kanagawa-paper.nvim-acknowledgements*
 
 - Kanagawa <https://github.com/rebelot/kanagawa.nvim>
 - Tokyo Night <https://github.com/folke/tokyonight.nvim>

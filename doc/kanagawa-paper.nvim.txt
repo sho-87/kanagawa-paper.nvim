@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*Remixed Kanagawa colourscheme with muted colors. For Neovim.
+*kanagawa-paper.nvim.txt*       For NVIM v0.8.0      Last change: 2024 June 09
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*

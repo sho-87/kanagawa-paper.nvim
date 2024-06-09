@@ -70,7 +70,7 @@ LUA ~
 <
 
 
-EXTERNAL PLUGINS
+EXTERNAL PLUGINS ~
 
 
 LUALINE
@@ -120,7 +120,8 @@ The code that defines the default configuration can be found here
 
 CUSTOMIZING COLORS                    *kanagawa-paper.nvim-customizing-colors*
 
-There are _two_ kinds of colors: `PaletteColors` and `ThemeColors`;
+There are two kinds of colors: `PaletteColors` and `ThemeColors`.
+
 `PaletteColors` are defined directly as RGB Hex strings, and have arbitrary
 names that recall their actual color. Conversely, `ThemeColors` are named and
 grouped _semantically_ on the basis of their actual function.
@@ -236,23 +237,16 @@ More uniform colors for the popup menu.
 
 EXTRAS                                            *kanagawa-paper.nvim-extras*
 
-- alacritty <extras/alacritty_kanagawa.yml>
-- Alfred <extras/alfred.md>
-- base16 <extras/base16-theme.yaml>
-- broot <extras/broot_kanagawa.toml>
-- emacs, doom emacs <extras/kanagawa-theme.el>
-- fish <extras/kanagawa.fish>
-- foot <extras/foot_kanagawa.ini>
-- iTerm <extras/kanagawa.itermcolors>
-- kitty <extras/kanagawa.conf>
-- mintty <extras/kanagawa.minttyrc>
+- alacritty <extras/alacritty_kanagawa_paper.yml>
+- fish <extras/kanagawa_paper.fish>
+- kitty <extras/kitty_kanagawa_paper.conf>
 - pywal <extras/pywal-theme.json>
-- sway <extras/kanagawa.sway>
-- wezterm <extras/wezterm.lua>
-- Windows Terminal <extras/windows_terminal.json>
-- Xresources <extras/.Xresources>
-- tmTheme (bat, delta and lazygit) <extras/kanagawa.tmTheme>
-- JSON compatible with many terminals <extras/Kanagawa.json> Check Gogh <https://github.com/Gogh-Co/Gogh#-terminals> for the list of supported terminals.
+- wezterm <extras/wezterm.lua> (guide: Defining a Color Scheme in a separate file <https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file>)
+- vscode <extras/vscode.json> (guide: Creating a new Color Theme <https://code.visualstudio.com/api/extension-guides/color-theme#create-a-new-color-theme>)
+- vscode terminal <extras/vscode_terminal.json> (guide: Visual Studio Code Theme Color <https://code.visualstudio.com/api/references/theme-color>)
+- Windows Terminal <extras/windows_terminal.json> (guide: Color schemes in Windows Terminal <https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes>)
+
+PRs are welcome if you want to add an extra for a specific application.
 
 
 ACKNOWLEDGEMENTS                        *kanagawa-paper.nvim-acknowledgements*

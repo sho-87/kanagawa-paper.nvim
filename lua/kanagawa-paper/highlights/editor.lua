@@ -40,7 +40,7 @@ function M.setup(colors, opts)
 		-- ErrorMsg	Error messages on the command line.
 		ErrorMsg = { fg = theme.diag.error },
 		-- WinSeparator	Separators between window splits.
-		WinSeparator = { fg = theme.ui.win_separator, bg = opts.dimInactive and theme.ui.bg_dim or "NONE" },
+		WinSeparator = { fg = theme.ui.win_separator, bg = "NONE" },
 		VertSplit = { link = "WinSeparator" },
 		-- Folded		Line used for closed folds.
 		Folded = { fg = theme.ui.special, bg = theme.ui.bg_p1 },

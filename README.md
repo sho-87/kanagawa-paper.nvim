@@ -10,6 +10,8 @@ I love the original [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) co
 
 kanagawa-paper combines both the dragon and wave themes, with a few additions and tweaks to work better with certain plugins.
 
+I have also ported the colourscheme to VSCode, which you can find here: [kanagawa-paper.vscode](https://github.com/sho-87/kanagawa-paper.vscode)
+
 ## ⚡️ Requirements
 
 - [Neovim](https://github.com/neovim/neovim) >=
@@ -202,10 +204,10 @@ end,
 - [fish](extras/kanagawa_paper.fish)
 - [kitty](extras/kitty_kanagawa_paper.conf)
 - [pywal](extras/pywal-theme.json)
-- [wezterm](extras/wezterm.lua) (guide: [Defining a Color Scheme in a separate file](https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file))
-- [vscode](extras/vscode.json) (guide: [Creating a new Color Theme](https://code.visualstudio.com/api/extension-guides/color-theme#create-a-new-color-theme))
+- [vscode](https://github.com/sho-87/kanagawa-paper.vscode) (official port)
 - [vscode terminal](extras/vscode_terminal.json) (guide: [Visual Studio Code Theme Color](https://code.visualstudio.com/api/references/theme-color))
-- [Windows Terminal](extras/windows_terminal.json) (guide: [Color schemes in Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes))
+- [wezterm](extras/wezterm.lua) (guide: [Defining a Color Scheme in a separate file](https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file))
+- [windows terminal](extras/windows_terminal.json) (guide: [Color schemes in Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes))
 
 PRs are welcome if you want to add an extra for a specific application.
 

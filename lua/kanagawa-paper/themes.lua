@@ -1,9 +1,11 @@
 ---@class SyntaxElements
 ---@field string ColorSpec
 ---@field variable ColorSpec
+---@field member ColorSpec
 ---@field number ColorSpec
 ---@field constant ColorSpec
 ---@field identifier ColorSpec
+---@field attribute ColorSpec
 ---@field parameter ColorSpec
 ---@field fun ColorSpec
 ---@field statement ColorSpec
@@ -148,13 +150,15 @@ return function(palette)
 		syn = {
 			string = palette.dragonGreen2,
 			variable = "none",
+			member = palette.fujiWhite,
 			number = palette.dragonPink,
 			constant = palette.dragonOrange,
 			identifier = palette.dragonYellow,
 			parameter = palette.dragonGray,
+			attribute = palette.dragonYellow,
 			fun = palette.dragonBlue2,
 			statement = palette.dragonViolet,
-			keyword = palette.dragonViolet,
+			keyword = palette.dragonPink,
 			operator = palette.dragonRed,
 			preproc = palette.dragonRed,
 			type = palette.dragonAqua,

@@ -15,7 +15,7 @@ function M.setup(colors, opts)
 		["@variable.parameter"] = { fg = theme.syn.parameter },
 		-- @variable.parameter.builtin     special parameters (e.g. `_`, `it`)
 		-- @variable.member                object and struct fields
-		["@variable.member"] = { fg = theme.syn.identifier },
+		["@variable.member"] = { fg = theme.syn.member },
 		--
 		-- @constant (Constant)              constant identifiers
 		-- @constant.builtin       built-in constant values
@@ -156,7 +156,7 @@ function M.setup(colors, opts)
 		-- @tag                    XML-style tag names (e.g. in XML, HTML, etc.)
 		-- @tag.builtin            XML-style tag names (e.g. HTML5 tags)
 		-- @tag.attribute          XML-style tag attributes
-		["@tag.attribute"] = { fg = theme.syn.identifier },
+		["@tag.attribute"] = { fg = theme.syn.attribute },
 		-- @tag.delimiter          XML-style tag delimiters
 		["@tag.delimiter"] = { fg = theme.syn.punct },
 	}

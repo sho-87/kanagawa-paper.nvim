@@ -27,7 +27,7 @@ function M.setup(colors, opts)
 		["@lsp.type.builtinConstant"] = { link = "@constant.builtin" },
 		["@lsp.type.magicFunction"] = { link = "@function.builtin" },
 
-		["@lsp.mod.readonly"] = { link = "Constant" },
+		["@lsp.mod.readonly"] = { link = "@variable" },
 		["@lsp.mod.typeHint"] = { link = "Type" },
 		-- ["@lsp.mod.defaultLibrary"] = { link = "Special" },
 		-- ["@lsp.mod.builtin"] = { link = "Special" },

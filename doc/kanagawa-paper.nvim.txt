@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*       For NVIM v0.8.0      Last change: 2024 June 10
+*kanagawa-paper.nvim.txt*       For NVIM v0.8.0      Last change: 2024 June 11
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
@@ -100,7 +100,7 @@ CONFIGURATION                              *kanagawa-paper.nvim-configuration*
       undercurl = true,
       transparent = false,
       gutter = false,
-      dimInactive = true,
+      dimInactive = true, -- disabled when transparent
       terminalColors = true,
       commentStyle = { italic = true },
       functionStyle = { italic = false },

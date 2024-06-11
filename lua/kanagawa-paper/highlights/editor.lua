@@ -65,7 +65,8 @@ function M.setup(colors, opts)
 		-- ModeMsg		'showmode' message (e.g., "-- INSERT --").
 		ModeMsg = { fg = theme.diag.warning, bold = true },
 		-- MsgArea		Area for messages and cmdline.
-		MsgArea = vim.o.cmdheight == 0 and { link = "StatusLine" } or { fg = theme.ui.fg_dim },
+		MsgArea = vim.o.cmdheight == 0 and { link = "StatusLine" }
+			or { fg = theme.ui.fg_gray, bg = not opts.transparent and theme.ui.bg or "NONE" },
 		-- MsgSeparator	Separator for scrolled messages |msgsep|.
 		MsgSeparator = { bg = vim.o.cmdheight == 0 and theme.ui.bg or theme.ui.bg_m3 },
 		-- MoreMsg		|more-prompt|
@@ -111,7 +112,7 @@ function M.setup(colors, opts)
 		-- SpellRare	Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
 		SpellRare = { undercurl = opts.undercurl, underline = not opts.undercurl, sp = theme.diag.warning },
 		-- StatusLine	Status line of current window.
-		StatusLine = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+		StatusLine = { fg = theme.ui.fg_gray, bg = theme.ui.bg_m3 },
 		-- StatusLineNC	Status lines of not-current windows. Note: If this is equal to "StatusLine", Vim will use "^^^" in the status line of the current window.
 		StatusLineNC = { fg = theme.ui.nontext, bg = theme.ui.bg_m3 },
 		-- TabLine		Tab pages line, not active tab page label.

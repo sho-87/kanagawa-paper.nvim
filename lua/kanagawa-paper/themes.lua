@@ -50,12 +50,12 @@
 ---@field fg ColorSpec Default foreground
 ---@field fg_gray ColorSpec Slightly darker, offwhite
 ---@field fg_dim ColorSpec Dimmed foreground
+---@field fg_dark ColorSpec Dark foreground text
 ---@field fg_reverse ColorSpec
----@field fg_dark ColorSpec
 ---@field bg_dim ColorSpec Dimmed background
----@field bg_m3 ColorSpec
+---@field bg_m3 ColorSpec Darker background
 ---@field bg_m2 ColorSpec
----@field bg_m1 ColorSpec
+---@field bg_m1 ColorSpec Darkest background
 ---@field bg ColorSpec Default background
 ---@field bg_p1 ColorSpec Lighter background ColorColumn, Folded, Gutter
 ---@field bg_p2 ColorSpec Lighter background Cursor{Line,Column}, TabLineSel (Selected Items)

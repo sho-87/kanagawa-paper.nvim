@@ -6,7 +6,7 @@ local kanagawa_paper = {}
 kanagawa_paper.normal = {
 	a = { bg = theme.modes.normal, fg = theme.ui.bg_m3 },
 	b = { bg = theme.ui.bg_p2, fg = theme.modes.normal },
-	c = { bg = theme.ui.bg_p1, fg = theme.ui.fg_dim },
+	c = { bg = theme.ui.bg_p1, fg = theme.ui.fg_gray },
 }
 
 kanagawa_paper.insert = {
@@ -32,7 +32,7 @@ kanagawa_paper.replace = {
 kanagawa_paper.inactive = {
 	a = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
 	b = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim, gui = "bold" },
-	c = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+	c = { bg = theme.ui.bg_m3, fg = theme.ui.fg_gray },
 }
 
 if vim.g.kanagawa_paper_lualine_bold then

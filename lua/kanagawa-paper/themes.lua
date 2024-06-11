@@ -48,6 +48,7 @@
 
 ---@class UiElements
 ---@field fg ColorSpec Default foreground
+---@field fg_gray ColorSpec Slightly darker, offwhite
 ---@field fg_dim ColorSpec Dimmed foreground
 ---@field fg_reverse ColorSpec
 ---@field fg_dark ColorSpec
@@ -107,12 +108,10 @@ return function(palette)
 		},
 		ui = {
 			fg = palette.fujiWhite,
-			fg_dim = palette.fujiGray,
-			fg_reverse = palette.waveBlue1,
+			fg_gray = palette.fujiGray,
 			fg_dark = palette.dragonBlack3,
-
-			bg_dim = palette.sumiInk1,
-			bg_gutter = gutter_bg,
+			fg_dim = palette.dragonBlack5,
+			fg_reverse = palette.waveBlue1,
 
 			bg_m3 = palette.sumiInk0,
 			bg_m2 = palette.sumiInk1,
@@ -120,13 +119,14 @@ return function(palette)
 			bg = palette.sumiInk3,
 			bg_p1 = palette.sumiInk4,
 			bg_p2 = palette.sumiInk5,
+			bg_dim = palette.sumiInk1,
+			bg_gutter = gutter_bg,
+			bg_search = palette.springViolet1,
+			bg_visual = palette.waveBlue2,
 
 			special = palette.springViolet1,
 			nontext = palette.sumiInk6,
 			whitespace = palette.sumiInk6,
-
-			bg_search = palette.springViolet1,
-			bg_visual = palette.waveBlue2,
 
 			win_separator = palette.dragonViolet,
 

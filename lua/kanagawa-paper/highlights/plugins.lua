@@ -63,6 +63,8 @@ function M.setup(colors, opts)
 		NvimTreeWindowPicker = { bg = theme.ui.bg_m1, fg = theme.syn.special1, bold = true },
 
 		-- NeoTree
+		NeoTreeNormal = { link = "NormalFloat" },
+		NeoTreeNormalNC = { link = "NormalFloat" },
 		NeoTreeFloatTitle = { fg = theme.ui.bg_m3, bg = palette.dragonGray3, bold = true },
 		NeoTreeFloatBorder = { fg = theme.ui.bg_p2, bg = theme.ui.float.bg_border },
 		NeoTreeWinSeparator = { link = "WinSeparator" },

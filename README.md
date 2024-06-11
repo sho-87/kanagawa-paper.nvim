@@ -68,7 +68,7 @@ require('kanagawa-paper').setup({
   undercurl = true,
   transparent = false,
   gutter = false,
-  dimInactive = true,
+  dimInactive = true, -- disabled when transparent
   terminalColors = true,
   commentStyle = { italic = true },
   functionStyle = { italic = false },

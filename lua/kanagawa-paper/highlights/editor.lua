@@ -7,6 +7,7 @@ function M.setup(colors, opts)
 	local theme = colors.theme
 
 	return {
+		None = { bg = "NONE", fg = theme.ui.bg },
 		-- ColorColumn	Used for the columns set with 'colorcolumn'.
 		ColorColumn = { bg = theme.ui.bg_p1 },
 		-- Conceal		Placeholder characters substituted for concealed text (see 'conceallevel').

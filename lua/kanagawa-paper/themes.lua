@@ -102,7 +102,7 @@ return function(palette)
 		modes = {
 			normal = palette.dragonYellow,
 			insert = palette.dragonRed,
-			visual = palette.dragonBlue,
+			visual = palette.springViolet1,
 			replace = palette.dragonRed,
 			command = palette.dragonYellow,
 		},
@@ -122,7 +122,7 @@ return function(palette)
 			bg_dim = palette.sumiInk1,
 			bg_gutter = gutter_bg,
 			bg_search = palette.springViolet1,
-			bg_visual = palette.waveBlue2,
+			bg_visual = palette.sumiInk6,
 
 			special = palette.springViolet1,
 			nontext = palette.sumiInk6,
@@ -136,14 +136,14 @@ return function(palette)
 				fg = palette.fujiWhite,
 				fg_sel = "none", -- This is important to make highlights pass-through
 				bg = palette.waveBlue1,
-				bg_sel = palette.waveBlue2,
-				bg_sbar = palette.waveBlue1,
-				bg_thumb = palette.waveBlue2,
+				bg_sel = palette.sumiInk6,
+				bg_sbar = palette.sumiInk5,
+				bg_thumb = palette.sumiInk6,
 			},
 			float = {
 				fg = palette.oldWhite,
 				bg = palette.sumiInk4,
-				fg_border = palette.sumiInk5,
+				fg_border = palette.sumiInk6,
 				bg_border = "none",
 			},
 		},

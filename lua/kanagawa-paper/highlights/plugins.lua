@@ -181,7 +181,7 @@ function M.setup(colors, opts)
 		CmpItemKindFunction = { link = "Function" },
 		CmpItemKindConstructor = { link = "@constructor" },
 		CmpItemKindField = { link = "@variable.member" },
-		CmpItemKindVariable = { fg = theme.ui.fg_dim },
+		CmpItemKindVariable = { link = "@variable" },
 		CmpItemKindClass = { link = "Type" },
 		CmpItemKindInterface = { link = "Type" },
 		CmpItemKindModule = { link = "@module" },

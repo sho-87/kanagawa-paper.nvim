@@ -122,7 +122,7 @@ return function(palette)
 			bg_dim = palette.sumiInk1,
 			bg_gutter = gutter_bg,
 			bg_search = palette.springViolet1,
-			bg_visual = palette.sumiInk6,
+			bg_visual = palette.sumiInk5,
 
 			special = palette.springViolet1,
 			nontext = palette.sumiInk6,

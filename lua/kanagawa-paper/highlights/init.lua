@@ -17,7 +17,7 @@ function M.setup(colors, opts)
 	opts = opts or require("kanagawa-paper.config").options
 
 	local highlights = {}
-	for _, highlight in ipairs({ "editor", "syntax", "treesitter", "lsp", "plugins" }) do
+	for _, highlight in ipairs({ "editor", "syntax", "treesitter", "lsp", "plugins", "ft" }) do
 		local mod = require("kanagawa-paper.highlights." .. highlight)
 		for hl, spec in pairs(mod.setup(colors, opts)) do
 			highlights[hl] = spec

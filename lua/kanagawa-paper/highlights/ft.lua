@@ -1,0 +1,18 @@
+local M = {}
+
+---@param colors KanagawaColors
+---@param opts? KanagawaConfig
+function M.setup(colors, opts)
+	opts = opts or require("kanagawa-paper.config").options
+	local theme = colors.theme
+	local palette = colors.palette
+
+	return {
+		-- zsh
+		zshVariable = { link = "@variable" },
+		zshFunction = { link = "@function" },
+		zshOperator = { link = "@operator" },
+	}
+end
+
+return M

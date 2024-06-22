@@ -30,8 +30,8 @@ kanagawa_paper.replace = {
 }
 
 kanagawa_paper.inactive = {
-	a = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-	b = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim, gui = "bold" },
+	a = { bg = theme.ui.bg_m3, fg = theme.ui.fg_gray },
+	b = { bg = theme.ui.bg_m3, fg = theme.ui.fg_gray, gui = "bold" },
 	c = { bg = theme.ui.bg_m3, fg = theme.ui.fg_gray },
 }
 

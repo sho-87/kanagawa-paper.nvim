@@ -322,8 +322,8 @@ function M.setup(colors, opts)
 		AerialTypeParameterIcon = { link = "Type" },
 
 		-- Satellite
-		SatelliteBar = { bg = palette.sumiInk5 },
-		SatelliteCursor = { fg = palette.fujiGray },
+		SatelliteBar = { bg = palette.fujiGray },
+		SatelliteCursor = { fg = palette.fujiWhite },
 		SatelliteMark = { fg = palette.waveAqua2 },
 
 		-- Whichkey

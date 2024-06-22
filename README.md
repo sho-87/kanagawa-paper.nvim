@@ -138,6 +138,8 @@ require('kanagawa-paper').setup({
 })
 ```
 
+You can find a more detailed explanation of color customization [here](https://github.com/sho-87/kanagawa-paper.nvim/issues/3#issuecomment-2183665367).
+
 ### Extracting colors
 
 ```lua

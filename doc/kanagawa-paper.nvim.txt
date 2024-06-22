@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*       For NVIM v0.8.0      Last change: 2024 June 19
+*kanagawa-paper.nvim.txt*       For NVIM v0.8.0      Last change: 2024 June 22
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
@@ -172,6 +172,9 @@ option. Supported keywords are the same for |nvim_set_hl| `{val}` parameter.
         end,
     })
 <
+
+You can find a more detailed explanation of color customization here
+<https://github.com/sho-87/kanagawa-paper.nvim/issues/3#issuecomment-2183665367>.
 
 
 EXTRACTING COLORS ~

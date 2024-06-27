@@ -129,13 +129,11 @@ return function(palette)
 			whitespace = palette.sumiInk6,
 
 			win_separator = palette.dragonViolet,
-
 			indent = palette.sumiInk4,
-
 			pmenu = {
 				fg = palette.fujiWhite,
 				fg_sel = "none", -- This is important to make highlights pass-through
-				bg = palette.waveBlue1,
+				bg = palette.sumiInk4,
 				bg_sel = palette.sumiInk6,
 				bg_sbar = palette.sumiInk5,
 				bg_thumb = palette.sumiInk6,

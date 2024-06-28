@@ -12,6 +12,9 @@ function M.setup(colors, opts)
 		zshVariable = { link = "@variable" },
 		zshFunction = { link = "@function" },
 		zshOperator = { link = "@operator" },
+
+		-- terraform
+		tfQuotes = { link = "String" },
 	}
 end
 

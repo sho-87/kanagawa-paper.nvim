@@ -238,13 +238,26 @@ function M.setup(colors, opts)
 		RainbowDelimiterCyan = { fg = palette.dragonTeal },
 
 		-- Bufferline
-		BufferLineFill = { bg = theme.ui.bg_tabline },
-		BufferlineBufferSelected = { fg = palette.dragonWhite, bold = true },
+		BufferlineFill = { bg = theme.ui.bg_tabline },
+		BufferlineNumbers = {
+			bg = not opts.transparent and theme.ui.bg_tabline or "NONE",
+			fg = theme.ui.fg_dim,
+		},
+		BufferlineNumbersSelected = { fg = palette.dragonBlue },
+		BufferlineBuffer = { bg = theme.ui.bg_tabline, fg = theme.ui.fg_dim, bold = false },
+		BufferlineBufferSelected = { bg = theme.ui.bg, fg = palette.dragonWhite, bold = true },
 		BufferlineIndicatorSelected = { fg = palette.dragonBlue },
-		BufferlineModified = { bg = not opts.transparent and theme.ui.bg_tabline or "NONE", fg = theme.vcs.changed },
-		BufferlineModifiedSelected = { fg = theme.vcs.changed },
-		BufferlineCloseButton = { bg = not opts.transparent and theme.ui.bg_tabline or "NONE", fg = theme.ui.fg_dim },
-		BufferlineCloseButtonSelected = { fg = palette.dragonRed },
+		BufferlineModified = {
+			bg = not opts.transparent and theme.ui.bg_tabline or "NONE",
+			fg = theme.vcs.changed,
+		},
+		BufferlineModifiedSelected = { bg = theme.ui.bg, fg = theme.vcs.changed },
+		BufferlineCloseButton = {
+			bg = not opts.transparent and theme.ui.bg_tabline or "NONE",
+			fg = theme.ui.fg_dim,
+			bold = false,
+		},
+		BufferlineCloseButtonSelected = { fg = palette.dragonRed, bold = true },
 		BufferlineTab = { bg = theme.ui.bg_tabline, fg = theme.ui.fg_dim },
 		BufferlineTabClose = { bg = theme.ui.bg_p1, fg = palette.dragonRed },
 		BufferlineTabSelected = { bg = theme.ui.bg_p1, fg = palette.dragonWhite, bold = true },

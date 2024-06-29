@@ -238,30 +238,20 @@ function M.setup(colors, opts)
 		RainbowDelimiterCyan = { fg = palette.dragonTeal },
 
 		-- Bufferline
+		BufferLineFill = { bg = theme.ui.bg_tabline },
 		BufferlineBufferSelected = { fg = palette.dragonWhite, bold = true },
 		BufferlineIndicatorSelected = { fg = palette.dragonBlue },
-		BufferlineModified = { fg = theme.vcs.changed },
+		BufferlineModified = { bg = not opts.transparent and theme.ui.bg_tabline or "NONE", fg = theme.vcs.changed },
 		BufferlineModifiedSelected = { fg = theme.vcs.changed },
-		BufferlineTabSelected = { bg = theme.ui.bg_p1, fg = palette.dragonWhite },
-		BufferlineTabSeparator = {
-			bg = not opts.transparent and theme.ui.bg_m3 or theme.ui.bg,
-			fg = not opts.transparent and theme.ui.bg_m3 or theme.ui.bg,
-		},
-		BufferlineTabSeparatorSelected = {
-			bg = theme.ui.bg_p1,
-			fg = not opts.transparent and theme.ui.bg_m3 or theme.ui.bg_p1,
-		},
-		BufferlineTabClose = { fg = palette.dragonRed },
-		BufferlineCloseButton = { fg = theme.ui.fg_dim, bg = not opts.transparent and theme.ui.bg_m3 or "NONE" },
+		BufferlineCloseButton = { bg = not opts.transparent and theme.ui.bg_tabline or "NONE", fg = theme.ui.fg_dim },
 		BufferlineCloseButtonSelected = { fg = palette.dragonRed },
-		BufferlineSeparator = {
-			fg = not opts.transparent and theme.ui.bg_m3 or theme.ui.bg,
-			bg = not opts.transparent and theme.ui.bg_m3 or "NONE",
-		},
-		BufferlineSeparatorSelected = {
-			fg = not opts.transparent and theme.ui.bg_m3 or theme.ui.bg,
-			bg = not opts.transparent and theme.ui.bg_m3 or "NONE",
-		},
+		BufferlineTab = { bg = theme.ui.bg_tabline, fg = theme.ui.fg_dim },
+		BufferlineTabClose = { bg = theme.ui.bg_p1, fg = palette.dragonRed },
+		BufferlineTabSelected = { bg = theme.ui.bg_p1, fg = palette.dragonWhite, bold = true },
+		BufferlineTabSeparator = { bg = theme.ui.bg_tabline, fg = theme.ui.bg_tabline },
+		BufferlineTabSeparatorSelected = { bg = theme.ui.bg_tabline, fg = theme.ui.bg_tabline },
+		BufferlineSeparator = { fg = theme.ui.bg_tabline, bg = theme.ui.bg_tabline },
+		BufferlineSeparatorSelected = { fg = theme.ui.bg_tabline, bg = theme.ui.bg_tabline },
 
 		-- Nvim-Navic
 		NavicIconsFile = { link = "Directory" },

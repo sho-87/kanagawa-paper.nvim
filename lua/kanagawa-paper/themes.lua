@@ -60,11 +60,12 @@
 ---@field bg_p1 ColorSpec Lighter background ColorColumn, Folded, Gutter
 ---@field bg_p2 ColorSpec Lighter background Cursor{Line,Column}, TabLineSel (Selected Items)
 ---@field bg_gutter ColorSpec {Sign,Fold}Column, LineNr
+---@field bg_search ColorSpec
+---@field bg_visual ColorSpec
+---@field bg_tabline ColorSpec
 ---@field special ColorSpec SpecialKey
 ---@field nontext ColorSpec LineNr, NonText
 ---@field whitespace ColorSpec Whitespace
----@field bg_search ColorSpec
----@field bg_visual ColorSpec
 ---@field win_separator ColorSpec
 ---@field indent ColorSpec
 ---@field pmenu MenuElements
@@ -123,6 +124,7 @@ return function(palette)
 			bg_gutter = gutter_bg,
 			bg_search = palette.springViolet1,
 			bg_visual = palette.sumiInk5,
+			bg_tabline = palette.sumiInk0,
 
 			special = palette.springViolet1,
 			nontext = palette.sumiInk6,

@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*       For NVIM v0.8.0      Last change: 2024 June 22
+*kanagawa-paper.nvim.txt*       For NVIM v0.8.0      Last change: 2024 June 29
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*

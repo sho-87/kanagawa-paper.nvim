@@ -360,14 +360,15 @@ function M.setup(colors, opts)
 		SatelliteMark = { fg = palette.waveAqua2 },
 
 		-- Whichkey
-		WhichKey = { fg = palette.dragonRed },
+		WhichKey = { fg = theme.syn.operator },
+		WhichKeyBorder = { bg = theme.ui.float.bg, fg = theme.ui.float.fg_border },
 
 		-- Yanky
 		YankyYanked = { bg = palette.winterYellow },
 		YankyPut = { bg = palette.winterRed },
 
 		-- Spectre
-		SpectreFaint = { fg = palette.fujiGray, italic = false },
+		SpectreFaint = { fg = theme.ui.fg_gray, italic = false },
 
 		-- Noice
 		NoiceVirtualText = { fg = theme.ui.bg_search },

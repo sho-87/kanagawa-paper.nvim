@@ -366,8 +366,8 @@ function M.setup(colors, opts)
 		WhichKeyTitle = { bg = theme.syn.operator, fg = theme.ui.fg_dark, bold = true },
 
 		-- Yanky
-		YankyYanked = { bg = palette.winterYellow },
-		YankyPut = { bg = palette.winterRed },
+		YankyYanked = { bg = theme.modes.visual, fg = theme.ui.fg_dark },
+		YankyPut = { bg = theme.modes.insert, fg = theme.ui.fg_dark },
 
 		-- Spectre
 		SpectreFaint = { fg = theme.ui.fg_gray, italic = false },

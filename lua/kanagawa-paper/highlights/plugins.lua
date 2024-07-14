@@ -362,6 +362,7 @@ function M.setup(colors, opts)
 		-- Whichkey
 		WhichKey = { fg = theme.syn.operator },
 		WhichKeyBorder = { bg = theme.ui.float.bg, fg = theme.ui.float.fg_border },
+		WhichKeyIcon = { link = "Label" },
 
 		-- Yanky
 		YankyYanked = { bg = palette.winterYellow },

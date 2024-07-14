@@ -430,13 +430,13 @@ function M.setup(colors, opts)
 		MiniIconsBlue = { fg = theme.syn.fun },
 		MiniIconsCyan = { fg = theme.syn.type },
 		MiniIconsGreen = { fg = theme.syn.string },
-		MiniIconsGrey = { fg = theme.syn.comment },
+		MiniIconsGrey = { fg = theme.ui.fg },
 		MiniIconsOrange = { fg = theme.syn.constant },
 		MiniIconsPurple = { fg = theme.syn.statement },
 		MiniIconsRed = { fg = theme.syn.special3 },
 		MiniIconsYellow = { fg = theme.syn.identifier },
 
-		MiniIndentscopeSymbol = { fg = theme.syn.special1 },
+		MiniIndentscopeSymbol = { fg = theme.ui.indent },
 		MiniIndentscopePrefix = { nocombine = true }, -- Make it invisible
 
 		MiniJump = { link = "SpellRare" },
@@ -478,19 +478,19 @@ function M.setup(colors, opts)
 		MiniStarterItem = { link = "Normal" },
 		MiniStarterItemBullet = { link = "Delimiter" },
 		MiniStarterItemPrefix = { fg = theme.diag.warning },
-		MiniStarterSection = { fg = theme.diag.ok },
+		MiniStarterSection = { fg = palette.autumnGreen },
 		MiniStarterQuery = { fg = theme.diag.info },
 
 		MiniStatuslineDevinfo = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1 },
 		MiniStatuslineFileinfo = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1 },
 		MiniStatuslineFilename = { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim },
 		MiniStatuslineInactive = { link = "StatusLineNC" },
-		MiniStatuslineModeCommand = { fg = theme.ui.bg, bg = theme.syn.operator, bold = true },
-		MiniStatuslineModeInsert = { fg = theme.ui.bg, bg = theme.diag.ok, bold = true },
-		MiniStatuslineModeNormal = { fg = theme.ui.bg_m3, bg = theme.syn.fun, bold = true },
-		MiniStatuslineModeOther = { fg = theme.ui.bg, bg = theme.syn.type, bold = true },
-		MiniStatuslineModeReplace = { fg = theme.ui.bg, bg = theme.syn.constant, bold = true },
-		MiniStatuslineModeVisual = { fg = theme.ui.bg, bg = theme.syn.keyword, bold = true },
+		MiniStatuslineModeCommand = { fg = theme.ui.bg, bg = theme.modes.command, bold = true },
+		MiniStatuslineModeInsert = { fg = theme.ui.bg, bg = theme.modes.insert, bold = true },
+		MiniStatuslineModeNormal = { fg = theme.ui.bg_m3, bg = theme.modes.normal, bold = true },
+		MiniStatuslineModeOther = { fg = theme.ui.bg_m3, bg = theme.modes.normal, bold = true },
+		MiniStatuslineModeReplace = { fg = theme.ui.bg, bg = theme.modes.replace, bold = true },
+		MiniStatuslineModeVisual = { fg = theme.ui.bg, bg = theme.modes.visual, bold = true },
 
 		MiniSurround = { link = "IncSearch" },
 

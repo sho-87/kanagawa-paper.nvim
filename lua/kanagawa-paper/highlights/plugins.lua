@@ -105,8 +105,10 @@ function M.setup(colors, opts)
 		NeoTreeSymbolicLinkTarget = { link = "Type" },
 
 		-- WindowPicker
-		NvimWindowSwitch = { bg = theme.ui.bg_m3, fg = theme.ui.picker },
-		NvimWindowSwitchNC = { link = "NvimWindowSwitch" },
+		WindowPickerStatusLine = { fg = theme.ui.picker },
+		WindowPickerStatusLineNC = { link = "WindowPickerStatusLine" },
+		WindowPickerWinBar = { link = "WindowPickerStatusLine" },
+		WindowPickerWinBarNC = { link = "WindowPickerStatusLine" },
 
 		-- Dashboard
 		DashboardShortCut = { fg = theme.ui.picker },

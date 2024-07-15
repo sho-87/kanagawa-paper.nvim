@@ -544,6 +544,14 @@ function M.setup(colors, opts)
 		NeotestTest = { fg = theme.ui.float.fg },
 		NeotestUnknown = { fg = theme.syn.deprecated },
 		NeotestWatching = { fg = theme.vcs.changed },
+
+		-- overseer
+		OverseerPENDING = { fg = theme.diag.hint },
+		OverseerRUNNING = { fg = theme.diag.info },
+		OverseerSUCCESS = { fg = theme.diag.ok },
+		OverseerCANCELED = { fg = theme.diag.warning },
+		OverseerFAILURE = { fg = theme.diag.error },
+		OverseerTaskBorder = { fg = theme.ui.win_separator },
 	}
 end
 

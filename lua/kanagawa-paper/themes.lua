@@ -170,7 +170,7 @@ return function(palette)
 			comment = palette.fujiGray,
 			special1 = palette.dragonTeal,
 			special2 = palette.dragonRed,
-			special3 = palette.dragonRed,
+			special3 = palette.dragonBlue,
 		},
 		vcs = {
 			added = palette.autumnGreen,

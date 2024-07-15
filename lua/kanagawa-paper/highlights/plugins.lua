@@ -14,9 +14,9 @@ function M.setup(colors, opts)
 		GitSignsDelete = { fg = theme.vcs.removed, bg = theme.ui.bg_gutter },
 
 		-- Neogit
-		NeogitDiffContextHighlight = { bg = theme.diff.change }, --[[  guibg=#333333 guifg=#b2b2b2 ]]
-		NeogitHunkHeader = { fg = theme.syn.fun }, --[[  guifg=#cccccc guibg=#404040 ]]
-		NeogitHunkHeaderHighlight = { fg = theme.syn.constant, bg = theme.diff.change }, --[[ guifg=#cccccc guibg=#4d4d4d ]]
+		NeogitDiffContextHighlight = { bg = theme.diff.change },
+		NeogitHunkHeader = { fg = theme.syn.fun },
+		NeogitHunkHeaderHighlight = { fg = theme.syn.constant, bg = theme.diff.change },
 		NeogitDiffAddHighlight = { bg = theme.diff.add },
 		NeogitDiffDeleteHighlight = { bg = theme.diff.delete },
 
@@ -124,35 +124,30 @@ function M.setup(colors, opts)
 		InclineNormalNC = { bg = theme.ui.bg_p2, fg = palette.fujiWhite },
 
 		-- Dap-UI
-		-- DapUIVariable = { link = "Normal" },
-		DapUIScope = { link = "Special" }, -- guifg=#00F1F5"
-		DapUIType = { link = "Type" }, -- guifg=#D484FF"
-		-- DapUIValue = { link = "Normal" },
-		DapUIModifiedValue = { fg = theme.syn.special1, bold = true }, -- guifg=#00F1F5 gui=bold"
-		DapUIDecoration = { fg = theme.ui.float.fg_border }, -- guifg=#00F1F5"
-		DapUIThread = { fg = theme.syn.identifier }, --guifg=#A9FF68"
-		DapUIStoppedThread = { fg = theme.syn.special1 }, --guifg=#00f1f5"
-		-- DapUIFrameName = { link = "Normal"},
-		DapUISource = { fg = theme.syn.special2 }, -- guifg=#D484FF"
-		DapUILineNumber = { fg = theme.syn.special1 }, -- guifg=#00f1f5"
-		DapUIFloatBorder = { fg = theme.ui.float.fg_border }, -- guifg=#00F1F5"
-		DapUIWatchesEmpty = { fg = theme.diag.error }, -- guifg=#F70067"
-		DapUIWatchesValue = { fg = theme.syn.identifier }, -- guifg=#A9FF68"
-		DapUIWatchesError = { fg = theme.diag.error }, --guifg=#F70067"
-		DapUIBreakpointsPath = { link = "Directory" }, --guifg=#00F1F5"
-		DapUIBreakpointsInfo = { fg = theme.diag.info }, --guifg=#A9FF68"
-		DapUIBreakpointsCurrentLine = { fg = theme.syn.identifier, bold = true }, --guifg=#A9FF68 gui=bold"
-		-- DapUIBreakpointsLine = {}, -- DapUILineNumber"
-		DapUIBreakpointsDisabledLine = { link = "Comment" }, --guifg=#424242"
-		-- DapUICurrentFrameName = {}, -- DapUIBreakpointsCurrentLine"
-		DapUIStepOver = { fg = theme.syn.special1 }, --guifg=#00f1f5"
-		DapUIStepInto = { fg = theme.syn.special1 }, --guifg=#00f1f5"
-		DapUIStepBack = { fg = theme.syn.special1 }, --guifg=#00f1f5"
-		DapUIStepOut = { fg = theme.syn.special1 }, --guifg=#00f1f5"
-		DapUIStop = { fg = theme.diag.error }, --guifg=#F70067"
-		DapUIPlayPause = { fg = theme.syn.string }, --guifg=#A9FF68"
-		DapUIRestart = { fg = theme.syn.string }, --guifg=#A9FF68"
-		DapUIUnavailable = { fg = theme.syn.comment }, --guifg=#424242"
+		DapUIScope = { link = "Special" },
+		DapUIType = { link = "Type" },
+		DapUIModifiedValue = { fg = theme.syn.special1, bold = true },
+		DapUIDecoration = { fg = theme.ui.float.fg_border },
+		DapUIThread = { fg = theme.syn.identifier },
+		DapUIStoppedThread = { fg = theme.syn.special1 },
+		DapUISource = { fg = theme.syn.special2 },
+		DapUILineNumber = { fg = theme.syn.special1 },
+		DapUIFloatBorder = { fg = theme.ui.float.fg_border },
+		DapUIWatchesEmpty = { fg = theme.diag.error },
+		DapUIWatchesValue = { fg = theme.syn.identifier },
+		DapUIWatchesError = { fg = theme.diag.error },
+		DapUIBreakpointsPath = { link = "Directory" },
+		DapUIBreakpointsInfo = { fg = theme.diag.info },
+		DapUIBreakpointsCurrentLine = { fg = theme.syn.identifier, bold = true },
+		DapUIBreakpointsDisabledLine = { link = "Comment" },
+		DapUIStepOver = { fg = theme.syn.special1 },
+		DapUIStepInto = { fg = theme.syn.special1 },
+		DapUIStepBack = { fg = theme.syn.special1 },
+		DapUIStepOut = { fg = theme.syn.special1 },
+		DapUIStop = { fg = theme.diag.error },
+		DapUIPlayPause = { fg = theme.syn.string },
+		DapUIRestart = { fg = theme.syn.string },
+		DapUIUnavailable = { fg = theme.syn.comment },
 
 		-- Floaterm
 		FloatermBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },

@@ -90,12 +90,16 @@ function M.setup(colors, opts)
 		-- mkdLink = {},
 
 		-- markdownHeadingDelimiter = {},
+		-- markdownLinkText = {},
 		markdownCode = { fg = theme.syn.string },
 		markdownCodeBlock = { fg = theme.syn.string },
 		markdownEscape = { fg = "NONE" },
-		-- markdownH1 = {},
-		-- markdownH2 = {},
-		-- markdownLinkText = {},
+		markdownH1 = { fg = theme.rainbow.rainbow1 },
+		markdownH2 = { fg = theme.rainbow.rainbow2 },
+		markdownH3 = { fg = theme.rainbow.rainbow3 },
+		markdownH4 = { fg = theme.rainbow.rainbow4 },
+		markdownH5 = { fg = theme.rainbow.rainbow5 },
+		markdownH6 = { fg = theme.rainbow.rainbow6 },
 	}
 end
 

@@ -86,6 +86,15 @@
 ---@field bg_sbar ColorSpec
 ---@field bg_thumb ColorSpec
 
+---@class RainbowColors
+---@field rainbow1 ColorSpec
+---@field rainbow2 ColorSpec
+---@field rainbow3 ColorSpec
+---@field rainbow4 ColorSpec
+---@field rainbow5 ColorSpec
+---@field rainbow6 ColorSpec
+---@field rainbow7 ColorSpec
+
 ---@class ThemeColors
 ---@field syn SyntaxElements
 ---@field diag DiagnosticsElements
@@ -93,6 +102,7 @@
 ---@field diff DiffElements
 ---@field ui UiElements
 ---@field modes ModeElements
+---@field rainbow RainbowColors
 ---@field term ColorSpec[]
 
 ---@param palette PaletteColors
@@ -148,6 +158,15 @@ return function(palette)
 				fg_border = palette.sumiInk6,
 				bg_border = "none",
 			},
+		},
+		rainbow = {
+			rainbow1 = palette.dragonRed,
+			rainbow2 = palette.dragonYellow,
+			rainbow3 = palette.dragonBlue,
+			rainbow4 = palette.dragonOrange2,
+			rainbow5 = palette.dragonGreen,
+			rainbow6 = palette.dragonAsh,
+			rainbow7 = palette.dragonTeal,
 		},
 		syn = {
 			string = palette.dragonGreen2,

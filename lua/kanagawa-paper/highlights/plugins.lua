@@ -216,21 +216,21 @@ function M.setup(colors, opts)
 		TroublePos = { fg = theme.ui.special },
 
 		-- Headlines
-		Headline1 = { bg = palette.waveBlue1, fg = theme.ui.fg, bold = true },
-		Headline2 = { bg = palette.winterRed, fg = theme.ui.fg, bold = true },
-		Headline3 = { bg = palette.winterYellow, fg = theme.ui.fg, bold = true },
-		Headline4 = { bg = palette.winterGreen, fg = theme.ui.fg, bold = true },
-		Headline5 = { bg = palette.dragonRed, fg = theme.ui.fg, bold = true },
-		Headline6 = { bg = palette.dragonGray, fg = theme.ui.fg, bold = true },
+		Headline1 = { bg = theme.rainbow.rainbow1, fg = theme.ui.fg, bold = true },
+		Headline2 = { bg = theme.rainbow.rainbow2, fg = theme.ui.fg, bold = true },
+		Headline3 = { bg = theme.rainbow.rainbow3, fg = theme.ui.fg, bold = true },
+		Headline4 = { bg = theme.rainbow.rainbow4, fg = theme.ui.fg, bold = true },
+		Headline5 = { bg = theme.rainbow.rainbow5, fg = theme.ui.fg, bold = true },
+		Headline6 = { bg = theme.rainbow.rainbow6, fg = theme.ui.fg, bold = true },
 
 		-- Raindow delimiters
-		RainbowDelimiterRed = { fg = palette.dragonRed },
-		RainbowDelimiterYellow = { fg = palette.dragonYellow },
-		RainbowDelimiterBlue = { fg = palette.dragonBlue },
-		RainbowDelimiterOrange = { fg = palette.dragonOrange2 },
-		RainbowDelimiterGreen = { fg = palette.dragonGreen },
-		RainbowDelimiterViolet = { fg = palette.dragonAsh },
-		RainbowDelimiterCyan = { fg = palette.dragonTeal },
+		RainbowDelimiterRed = { fg = theme.rainbow.rainbow1 },
+		RainbowDelimiterYellow = { fg = theme.rainbow.rainbow2 },
+		RainbowDelimiterBlue = { fg = theme.rainbow.rainbow3 },
+		RainbowDelimiterOrange = { fg = theme.rainbow.rainbow4 },
+		RainbowDelimiterGreen = { fg = theme.rainbow.rainbow5 },
+		RainbowDelimiterViolet = { fg = theme.rainbow.rainbow6 },
+		RainbowDelimiterCyan = { fg = theme.rainbow.rainbow7 },
 
 		-- Bufferline
 		BufferlineFill = { bg = theme.ui.bg_tabline },

@@ -28,6 +28,17 @@ function M.setup(colors, opts)
 		NeogitDiffAddHighlight = { bg = theme.diff.add },
 		NeogitDiffDeleteHighlight = { bg = theme.diff.delete },
 
+		-- Octo
+		OctoDetailsLabel = { fg = theme.syn.statement, bold = true },
+		OctoDetailsValue = { link = "@variable.member" },
+		OctoDirty = { fg = theme.syn.parameter, bold = true },
+		OctoIssueTitle = { fg = theme.syn.fun, bold = true },
+		OctoStateChangesRequested = { link = "DiagnosticVirtualTextWarn" },
+		OctoStateClosed = { link = "DiagnosticVirtualTextError" },
+		OctoStateOpen = { link = "DiagnosticVirtualTextHint" },
+		OctoStatePending = { link = "DiagnosticVirtualTextWarn" },
+		OctoStatusColumn = { fg = theme.syn.number },
+
 		-- TreeSitter Extensions
 		TreesitterContext = { link = "Folded" },
 		TreesitterContextLineNumber = { fg = theme.ui.special, bg = theme.ui.bg_gutter },

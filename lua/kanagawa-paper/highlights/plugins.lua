@@ -13,6 +13,14 @@ function M.setup(colors, opts)
 		GitSignsChange = { fg = theme.vcs.changed, bg = theme.ui.bg_gutter },
 		GitSignsDelete = { fg = theme.vcs.removed, bg = theme.ui.bg_gutter },
 
+		-- Gitgutter
+		GitGutterAdd = { link = "GitSignsAdd" },
+		GitGutterChange = { link = "GitSignsChange" },
+		GitGutterDelete = { link = "GitSignsDelete" },
+		GitGutterAddLineNr = { link = "GitSignsAdd" },
+		GitGutterChangeLineNr = { link = "GitSignsChange" },
+		GitGutterDeleteLineNr = { link = "GitSignsDelete" },
+
 		-- Neogit
 		NeogitDiffContextHighlight = { bg = theme.diff.change },
 		NeogitHunkHeader = { fg = theme.syn.fun },

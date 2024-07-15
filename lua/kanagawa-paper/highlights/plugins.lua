@@ -60,7 +60,7 @@ function M.setup(colors, opts)
 		NvimTreeOpenedFile = { fg = theme.syn.special1, italic = true },
 		NvimTreeOpenedFolderName = { fg = palette.dragonBlue },
 		NvimTreeWinSeparator = { link = "WinSeparator" },
-		NvimTreeWindowPicker = { bg = theme.ui.bg_m1, fg = theme.syn.special1, bold = true },
+		NvimTreeWindowPicker = { bg = theme.ui.bg_m1, fg = theme.ui.picker, bold = true },
 
 		-- NeoTree
 		NeoTreeNormal = { link = "NormalFloat" },
@@ -86,11 +86,11 @@ function M.setup(colors, opts)
 		NeoTreeSymbolicLinkTarget = { link = "Type" },
 
 		-- WindowPicker
-		NvimWindowSwitch = { bg = theme.ui.bg_m3, fg = theme.diag.warning },
+		NvimWindowSwitch = { bg = theme.ui.bg_m3, fg = theme.ui.picker },
 		NvimWindowSwitchNC = { link = "NvimWindowSwitch" },
 
 		-- Dashboard
-		DashboardShortCut = { fg = theme.syn.special1 },
+		DashboardShortCut = { fg = theme.ui.picker },
 		DashboardHeader = { fg = theme.vcs.removed },
 		DashboardCenter = { fg = theme.syn.identifier },
 		DashboardFooter = { fg = theme.syn.comment },
@@ -273,7 +273,7 @@ function M.setup(colors, opts)
 		BufferInactiveBtn = { bg = theme.ui.bg_tabline, fg = theme.ui.fg_dim },
 		BufferInactiveMod = { link = "BufferInactive" },
 		BufferInactiveModBtn = { bg = theme.ui.bg_tabline, fg = theme.vcs.changed },
-		BufferInactiveTarget = { bg = theme.ui.bg_tabline, fg = palette.dragonRed, bold = true },
+		BufferInactiveTarget = { bg = theme.ui.bg_tabline, fg = theme.ui.picker, bold = true },
 		BufferInactiveIndex = { bg = theme.ui.bg_tabline, fg = theme.ui.fg_dim, bold = true },
 		BufferInactiveNumber = { bg = theme.ui.bg_tabline, fg = theme.ui.fg_dim, bold = true },
 		BufferCurrent = { link = "BufferlineBufferSelected" },
@@ -281,7 +281,7 @@ function M.setup(colors, opts)
 		BufferCurrentSign = { bg = palette.dragonBlue, fg = palette.dragonBlue },
 		BufferCurrentMod = { link = "BufferCurrent" },
 		BufferCurrentModBtn = { link = "BufferlineModifiedSelected" },
-		BufferCurrentTarget = { bg = theme.ui.bg, fg = palette.dragonRed, bold = true },
+		BufferCurrentTarget = { bg = theme.ui.bg, fg = theme.ui.picker, bold = true },
 		BufferCurrentIndex = { bg = theme.ui.bg, fg = palette.dragonWhite, bold = true },
 		BufferCurrentNumber = { bg = theme.ui.bg, fg = palette.dragonWhite, bold = true },
 		BufferAlternate = { bg = theme.ui.bg_tabline, fg = palette.dragonPink },
@@ -289,7 +289,7 @@ function M.setup(colors, opts)
 		BufferAlternateBtn = { link = "BufferAlternate" },
 		BufferAlternateMod = { link = "BufferAlternate" },
 		BufferAlternateModBtn = { bg = theme.ui.bg_tabline, fg = theme.vcs.changed },
-		BufferAlternateTarget = { bg = theme.ui.bg_tabline, fg = palette.dragonRed, bold = true },
+		BufferAlternateTarget = { bg = theme.ui.bg_tabline, fg = theme.ui.picker, bold = true },
 		BufferAlternateIndex = { bg = theme.ui.bg_tabline, fg = palette.dragonPink, bold = true },
 		BufferAlternateNumber = { bg = theme.ui.bg_tabline, fg = palette.dragonPink, bold = true },
 		BufferTabpages = { bg = theme.ui.bg_tabline, fg = palette.dragonWhite },
@@ -360,10 +360,10 @@ function M.setup(colors, opts)
 		SatelliteMark = { fg = palette.waveAqua2 },
 
 		-- Whichkey
-		WhichKey = { fg = theme.syn.operator },
+		WhichKey = { fg = theme.ui.picker },
 		WhichKeyBorder = { bg = theme.ui.float.bg, fg = theme.ui.float.fg_border },
 		WhichKeyIcon = { link = "Label" },
-		WhichKeyTitle = { bg = theme.syn.operator, fg = theme.ui.fg_dark, bold = true },
+		WhichKeyTitle = { bg = theme.ui.picker, fg = theme.ui.fg_dark, bold = true },
 
 		-- Yanky
 		YankyYanked = { bg = theme.modes.visual, fg = theme.ui.fg_dark },
@@ -384,7 +384,7 @@ function M.setup(colors, opts)
 		MiniClueBorder = { link = "FloatBorder" },
 		MiniClueDescGroup = { link = "DiagnosticFloatingWarn" },
 		MiniClueDescSingle = { link = "NormalFloat" },
-		MiniClueNextKey = { link = "DiagnosticFloatingHint" },
+		MiniClueNextKey = { link = "WhichKey" },
 		MiniClueNextKeyWithPostkeys = { link = "DiagnosticFloatingError" },
 		MiniClueSeparator = { link = "DiagnosticFloatingInfo" },
 		MiniClueTitle = { link = "FloatTitle" },

@@ -67,7 +67,8 @@
 ---@field nontext ColorSpec LineNr, NonText
 ---@field whitespace ColorSpec Whitespace
 ---@field win_separator ColorSpec
----@field indent ColorSpec
+---@field indent ColorSpec Indent line character
+---@field picker ColorSpec Color of picker letters e.g. bufferline pick buffer
 ---@field pmenu MenuElements
 ---@field float FloatElements
 
@@ -132,6 +133,7 @@ return function(palette)
 
 			win_separator = palette.dragonViolet,
 			indent = palette.sumiInk4,
+			picker = palette.dragonRed,
 			pmenu = {
 				fg = palette.fujiWhite,
 				fg_sel = "none", -- This is important to make highlights pass-through

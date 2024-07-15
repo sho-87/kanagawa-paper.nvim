@@ -44,7 +44,7 @@ function M.setup(colors, opts)
 		TelescopePreviewBorder = { bg = theme.ui.bg, fg = theme.ui.bg_p2 },
 
 		-- NvimTree
-		-- NvimTreeIndentMarker           = {},
+		NvimTreeIndentMarker = { fg = theme.ui.indent },
 		NvimTreeNormal = { link = "Normal" },
 		NvimTreeNormalNC = { link = "NvimTreeNormal" },
 		NvimTreeGitDirty = { fg = theme.vcs.changed },
@@ -212,7 +212,7 @@ function M.setup(colors, opts)
 		LazyProgressTodo = { fg = theme.ui.nontext },
 
 		-- Trouble
-		TroubleIndent = { fg = theme.ui.whitespace },
+		TroubleIndent = { fg = theme.ui.indent },
 		TroublePos = { fg = theme.ui.special },
 
 		-- Headlines

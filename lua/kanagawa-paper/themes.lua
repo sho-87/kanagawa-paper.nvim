@@ -142,7 +142,7 @@ return function(palette)
 			whitespace = palette.sumiInk6,
 
 			win_separator = palette.dragonViolet,
-			indent = palette.sumiInk4,
+			indent = palette.sumiInk5,
 			picker = palette.dragonRed,
 			pmenu = {
 				fg = palette.fujiWhite,

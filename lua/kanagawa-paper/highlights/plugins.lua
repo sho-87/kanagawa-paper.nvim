@@ -4,6 +4,8 @@ local M = {}
 ---@param opts? KanagawaConfig
 function M.setup(colors, opts)
 	opts = opts or require("kanagawa-paper.config").options
+
+	local color = require("kanagawa-paper.lib.color")
 	local theme = colors.theme
 	local palette = colors.palette
 
@@ -237,12 +239,12 @@ function M.setup(colors, opts)
 		TroublePos = { fg = theme.ui.special },
 
 		-- Headlines
-		Headline1 = { bg = theme.rainbow.rainbow1, fg = theme.ui.fg, bold = true },
-		Headline2 = { bg = theme.rainbow.rainbow2, fg = theme.ui.fg, bold = true },
-		Headline3 = { bg = theme.rainbow.rainbow3, fg = theme.ui.fg, bold = true },
-		Headline4 = { bg = theme.rainbow.rainbow4, fg = theme.ui.fg, bold = true },
-		Headline5 = { bg = theme.rainbow.rainbow5, fg = theme.ui.fg, bold = true },
-		Headline6 = { bg = theme.rainbow.rainbow6, fg = theme.ui.fg, bold = true },
+		Headline1 = { bg = tostring(color(theme.rainbow.rainbow1):brighten(-0.4)), fg = theme.ui.fg_dark, bold = true },
+		Headline2 = { bg = tostring(color(theme.rainbow.rainbow2):brighten(-0.4)), fg = theme.ui.fg_dark, bold = true },
+		Headline3 = { bg = tostring(color(theme.rainbow.rainbow3):brighten(-0.4)), fg = theme.ui.fg_dark, bold = true },
+		Headline4 = { bg = tostring(color(theme.rainbow.rainbow4):brighten(-0.4)), fg = theme.ui.fg_dark, bold = true },
+		Headline5 = { bg = tostring(color(theme.rainbow.rainbow5):brighten(-0.4)), fg = theme.ui.fg_dark, bold = true },
+		Headline6 = { bg = tostring(color(theme.rainbow.rainbow6):brighten(-0.4)), fg = theme.ui.fg_dark, bold = true },
 
 		-- Raindow delimiters
 		RainbowDelimiterRed = { fg = theme.rainbow.rainbow1 },

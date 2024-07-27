@@ -246,6 +246,21 @@ function M.setup(colors, opts)
 		Headline5 = { bg = tostring(color(theme.rainbow.rainbow5):brighten(-0.4)), fg = theme.ui.fg_dark, bold = true },
 		Headline6 = { bg = tostring(color(theme.rainbow.rainbow6):brighten(-0.4)), fg = theme.ui.fg_dark, bold = true },
 
+		-- markdown.nvim
+		RenderMarkdownH1Bg = { bg = theme.rainbow.rainbow1, fg = theme.ui.fg_dark, bold = true },
+		RenderMarkdownH2Bg = { bg = theme.rainbow.rainbow2, fg = theme.ui.fg_dark, bold = true },
+		RenderMarkdownH3Bg = { bg = theme.rainbow.rainbow3, fg = theme.ui.fg_dark, bold = true },
+		RenderMarkdownH4Bg = { bg = theme.rainbow.rainbow4, fg = theme.ui.fg_dark, bold = true },
+		RenderMarkdownH5Bg = { bg = theme.rainbow.rainbow5, fg = theme.ui.fg_dark, bold = true },
+		RenderMarkdownH6Bg = { bg = theme.rainbow.rainbow6, fg = theme.ui.fg_dark, bold = true },
+
+		RenderMarkdownH1 = { bg = theme.rainbow.rainbow1, fg = theme.ui.fg_dark, bold = true },
+		RenderMarkdownH2 = { bg = theme.rainbow.rainbow2, fg = theme.ui.fg_dark, bold = true },
+		RenderMarkdownH3 = { bg = theme.rainbow.rainbow3, fg = theme.ui.fg_dark, bold = true },
+		RenderMarkdownH4 = { bg = theme.rainbow.rainbow4, fg = theme.ui.fg_dark, bold = true },
+		RenderMarkdownH5 = { bg = theme.rainbow.rainbow5, fg = theme.ui.fg_dark, bold = true },
+		RenderMarkdownH6 = { bg = theme.rainbow.rainbow6, fg = theme.ui.fg_dark, bold = true },
+
 		-- Raindow delimiters
 		RainbowDelimiterRed = { fg = theme.rainbow.rainbow1 },
 		RainbowDelimiterYellow = { fg = theme.rainbow.rainbow2 },

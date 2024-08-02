@@ -152,13 +152,6 @@ function M.setup(colors, opts)
 		debugPC = { bg = theme.diff.delete },
 		debugBreakpoint = { fg = theme.syn.special1, bg = theme.ui.bg_gutter },
 
-		LspReferenceText = { bg = "None", fg = theme.ui.fg, bold = true },
-		LspReferenceRead = { link = "LspReferenceText" },
-		LspReferenceWrite = { bg = "None", fg = theme.ui.fg, bold = true, underline = true },
-		LspInlayHint = { fg = theme.syn.comment, bg = theme.ui.bg_dim, italic = false },
-		LspSignatureActiveParameter = { fg = theme.diag.warning },
-		LspCodeLens = { fg = theme.syn.comment },
-
 		DiagnosticError = { fg = theme.diag.error },
 		DiagnosticWarn = { fg = theme.diag.warning },
 		DiagnosticInfo = { fg = theme.diag.info },

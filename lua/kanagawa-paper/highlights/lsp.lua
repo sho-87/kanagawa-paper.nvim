@@ -5,6 +5,13 @@ function M.setup(colors, opts)
 	opts = opts or require("kanagawa-paper.config").options
 	local theme = colors.theme
 	return {
+		LspReferenceText = { bg = "None", fg = theme.ui.fg, bold = true },
+		LspReferenceRead = { link = "LspReferenceText" },
+		LspReferenceWrite = { bg = "None", fg = theme.ui.fg, bold = true, underline = true },
+		LspInlayHint = { link = "Comment" },
+		LspSignatureActiveParameter = { fg = theme.diag.warning },
+		LspCodeLens = { fg = theme.syn.comment, italic = false },
+
 		-- ["@lsp.type.class"] = { link = "Structure" },
 		-- ["@lsp.type.decorator"] = { link = "Function" },
 		-- ["@lsp.type.enum"] = { link = "Structure" },
@@ -23,14 +30,13 @@ function M.setup(colors, opts)
 		["@lsp.type.comment"] = { fg = "none" }, -- Comment
 
 		["@lsp.type.selfParameter"] = { link = "@variable.builtin" },
-		-- ["@lsp.type.builtinConstant"] = { link = "@constant.builtin" },
 		["@lsp.type.builtinConstant"] = { link = "@constant.builtin" },
 		["@lsp.type.magicFunction"] = { link = "@function.builtin" },
 
 		["@lsp.mod.readonly"] = { link = "@variable" },
 		["@lsp.mod.typeHint"] = { link = "Type" },
-		-- ["@lsp.mod.defaultLibrary"] = { link = "Special" },
-		-- ["@lsp.mod.builtin"] = { link = "Special" },
+		["@lsp.mod.defaultLibrary"] = { link = "Special" },
+		["@lsp.mod.builtin"] = { link = "Special" },
 
 		["@lsp.typemod.operator.controlFlow"] = { link = "@keyword.exception" },
 		["@lsp.typemod.keyword.documentation"] = { link = "Special" },

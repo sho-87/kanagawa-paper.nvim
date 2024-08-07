@@ -8,9 +8,9 @@ function M.setup(colors, opts)
 		LspReferenceText = { bg = "None", fg = theme.ui.fg, bold = true },
 		LspReferenceRead = { link = "LspReferenceText" },
 		LspReferenceWrite = { bg = "None", fg = theme.ui.fg, bold = true, underline = true },
-		LspInlayHint = { link = "Comment" },
+		LspInlayHint = { fg = theme.syn.comment, bg = "None", italic = true },
 		LspSignatureActiveParameter = { fg = theme.diag.warning },
-		LspCodeLens = { fg = theme.syn.comment, italic = false },
+		LspCodeLens = { fg = theme.syn.comment, bg = "None", italic = false },
 
 		-- ["@lsp.type.class"] = { link = "Structure" },
 		-- ["@lsp.type.decorator"] = { link = "Function" },

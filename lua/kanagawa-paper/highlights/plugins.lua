@@ -310,7 +310,7 @@ function M.setup(colors, opts)
 		BufferInactiveIndex = { bg = theme.ui.bg_tabline, fg = theme.ui.fg_dim, bold = true },
 		BufferInactiveNumber = { bg = theme.ui.bg_tabline, fg = theme.ui.fg_dim, bold = true },
 		BufferCurrent = { link = "BufferlineBufferSelected" },
-		BufferCurrentBtn = { link = "BufferLineCloseButtonSelected" },
+		BufferCurrentBtn = { bg = theme.ui.bg, fg = palette.dragonRed, bold = true },
 		BufferCurrentSign = { bg = palette.dragonBlue, fg = palette.dragonBlue },
 		BufferCurrentMod = { link = "BufferCurrent" },
 		BufferCurrentModBtn = { link = "BufferlineModifiedSelected" },
@@ -332,7 +332,7 @@ function M.setup(colors, opts)
 		BufferAlternateTarget = { bg = theme.ui.bg_tabline, fg = theme.ui.picker, bold = true },
 		BufferAlternateIndex = { bg = theme.ui.bg_tabline, fg = palette.dragonPink, bold = true },
 		BufferAlternateNumber = { bg = theme.ui.bg_tabline, fg = palette.dragonPink, bold = true },
-		BufferTabpages = { bg = theme.ui.bg_tabline, fg = palette.dragonWhite },
+		BufferTabpages = { bg = theme.ui.bg_tabline, fg = palette.dragonWhite, bold = true },
 		BufferTabpageFill = { link = "BufferlineFill" },
 		BufferTabpagesSep = { link = "BufferTabpages" },
 

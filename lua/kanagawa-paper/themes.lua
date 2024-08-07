@@ -197,10 +197,10 @@ return function(palette)
 			changed = palette.autumnYellow,
 		},
 		diff = {
-			add = palette.winterGreen,
-			delete = palette.winterRed,
-			change = palette.winterBlue,
-			text = palette.winterYellow,
+			add = palette.autumnGreen,
+			delete = palette.autumnRed,
+			change = palette.autumnYellow,
+			text = palette.dragonBlue,
 		},
 		diag = {
 			error = palette.samuraiRed,

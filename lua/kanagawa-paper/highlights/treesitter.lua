@@ -5,6 +5,7 @@ local M = {}
 function M.setup(colors, opts)
 	opts = opts or require("kanagawa-paper.config").options
 	local theme = colors.theme
+	local palette = colors.palette
 
 	return {
 		-- @variable                       various variable names
@@ -134,10 +135,9 @@ function M.setup(colors, opts)
 		-- @markup.environment     environments (e.g. in LaTeX)
 		["@markup.environment"] = { link = "Keyword" },
 		--
-		-- @markup.link            text references, footnotes, citations, etc.
-		-- @markup.link.label      link, reference descriptions
-		-- @markup.link.url        URL-style links
+		["@markup.link"] = { link = "@string.special.url" },
 		["@markup.link.url"] = { link = "@string.special.url" },
+		-- @markup.link.label      link, reference descriptions
 		-- @markup.raw             literal or verbatim text (e.g. inline code)
 		["@markup.raw"] = { link = "String" },
 		-- @markup.raw.block       literal or verbatim text as a stand-alone block

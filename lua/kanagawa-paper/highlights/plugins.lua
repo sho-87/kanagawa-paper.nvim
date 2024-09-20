@@ -40,6 +40,9 @@ function M.setup(colors, opts)
 		OctoStateOpen = { link = "DiagnosticVirtualTextHint" },
 		OctoStatePending = { link = "DiagnosticVirtualTextWarn" },
 		OctoStatusColumn = { fg = theme.syn.number },
+		OctoPullAdditions = { bg = theme.diff.addDark },
+		OctoPullDeletions = { bg = theme.diff.deleteDark },
+		OctoPullModifications = { bg = theme.diff.changeDark },
 
 		-- TreeSitter Extensions
 		TreesitterContext = { link = "Folded" },

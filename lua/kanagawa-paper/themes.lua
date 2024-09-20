@@ -33,11 +33,18 @@
 ---@field delete ColorSpec
 ---@field change ColorSpec
 ---@field text ColorSpec
+---@field addDark ColorSpec
+---@field deleteDark ColorSpec
+---@field changeDark ColorSpec
+---@field textDark ColorSpec
 
 ---@class VCSElements
 ---@field added ColorSpec
 ---@field removed ColorSpec
 ---@field changed ColorSpec
+---@field addedDark ColorSpec
+---@field removedDark ColorSpec
+---@field changedDark ColorSpec
 
 ---@class ModeElements
 ---@field normal ColorSpec
@@ -193,14 +200,21 @@ return function(palette)
 		},
 		vcs = {
 			added = palette.autumnGreen,
+			addedDark = palette.winterGreen,
 			removed = palette.autumnRed,
+			removedDark = palette.winterRed,
 			changed = palette.autumnYellow,
+			changedDark = palette.winterYellow,
 		},
 		diff = {
 			add = palette.autumnGreen,
+			addDark = palette.winterGreen,
 			delete = palette.autumnRed,
+			deleteDark = palette.winterRed,
 			change = palette.autumnYellow,
+			changeDark = palette.winterYellow,
 			text = palette.dragonBlue,
+			textDark = palette.winterBlue,
 		},
 		diag = {
 			error = palette.samuraiRed,

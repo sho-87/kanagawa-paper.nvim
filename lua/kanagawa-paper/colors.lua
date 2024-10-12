@@ -84,6 +84,7 @@ local palette = {
 	dragonYellow = "#c4b28a", --"#a99c8b",
 	-- "#8a9aa3",
 
+	lotusInk0 = "#3d3d5e",
 	lotusInk1 = "#545464",
 	lotusInk2 = "#43436c",
 	lotusGray = "#dcd7ba",

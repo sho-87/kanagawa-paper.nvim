@@ -68,6 +68,7 @@
 ---@field bg_p2 ColorSpec Lighter background Cursor{Line,Column}, TabLineSel (Selected Items)
 ---@field bg_gutter ColorSpec {Sign,Fold}Column, LineNr
 ---@field bg_search ColorSpec
+---@field bg_cursorline ColorSpec
 ---@field bg_visual ColorSpec
 ---@field bg_tabline ColorSpec
 ---@field special ColorSpec SpecialKey
@@ -141,7 +142,8 @@ return function(palette)
 			bg_dim = palette.sumiInk1,
 			bg_gutter = gutter_bg,
 			bg_search = palette.springViolet1,
-			bg_visual = palette.sumiInk5,
+			bg_cursorline = palette.sumiInk5,
+			bg_visual = palette.lotusInk0,
 			bg_tabline = palette.sumiInk0,
 
 			special = palette.springViolet1,

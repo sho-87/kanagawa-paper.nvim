@@ -209,6 +209,7 @@ end,
 - [vscode](https://github.com/sho-87/kanagawa-paper.vscode) (official port)
 - [vscode terminal](extras/vscode_terminal.json) (guide: [Visual Studio Code Theme Color](https://code.visualstudio.com/api/references/theme-color))
 - [wezterm](extras/wezterm.lua) (guide: [Defining a Color Scheme in a separate file](https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file))
+- [wezterm tabline](extras/wezterm_tabline.lua) (guide: [tabline.wez](https://github.com/michaelbrusegard/tabline.wez))
 - [windows terminal](extras/windows_terminal.json) (guide: [Color schemes in Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes))
 
 PRs are welcome if you want to add an extra for a specific application.

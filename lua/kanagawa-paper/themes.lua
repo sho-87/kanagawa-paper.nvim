@@ -213,7 +213,7 @@ return function(palette)
 			addDark = palette.winterGreen,
 			delete = palette.autumnRed,
 			deleteDark = palette.winterRed,
-			change = palette.autumnYellow,
+			change = palette.dragonYellow,
 			changeDark = palette.winterYellow,
 			text = palette.dragonBlue,
 			textDark = palette.winterBlue,

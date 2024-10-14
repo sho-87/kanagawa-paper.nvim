@@ -33,7 +33,7 @@ function M.setup(colors, opts)
 		-- DiffDelete	Diff mode: Deleted line. |diff.txt|
 		DiffDelete = { fg = theme.vcs.removed, bg = theme.diff.deleteDark },
 		-- DiffText	Diff mode: Changed text within a changed line. |diff.txt|
-		DiffText = { bg = theme.diff.textDark, fg = theme.ui.fg, bold = true },
+		DiffText = { bg = theme.diff.changeDark, fg = theme.diff.change, bold = true },
 		-- EndOfBuffer	Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
 		EndOfBuffer = { fg = theme.ui.bg },
 		-- TermCursor	Cursor in a focused terminal.

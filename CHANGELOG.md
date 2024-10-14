@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/sho-87/kanagawa-paper.nvim/compare/v1.6.0...v1.6.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* **diff:** make changed diff text more readable ([a3a6320](https://github.com/sho-87/kanagawa-paper.nvim/commit/a3a6320997a022b3546f62335b6442853fc76191))
+
 ## [1.6.0](https://github.com/sho-87/kanagawa-paper.nvim/compare/v1.5.0...v1.6.0) (2024-10-12)
 
 

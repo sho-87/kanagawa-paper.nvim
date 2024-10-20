@@ -5,9 +5,9 @@
 ansi = [
   "#0d0c0c",
   "#c4746e",
-  "#8a9a7b",
+  "#b3c6a0",
   "#c4b28a",
-  "#8ba4b0",
+  "#315567",
   "#a292a3",
   "#8ea4a2",
   "#C8C093",
@@ -27,13 +27,13 @@ foreground = '#DCD7BA'
 cursor_bg = '#c8c093'
 cursor_fg = '#1f1f28'
 cursor_border = '#c8c093'
-selection_bg = '#658594'
-selection_fg = '#c8c093'
+selection_bg = '#938AA9'
+selection_fg = '#393836'
 scrollbar_thumb = '#393836'
 split = '#8992a7'
 
 [colors.indexed]
-16 = '#b6927b'
+16 = '#393836'
 17 = '#ff5d62'
 
 [metadata]

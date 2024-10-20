@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.1](https://github.com/sho-87/kanagawa-paper.nvim/compare/v1.6.0...v1.6.1) (2024-10-20)
+
+
+### Bug Fixes
+
+* **diff:** make changed diff text more readable ([a3a6320](https://github.com/sho-87/kanagawa-paper.nvim/commit/a3a6320997a022b3546f62335b6442853fc76191))
+* **extras:** make wezterm highlights more readable ([ca32d10](https://github.com/sho-87/kanagawa-paper.nvim/commit/ca32d10d59d73f5fee728b9e03bb88e966e5ca18))
+
 ## [1.6.0](https://github.com/sho-87/kanagawa-paper.nvim/compare/v1.5.0...v1.6.0) (2024-10-12)
 
 

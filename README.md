@@ -155,6 +155,8 @@ local theme_colors = colors.theme
 
 This will make floating windows look nicer with default borders.
 
+For this to work, make sure you've set winblend to a non-zero value in your config: `vim.opt.winblend = 30`
+
 ```lua
 overrides = function(colors)
     local theme = colors.theme

@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*     For NVIM v0.8.0     Last change: 2024 October 12
+*kanagawa-paper.nvim.txt*     For NVIM v0.8.0     Last change: 2024 October 24
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
@@ -193,6 +193,9 @@ COMMON CUSTOMIZATIONS ~
 TRANSPARENT FLOATING WINDOWS
 
 This will make floating windows look nicer with default borders.
+
+For this to work, make sure you’ve set winblend to a non-zero value in your
+config: `vim.opt.winblend = 30`
 
 >lua
     overrides = function(colors)

@@ -24,11 +24,9 @@ function M.setup(colors, opts)
 		GitGutterDeleteLineNr = { link = "GitSignsDelete" },
 
 		-- Neogit
-		NeogitDiffContextHighlight = { bg = theme.diff.change },
-		NeogitHunkHeader = { fg = theme.syn.fun },
-		NeogitHunkHeaderHighlight = { fg = theme.syn.constant, bg = theme.diff.change },
-		NeogitDiffAddHighlight = { bg = theme.diff.add },
-		NeogitDiffDeleteHighlight = { bg = theme.diff.delete },
+		NeogitHunkHeader = { fg = theme.syn.constant },
+		NeogitHunkHeaderCursor = { fg = theme.syn.fun, bg = theme.ui.bg_cursorline, bold = true },
+		NeogitHunkHeaderHighlight = { fg = theme.syn.fun, bold = true },
 
 		-- Octo
 		OctoDetailsLabel = { fg = theme.syn.statement, bold = true },

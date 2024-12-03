@@ -208,6 +208,7 @@ end,
 - [fish](extras/kanagawa_paper.fish)
 - [kitty](extras/kitty_kanagawa_paper.conf)
 - [pywal](extras/pywal-theme.json)
+- [fzf](extras/fzf.rc) (guide: [fzf color schemes](https://github.com/junegunn/fzf/wiki/Color-schemes))
 - [vscode](https://github.com/sho-87/kanagawa-paper.vscode) (official port)
 - [vscode terminal](extras/vscode_terminal.json) (guide: [Visual Studio Code Theme Color](https://code.visualstudio.com/api/references/theme-color))
 - [wezterm](extras/wezterm.lua) (guide: [Defining a Color Scheme in a separate file](https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file))

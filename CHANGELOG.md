@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.7.0](https://github.com/sho-87/kanagawa-paper.nvim/compare/v1.6.0...v1.7.0) (2024-12-03)
+
+
+### Features
+
+* **fzf:** add color scheme for fzf ([c510f4c](https://github.com/sho-87/kanagawa-paper.nvim/commit/c510f4c6461f00753ff0c03e68e368eb6ba217e1)), closes [#17](https://github.com/sho-87/kanagawa-paper.nvim/issues/17)
+
+
+### Bug Fixes
+
+* **diff:** make changed diff text more readable ([a3a6320](https://github.com/sho-87/kanagawa-paper.nvim/commit/a3a6320997a022b3546f62335b6442853fc76191))
+* **extras:** make wezterm highlights more readable ([ca32d10](https://github.com/sho-87/kanagawa-paper.nvim/commit/ca32d10d59d73f5fee728b9e03bb88e966e5ca18))
+* **neogit:** use default neogit colors for diffs ([2856b25](https://github.com/sho-87/kanagawa-paper.nvim/commit/2856b250977c3c7a30f10019a82328f660a7f730)), closes [#18](https://github.com/sho-87/kanagawa-paper.nvim/issues/18)
+
 ## [1.6.0](https://github.com/sho-87/kanagawa-paper.nvim/compare/v1.5.0...v1.6.0) (2024-10-12)
 
 

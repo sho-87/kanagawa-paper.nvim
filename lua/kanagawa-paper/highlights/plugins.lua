@@ -624,6 +624,11 @@ function M.setup(colors, opts)
 		OverseerCANCELED = { fg = theme.diag.warning },
 		OverseerFAILURE = { fg = theme.diag.error },
 		OverseerTaskBorder = { fg = theme.ui.win_separator },
+
+		-- Snacks
+		SnacksIndent = { fg = theme.ui.indent },
+		SnacksIndentScope = { fg = theme.ui.indent_scope },
+		SnacksIndentChunk = { fg = theme.ui.indent_scope },
 	}
 end
 

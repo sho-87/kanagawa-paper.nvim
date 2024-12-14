@@ -76,6 +76,7 @@
 ---@field whitespace ColorSpec Whitespace
 ---@field win_separator ColorSpec
 ---@field indent ColorSpec Indent line character
+---@field indent_scope ColorSpec Indent scope character
 ---@field picker ColorSpec Color of picker letters e.g. bufferline pick buffer
 ---@field pmenu MenuElements
 ---@field float FloatElements
@@ -152,6 +153,7 @@ return function(palette)
 
 			win_separator = palette.dragonViolet,
 			indent = palette.sumiInk5,
+			indent_scope = palette.dragonViolet,
 			picker = palette.dragonRed,
 			pmenu = {
 				fg = palette.fujiWhite,

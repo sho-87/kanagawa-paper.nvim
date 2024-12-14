@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/sho-87/kanagawa-paper.nvim/compare/v1.7.0...v1.7.1) (2024-12-14)
+
+
+### Bug Fixes
+
+* **snacks:** set color for indents ([74f9110](https://github.com/sho-87/kanagawa-paper.nvim/commit/74f911042c9901d8556fa7a5093912126cb3db2a))
+
 ## [1.7.0](https://github.com/sho-87/kanagawa-paper.nvim/compare/v1.6.0...v1.7.0) (2024-12-03)
 
 

@@ -146,12 +146,6 @@ function M.setup(colors, opts)
 		-- WinBarNC	Window bar of not-current windows.
 		WinBarNC = { fg = theme.ui.fg_dim, bg = opts.dimInactive and theme.ui.bg_dim or "NONE" },
 
-		-- SignColumnSB = { link = "SignColumn" },
-		-- NormalSB = { link = "Normal" },
-
-		debugPC = { bg = theme.diff.delete },
-		debugBreakpoint = { fg = theme.syn.special1, bg = theme.ui.bg_gutter },
-
 		DiagnosticError = { fg = theme.diag.error },
 		DiagnosticWarn = { fg = theme.diag.warning },
 		DiagnosticInfo = { fg = theme.diag.info },

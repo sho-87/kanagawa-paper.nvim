@@ -30,9 +30,9 @@ kanagawa_paper.replace = {
 }
 
 kanagawa_paper.inactive = {
-	a = { bg = theme.ui.bg_m3, fg = theme.ui.fg_gray },
-	b = { bg = theme.ui.bg_m3, fg = theme.ui.fg_gray, gui = "bold" },
-	c = { bg = theme.ui.bg_m3, fg = theme.ui.fg_gray },
+	a = { bg = theme.ui.bg_m4, fg = theme.ui.fg_gray },
+	b = { bg = theme.ui.bg_m4, fg = theme.ui.fg_gray, gui = "bold" },
+	c = { bg = theme.ui.bg_m4, fg = theme.ui.fg_gray },
 }
 
 if vim.g.kanagawa_paper_lualine_bold then

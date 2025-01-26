@@ -60,6 +60,7 @@
 ---@field fg_dark ColorSpec Dark foreground text
 ---@field fg_reverse ColorSpec
 ---@field bg_dim ColorSpec Dimmed background
+---@field bg_m4 ColorSpec Darkest background
 ---@field bg_m3 ColorSpec Darker background
 ---@field bg_m2 ColorSpec
 ---@field bg_m1 ColorSpec Darkest background
@@ -134,6 +135,7 @@ return function(palette)
 			fg_dim = palette.dragonBlack5,
 			fg_reverse = palette.waveBlue1,
 
+			bg_m4 = palette.sumiInkn1,
 			bg_m3 = palette.sumiInk0,
 			bg_m2 = palette.sumiInk1,
 			bg_m1 = palette.sumiInk2,

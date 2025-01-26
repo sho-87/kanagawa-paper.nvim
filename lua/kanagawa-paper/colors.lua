@@ -1,6 +1,7 @@
 ---@class PaletteColors
 local palette = {
 	-- Bg Shades
+	sumiInkn1 = "#0f0f15",
 	sumiInk0 = "#16161D",
 	sumiInk1 = "#181820",
 	sumiInk2 = "#1a1a22",

@@ -2,7 +2,7 @@
 
 Remixed Kanagawa colourscheme with muted colors. For Neovim.
 
-![screenshot](https://github.com/sho-87/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924)
+![screenshot](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924)
 
 ## 💡 Motivation
 
@@ -10,7 +10,7 @@ I love the original [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) co
 
 kanagawa-paper combines both the dragon and wave themes, with a few additions and tweaks to work better with certain plugins.
 
-I have also ported the colourscheme to VSCode, which you can find here: [kanagawa-paper.vscode](https://github.com/sho-87/kanagawa-paper.vscode)
+I have also ported the colourscheme to VSCode, which you can find here: [kanagawa-paper.vscode](https://github.com/thesimonho/kanagawa-paper.vscode)
 
 ## ⚡️ Requirements
 
@@ -23,7 +23,7 @@ Install the theme with your preferred package manager, such as [lazy.nvim](https
 
 ```lua
 {
-  "sho-87/kanagawa-paper.nvim",
+  "thesimonho/kanagawa-paper.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
@@ -138,7 +138,7 @@ require('kanagawa-paper').setup({
 })
 ```
 
-You can find a more detailed explanation of color customization [here](https://github.com/sho-87/kanagawa-paper.nvim/issues/3#issuecomment-2183665367).
+You can find a more detailed explanation of color customization [here](https://github.com/thesimonho/kanagawa-paper.nvim/issues/3#issuecomment-2183665367).
 
 ### Extracting colors
 
@@ -209,7 +209,7 @@ end,
 - [kitty](extras/kitty_kanagawa_paper.conf)
 - [pywal](extras/pywal-theme.json)
 - [fzf](extras/fzf.rc) (guide: [fzf color schemes](https://github.com/junegunn/fzf/wiki/Color-schemes))
-- [vscode](https://github.com/sho-87/kanagawa-paper.vscode) (official port)
+- [vscode](https://github.com/thesimonho/kanagawa-paper.vscode) (official port)
 - [vscode terminal](extras/vscode_terminal.json) (guide: [Visual Studio Code Theme Color](https://code.visualstudio.com/api/references/theme-color))
 - [wezterm](extras/wezterm.lua) (guide: [Defining a Color Scheme in a separate file](https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file))
 - [wezterm tabline](extras/wezterm_tabline.lua) (guide: [tabline.wez](https://github.com/michaelbrusegard/tabline.wez))

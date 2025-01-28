@@ -261,6 +261,7 @@ function M.setup(colors, opts)
 		-- Trouble
 		TroubleIndent = { fg = theme.ui.indent },
 		TroublePos = { fg = theme.ui.special },
+		TroubleCount = { fg = theme.syn.special2 },
 
 		-- Headlines
 		Headline1 = { bg = tostring(color(theme.rainbow.rainbow1):brighten(-0.4)), fg = theme.ui.fg_dark, bold = true },

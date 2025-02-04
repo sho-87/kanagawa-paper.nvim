@@ -37,7 +37,7 @@ function M.setup(colors, opts)
 		["@string.special.symbol"] = { fg = theme.syn.identifier },
 		-- @string.special.path    filenames
 		-- @string.special.url (Underlined)     URIs (e.g. hyperlinks)
-		["@string.special.url"] = { fg = theme.syn.special1, underline = true },
+		["@string.special.url"] = { fg = theme.syn.special1, sp = theme.syn.special1, underline = true },
 		-- @character              character literals
 		-- @character.special      special characters (e.g. wildcards)
 		--

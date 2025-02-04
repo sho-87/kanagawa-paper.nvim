@@ -186,7 +186,7 @@ function M.setup(colors, opts)
 		CmpCompletion = { link = "Pmenu" },
 		CmpCompletionSel = { fg = "NONE", bg = theme.ui.pmenu.bg_sel },
 		CmpCompletionBorder = { fg = theme.ui.bg_search, bg = theme.ui.pmenu.bg },
-		CmpCompletionThumb = { bg = palette.fujiGray },
+		CmpCompletionThumb = { bg = theme.ui.scrollbar },
 		CmpCompletionSbar = { bg = palette.fujiWhite },
 		CmpDocumentation = { link = "NormalFloat" },
 		CmpDocumentationBorder = { link = "FloatBorder" },
@@ -444,7 +444,7 @@ function M.setup(colors, opts)
 		AerialTypeParameterIcon = { link = "Type" },
 
 		-- Satellite
-		SatelliteBar = { bg = palette.fujiGray },
+		SatelliteBar = { bg = theme.ui.scrollbar },
 		SatelliteCursor = { fg = palette.fujiWhite },
 		SatelliteMark = { fg = palette.waveAqua2 },
 

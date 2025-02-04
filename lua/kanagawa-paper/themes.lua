@@ -79,6 +79,7 @@
 ---@field indent ColorSpec Indent line character
 ---@field indent_scope ColorSpec Indent scope character
 ---@field picker ColorSpec Color of picker letters e.g. bufferline pick buffer
+---@field scrollbar ColorSpec Color of scrollbar
 ---@field pmenu MenuElements
 ---@field float FloatElements
 
@@ -157,6 +158,7 @@ return function(palette)
 			indent = palette.sumiInk5,
 			indent_scope = palette.dragonViolet,
 			picker = palette.dragonRed,
+			scrollbar = palette.fujiGray,
 			pmenu = {
 				fg = palette.fujiWhite,
 				fg_sel = "none", -- This is important to make highlights pass-through

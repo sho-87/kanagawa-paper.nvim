@@ -72,6 +72,7 @@
 ---@field bg_cursorline ColorSpec
 ---@field bg_visual ColorSpec
 ---@field bg_tabline ColorSpec
+---@field bg_statusline ColorSpec
 ---@field special ColorSpec SpecialKey
 ---@field nontext ColorSpec LineNr, NonText
 ---@field whitespace ColorSpec Whitespace
@@ -149,6 +150,7 @@ return function(palette)
 			bg_cursorline = palette.sumiInk5,
 			bg_visual = palette.lotusInk0,
 			bg_tabline = palette.sumiInk0,
+			bg_statusline = palette.sumiInk4,
 
 			special = palette.springViolet1,
 			nontext = palette.sumiInk6,

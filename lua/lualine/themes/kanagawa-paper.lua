@@ -6,7 +6,7 @@ local kanagawa_paper = {}
 kanagawa_paper.normal = {
 	a = { bg = theme.modes.normal, fg = theme.ui.bg_m3 },
 	b = { bg = theme.ui.bg_p2, fg = theme.modes.normal },
-	c = { bg = theme.ui.bg_p1, fg = theme.ui.fg_gray },
+	c = { bg = theme.ui.bg_statusline, fg = theme.ui.fg_gray },
 }
 
 kanagawa_paper.insert = {

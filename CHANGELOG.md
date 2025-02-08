@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.8.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v1.7.0...v1.8.0) (2025-02-08)
+
+
+### Features
+
+* **blink:** add additional blink highlights ([a38356b](https://github.com/thesimonho/kanagawa-paper.nvim/commit/a38356b6520fadd710116352e9e98406c9e171c1))
+* **blink:** add highlights for blink completion ([79bdc98](https://github.com/thesimonho/kanagawa-paper.nvim/commit/79bdc98ffdadaf5a9536a6fa108d3fcb235228ed))
+* **extras:** add ghostty ([0aee289](https://github.com/thesimonho/kanagawa-paper.nvim/commit/0aee2893f0178fb7078b4c6e51fd780d64b046d4))
+* **lsp:** add additional lsp types ([ec651cb](https://github.com/thesimonho/kanagawa-paper.nvim/commit/ec651cb118a2e5671b1f148a9e432f09e7bda7c3))
+* **palette:** add darker sumiInk color ([dca5578](https://github.com/thesimonho/kanagawa-paper.nvim/commit/dca55783f2e4b847ba064370c61d877fd0a62cde))
+
+
+### Bug Fixes
+
+* **blink:** make source text more readable ([502cd71](https://github.com/thesimonho/kanagawa-paper.nvim/commit/502cd718eec01bb9fd6cbbd12bc6508f07ce1312))
+* **dap:** make breakpoints and UI buttons more readable ([bf4a8a9](https://github.com/thesimonho/kanagawa-paper.nvim/commit/bf4a8a986cbc8f5c193adb2ed0cd2970f672040f))
+* **lualine:** set the correct statusline color ([8da902e](https://github.com/thesimonho/kanagawa-paper.nvim/commit/8da902efd40818ec96d6881597efb60222a1c469))
+* **lualine:** use darker color for inactive statusline ([108f0f5](https://github.com/thesimonho/kanagawa-paper.nvim/commit/108f0f52539a8c068796f277d1219f3d89a80960))
+* **noice:** match cmdline search text to match color ([4abc704](https://github.com/thesimonho/kanagawa-paper.nvim/commit/4abc704f0f1ab68c8e10e5169ea7c4676b3adadf))
+* **snacks:** set color for indents ([74f9110](https://github.com/thesimonho/kanagawa-paper.nvim/commit/74f911042c9901d8556fa7a5093912126cb3db2a))
+* **treesitter:** set underline color ([63e61fd](https://github.com/thesimonho/kanagawa-paper.nvim/commit/63e61fdc784dc5a13e2301a60d354a0ce58a0096))
+* **treesitter:** use underline for urls ([728081f](https://github.com/thesimonho/kanagawa-paper.nvim/commit/728081fe096c645a937a7784e6cbf73ec1b97d83))
+* **trouble:** make trouble counts more readable ([21c86a4](https://github.com/thesimonho/kanagawa-paper.nvim/commit/21c86a44e7294526d4f65394c997b5c60280ea73))
+
 ## [1.7.0](https://github.com/sho-87/kanagawa-paper.nvim/compare/v1.6.0...v1.7.0) (2024-12-03)
 
 

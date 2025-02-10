@@ -165,13 +165,13 @@ return function(palette)
 			indent_scope = palette.dragonViolet,
 			picker = palette.dragonRed,
 			scrollbar = palette.fujiGray,
-      tabline = {
-        bg = palette.sumiInk0,
-        fg_selected = palette.sumiInk3,
-        bg_selected = palette.dragonYellow,
-        fg_inactive = palette.fujiGray,
-        bg_inactive = palette.sumiInk4,
-      },
+			tabline = {
+				bg = palette.sumiInk0,
+				fg_selected = palette.sumiInk3,
+				bg_selected = palette.dragonYellow,
+				fg_inactive = palette.fujiGray,
+				bg_inactive = palette.sumiInk4,
+			},
 			pmenu = {
 				fg = palette.fujiWhite,
 				fg_sel = "none", -- This is important to make highlights pass-through

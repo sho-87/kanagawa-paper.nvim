@@ -167,10 +167,10 @@ return function(palette)
 			scrollbar = palette.fujiGray,
 			tabline = {
 				bg = palette.sumiInk0,
-				fg_selected = palette.sumiInk3,
-				bg_selected = palette.dragonYellow,
-				fg_inactive = palette.fujiGray,
-				bg_inactive = palette.sumiInk4,
+				fg_selected = palette.dragonBlack5,
+				bg_selected = palette.sumiInk4,
+				fg_inactive = palette.springViolet1,
+				bg_inactive = palette.sumiInk0,
 			},
 			pmenu = {
 				fg = palette.fujiWhite,

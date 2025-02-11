@@ -355,7 +355,11 @@ function M.setup(colors, opts)
 		},
 		BufferlineNumbersSelected = { fg = palette.dragonBlue, bold = true },
 		BufferlineBuffer = { fg = theme.ui.tabline.fg_inactive, bg = theme.ui.tabline.bg_inactive, bold = false },
-		BufferlineBufferSelected = { fg = theme.ui.tabline.fg_selected, bg = theme.ui.tabline.bg_selected,  bold = true },
+		BufferlineBufferSelected = {
+			fg = theme.ui.tabline.fg_selected,
+			bg = theme.ui.tabline.bg_selected,
+			bold = true,
+		},
 		BufferlineIndicatorSelected = { fg = palette.dragonBlue },
 		BufferlineModified = {
 			bg = not opts.transparent and theme.ui.tabline.bg or "NONE",
@@ -638,7 +642,11 @@ function M.setup(colors, opts)
 		MiniTablineCurrent = { fg = theme.ui.tabline.fg_selected, bg = theme.ui.tabline.bg_selected, bold = true },
 		MiniTablineFill = { link = "TabLineFill" },
 		MiniTablineHidden = { fg = theme.ui.special, bg = theme.ui.tabline.bg },
-		MiniTablineModifiedCurrent = { fg = theme.ui.tabline.bg_selected, bg = theme.ui.tabline.fg_selected, bold = true },
+		MiniTablineModifiedCurrent = {
+			fg = theme.ui.tabline.bg_selected,
+			bg = theme.ui.tabline.fg_selected,
+			bold = true,
+		},
 		MiniTablineModifiedHidden = { fg = theme.ui.tabline.bg, bg = theme.ui.special },
 		MiniTablineModifiedVisible = { fg = theme.ui.tabline.bg, bg = theme.ui.special, bold = true },
 		MiniTablineTabpagesection = { fg = theme.ui.fg, bg = theme.ui.bg_search, bold = true },

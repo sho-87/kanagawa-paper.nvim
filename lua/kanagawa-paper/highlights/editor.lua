@@ -1,4 +1,3 @@
-
 local M = {}
 
 ---@param colors KanagawaColors

@@ -1,4 +1,3 @@
-
 ---@class SyntaxElements
 ---@field string ColorSpec
 ---@field variable ColorSpec

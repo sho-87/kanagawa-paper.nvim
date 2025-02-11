@@ -42,9 +42,11 @@ function M.setup(colors, opts)
 		OctoPullDeletions = { bg = theme.diff.deleteDark },
 		OctoPullModifications = { bg = theme.diff.changeDark },
 
-		-- TreeSitter Extensions
-		TreesitterContext = { link = "Folded" },
-		TreesitterContextLineNumber = { fg = theme.ui.special, bg = theme.ui.bg_gutter },
+		-- Treesitter Extensions
+		TreesitterContext = { bg = palette.sumiInk5 },
+		TreesitterContextBottom = { fg = "NONE", bg = palette.sumiInk5 },
+		TreesitterContextLineNumber = { fg = theme.ui.fg_gray, bg = palette.sumiInk5 },
+		TreesitterContextSeparator = { fg = theme.ui.win_separator },
 
 		-- Telescope
 		TelescopeTitle = { fg = palette.sumiInk0, bg = palette.dragonBlue, bold = true },

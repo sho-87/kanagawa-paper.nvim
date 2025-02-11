@@ -635,14 +635,14 @@ function M.setup(colors, opts)
 
 		MiniSurround = { link = "IncSearch" },
 
-		MiniTablineCurrent = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1, bold = true },
+		MiniTablineCurrent = { fg = theme.ui.tabline.fg_selected, bg = theme.ui.tabline.bg_selected, bold = true },
 		MiniTablineFill = { link = "TabLineFill" },
-		MiniTablineHidden = { fg = theme.ui.special, bg = theme.ui.bg_m3 },
-		MiniTablineModifiedCurrent = { fg = theme.ui.bg_p1, bg = theme.ui.fg_dim, bold = true },
-		MiniTablineModifiedHidden = { fg = theme.ui.bg_m3, bg = theme.ui.special },
-		MiniTablineModifiedVisible = { fg = theme.ui.bg_m3, bg = theme.ui.special, bold = true },
+		MiniTablineHidden = { fg = theme.ui.special, bg = theme.ui.tabline.bg },
+		MiniTablineModifiedCurrent = { fg = theme.ui.tabline.bg_selected, bg = theme.ui.tabline.fg_selected, bold = true },
+		MiniTablineModifiedHidden = { fg = theme.ui.tabline.bg, bg = theme.ui.special },
+		MiniTablineModifiedVisible = { fg = theme.ui.tabline.bg, bg = theme.ui.special, bold = true },
 		MiniTablineTabpagesection = { fg = theme.ui.fg, bg = theme.ui.bg_search, bold = true },
-		MiniTablineVisible = { fg = theme.ui.special, bg = theme.ui.bg_m3, bold = true },
+		MiniTablineVisible = { fg = theme.ui.special, bg = theme.ui.tabline.bg, bold = true },
 
 		MiniTestEmphasis = { bold = true },
 		MiniTestFail = { fg = theme.diag.error, bold = true },

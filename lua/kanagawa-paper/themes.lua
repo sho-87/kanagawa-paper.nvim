@@ -72,6 +72,8 @@
 ---@field bg_cursorline ColorSpec
 ---@field bg_visual ColorSpec
 ---@field bg_statusline ColorSpec
+---@field header1 ColorSpec
+---@field header2 ColorSpec
 ---@field special ColorSpec SpecialKey
 ---@field nontext ColorSpec LineNr, NonText
 ---@field whitespace ColorSpec Whitespace
@@ -79,6 +81,7 @@
 ---@field indent ColorSpec Indent line character
 ---@field indent_scope ColorSpec Indent scope character
 ---@field picker ColorSpec Color of picker letters e.g. bufferline pick buffer
+---@field mark ColorSpec Color of mark indicators
 ---@field scrollbar ColorSpec Color of scrollbar
 ---@field tabline TabElements
 ---@field pmenu MenuElements
@@ -90,6 +93,9 @@
 ---@field bg_selected ColorSpec
 ---@field fg_inactive ColorSpec
 ---@field bg_inactive ColorSpec
+---@field fg_alternate ColorSpec
+---@field bg_alternate ColorSpec
+---@field indicator ColorSpec
 
 ---@class FloatElements
 ---@field fg ColorSpec
@@ -114,6 +120,13 @@
 ---@field rainbow6 ColorSpec
 ---@field rainbow7 ColorSpec
 
+---@class AccentColors
+---@field accent1 ColorSpec
+---@field accent2 ColorSpec
+---@field accent3 ColorSpec
+---@field accent4 ColorSpec
+---@field accent5 ColorSpec
+
 ---@class ThemeColors
 ---@field syn SyntaxElements
 ---@field diag DiagnosticsElements
@@ -122,6 +135,7 @@
 ---@field ui UiElements
 ---@field modes ModeElements
 ---@field rainbow RainbowColors
+---@field accent AccentColors
 ---@field term ColorSpec[]
 
 ---@param palette PaletteColors
@@ -156,6 +170,8 @@ return function(palette)
 			bg_cursorline = palette.sumiInk5,
 			bg_visual = palette.lotusInk0,
 			bg_statusline = palette.sumiInk4,
+			header1 = palette.dragonViolet,
+			header2 = palette.dragonOrange,
 			special = palette.springViolet1,
 			nontext = palette.sumiInk6,
 			whitespace = palette.sumiInk6,
@@ -163,6 +179,7 @@ return function(palette)
 			indent = palette.sumiInk5,
 			indent_scope = palette.dragonViolet,
 			picker = palette.dragonRed,
+			mark = palette.waveAqua2,
 			scrollbar = palette.fujiGray,
 			tabline = {
 				bg = palette.sumiInk0,
@@ -170,6 +187,9 @@ return function(palette)
 				bg_selected = palette.sumiInk3,
 				fg_inactive = palette.dragonBlack5,
 				bg_inactive = palette.sumiInk0,
+				fg_alternate = palette.dragonPink,
+				bg_alternate = palette.sumiInk0,
+				indicator = palette.dragonBlue,
 			},
 			pmenu = {
 				fg = palette.fujiWhite,
@@ -185,6 +205,13 @@ return function(palette)
 				fg_border = palette.sumiInk6,
 				bg_border = "none",
 			},
+		},
+		accent = {
+			accent1 = palette.dragonBlue,
+			accent2 = palette.dragonOrange,
+			accent3 = palette.waveAqua1,
+			accent4 = palette.dragonGray3,
+			accent5 = palette.dragonRed,
 		},
 		rainbow = {
 			rainbow1 = palette.dragonRed,

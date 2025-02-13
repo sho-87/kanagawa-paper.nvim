@@ -7,7 +7,6 @@ function M.setup(colors, opts)
 
 	local color = require("kanagawa-paper.lib.color")
 	local theme = colors.theme
-	local palette = colors.palette
 
 	return {
 		-- Gitsigns
@@ -43,13 +42,13 @@ function M.setup(colors, opts)
 		OctoPullModifications = { bg = theme.diff.changeDark },
 
 		-- Treesitter Extensions
-		TreesitterContext = { bg = palette.sumiInk5 },
-		TreesitterContextBottom = { fg = "NONE", bg = palette.sumiInk5 },
-		TreesitterContextLineNumber = { fg = theme.ui.fg_gray, bg = palette.sumiInk5 },
+		TreesitterContext = { bg = theme.ui.bg_p2 },
+		TreesitterContextBottom = { fg = "NONE", bg = theme.ui.bg_p2 },
+		TreesitterContextLineNumber = { fg = theme.ui.fg_gray, bg = theme.ui.bg_p2 },
 		TreesitterContextSeparator = { fg = theme.ui.win_separator },
 
 		-- Telescope
-		TelescopeTitle = { fg = palette.sumiInk0, bg = palette.dragonBlue, bold = true },
+		TelescopeTitle = { fg = theme.ui.fg_dark, bg = theme.accent.accent1, bold = true },
 		TelescopeBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
 		TelescopeSelection = { link = "CursorLine" },
 		TelescopeSelectionCaret = { link = "CursorLineNr" },
@@ -60,10 +59,10 @@ function M.setup(colors, opts)
 		TelescopeResultsField = { link = "@field" },
 		TelescopeResultsMethod = { link = "Function" },
 		TelescopeResultsVariable = { link = "@variable" },
-		TeleScopeResultsTitle = { fg = palette.sumiInk0, bg = palette.dragonOrange, bold = true },
+		TeleScopeResultsTitle = { fg = theme.ui.fg_dark, bg = theme.accent.accent2, bold = true },
 		TelescopeResultsNormal = { fg = theme.ui.fg, bg = theme.ui.bg_p1 },
 		TelescopeResultsBorder = { fg = theme.ui.bg_p2, bg = theme.ui.bg_p1 },
-		TeleScopePreviewTitle = { fg = palette.sumiInk0, bg = palette.waveAqua1, bold = true },
+		TeleScopePreviewTitle = { fg = theme.ui.fg_dark, bg = theme.accent.accent3, bold = true },
 		TelescopePreviewNormal = { bg = theme.ui.bg },
 		TelescopePreviewBorder = { bg = theme.ui.bg, fg = theme.ui.bg_p2 },
 
@@ -80,23 +79,23 @@ function M.setup(colors, opts)
 		NvimTreeSymlink = { link = "Type" },
 		NvimTreeFolderName = { link = "Directory" },
 		NvimTreeExecFile = { fg = theme.syn.string, bold = true },
-		NvimTreeRootFolder = { fg = palette.autumnRed, bold = true },
+		NvimTreeRootFolder = { fg = theme.accent.accent5, bold = true },
 		NvimTreeOpenedFile = { fg = theme.syn.special1, italic = true },
-		NvimTreeOpenedFolderName = { fg = palette.dragonBlue },
+		NvimTreeOpenedFolderName = { fg = theme.accent.accent1 },
 		NvimTreeWinSeparator = { link = "WinSeparator" },
 		NvimTreeWindowPicker = { bg = theme.ui.bg_m1, fg = theme.ui.picker, bold = true },
 
 		-- NeoTree
 		NeoTreeNormal = { link = "NormalFloat" },
 		NeoTreeNormalNC = { link = "NormalFloat" },
-		NeoTreeFloatTitle = { fg = theme.ui.bg_m3, bg = palette.dragonGray3, bold = true },
+		NeoTreeFloatTitle = { fg = theme.ui.bg_m3, bg = theme.accent.accent4, bold = true },
 		NeoTreeFloatBorder = { fg = theme.ui.bg_p2, bg = theme.ui.float.bg_border },
 		NeoTreeWinSeparator = { link = "WinSeparator" },
 		NeoTreeTabInactive = { link = "TabLine" },
 		NeoTreeTabActive = { link = "TabLineSel" },
 		NeoTreeTabSeparatorInactive = { link = "NeoTreeTabInactive" },
 		NeoTreeTabSeparatorActive = { link = "NeoTreeTabActive" },
-		NeoTreeRootName = { fg = palette.dragonRed, bold = true },
+		NeoTreeRootName = { link = "NvimTreeRootFolder" },
 		NeoTreeModified = { link = "String" },
 		NeoTreeGitModified = { fg = theme.vcs.changed },
 		NeoTreeGitAdded = { fg = theme.vcs.added },
@@ -106,7 +105,7 @@ function M.setup(colors, opts)
 		NeoTreeGitUntracked = { link = "NeoTreeGitModified", default = true },
 		NeoTreeGitUnstaged = { link = "NeoTreeGitModified", default = true },
 		NeoTreeIndentMarker = { fg = theme.ui.indent },
-		NeoTreeFileNameOpened = { fg = theme.syn.special1, italic = true },
+		NeoTreeFileNameOpened = { link = "NvimTreeOpenedFile" },
 		NeoTreeSymbolicLinkTarget = { link = "Type" },
 
 		-- WindowPicker
@@ -146,8 +145,8 @@ function M.setup(colors, opts)
 		NotifyTRACETitle = { link = "Comment" },
 
 		-- Incline
-		InclineNormal = { bg = palette.fujiWhite, fg = theme.ui.bg_dim },
-		InclineNormalNC = { bg = theme.ui.bg_p2, fg = palette.fujiWhite },
+		InclineNormal = { bg = theme.ui.fg, fg = theme.ui.bg_dim },
+		InclineNormalNC = { bg = theme.ui.bg_p2, fg = theme.ui.fg },
 
 		-- Dap-UI
 		DapUIScope = { link = "Special" },
@@ -189,7 +188,7 @@ function M.setup(colors, opts)
 		CmpCompletionSel = { link = "PmenuSel" },
 		CmpCompletionBorder = { fg = theme.ui.bg_search, bg = theme.ui.pmenu.bg },
 		CmpCompletionThumb = { bg = theme.ui.scrollbar },
-		CmpCompletionSbar = { bg = palette.fujiWhite },
+		CmpCompletionSbar = { bg = theme.ui.fg },
 		CmpDocumentation = { link = "NormalFloat" },
 		CmpDocumentationBorder = { link = "FloatBorder" },
 		CmpItemAbbr = { fg = theme.ui.pmenu.fg },
@@ -355,14 +354,14 @@ function M.setup(colors, opts)
 			fg = theme.ui.fg_dim,
 			bold = true,
 		},
-		BufferlineNumbersSelected = { fg = palette.dragonBlue, bold = true },
+		BufferlineNumbersSelected = { fg = theme.ui.tabline.indicator, bold = true },
 		BufferlineBuffer = { fg = theme.ui.tabline.fg_inactive, bg = theme.ui.tabline.bg_inactive, bold = false },
 		BufferlineBufferSelected = {
 			fg = theme.ui.tabline.fg_selected,
 			bg = theme.ui.tabline.bg_selected,
 			bold = true,
 		},
-		BufferlineIndicatorSelected = { fg = palette.dragonBlue },
+		BufferlineIndicatorSelected = { fg = theme.ui.tabline.indicator },
 		BufferlineModified = {
 			bg = not opts.transparent and theme.ui.tabline.bg or "NONE",
 			fg = theme.vcs.changed,
@@ -373,9 +372,9 @@ function M.setup(colors, opts)
 			fg = theme.ui.fg_dim,
 			bold = false,
 		},
-		BufferlineCloseButtonSelected = { fg = palette.dragonRed, bold = true },
+		BufferlineCloseButtonSelected = { fg = theme.ui.picker, bold = true },
 		BufferlineTab = { fg = theme.ui.tabline.fg_inactive, bg = theme.ui.tabline.bg },
-		BufferlineTabClose = { fg = palette.dragonRed, bg = theme.ui.tabline.bg },
+		BufferlineTabClose = { fg = theme.ui.picker, bg = theme.ui.tabline.bg },
 		BufferlineTabSelected = { fg = theme.ui.tabline.fg_selected, bg = theme.ui.tabline.bg_selected, bold = true },
 		BufferlineTabSeparator = { fg = theme.ui.tabline.bg, bg = theme.ui.tabline.bg },
 		BufferlineTabSeparatorSelected = { fg = theme.ui.tabline.bg, bg = theme.ui.tabline.bg },
@@ -392,8 +391,8 @@ function M.setup(colors, opts)
 		BufferInactiveIndex = { bg = theme.ui.tabline.bg_inactive, fg = theme.ui.tabline.fg_inactive, bold = true },
 		BufferInactiveNumber = { bg = theme.ui.tabline.bg_inactive, fg = theme.ui.tabline.fg_inactive, bold = true },
 		BufferCurrent = { link = "BufferlineBufferSelected" },
-		BufferCurrentBtn = { bg = theme.ui.tabline.bg_selected, fg = palette.dragonRed, bold = true },
-		BufferCurrentSign = { bg = palette.dragonBlue, fg = palette.dragonBlue },
+		BufferCurrentBtn = { bg = theme.ui.tabline.bg_selected, fg = theme.ui.picker, bold = true },
+		BufferCurrentSign = { bg = theme.ui.tabline.indicator, fg = theme.ui.tabline.indicator },
 		BufferCurrentMod = { link = "BufferCurrent" },
 		BufferCurrentModBtn = { link = "BufferlineModifiedSelected" },
 		BufferCurrentTarget = { bg = theme.ui.tabline.bg_selected, fg = theme.ui.picker, bold = true },
@@ -406,14 +405,14 @@ function M.setup(colors, opts)
 		BufferCurrentADDED = { bg = theme.ui.tabline.bg_selected, fg = theme.vcs.added },
 		BufferCurrentCHANGED = { bg = theme.ui.tabline.bg_selected, fg = theme.vcs.changed },
 		BufferCurrentDELETED = { bg = theme.ui.tabline.bg_selected, fg = theme.vcs.removed },
-		BufferAlternate = { bg = theme.ui.tabline.bg, fg = palette.dragonPink },
+		ufferAlternate = { bg = theme.ui.tabline.bg_alternate, fg = theme.ui.tabline.fg_alternate },
 		BufferAlternateSign = { link = "BufferAlternate" },
 		BufferAlternateBtn = { link = "BufferAlternate" },
 		BufferAlternateMod = { link = "BufferAlternate" },
-		BufferAlternateModBtn = { bg = theme.ui.tabline.bg, fg = theme.vcs.changed },
-		BufferAlternateTarget = { bg = theme.ui.tabline.bg, fg = theme.ui.picker, bold = true },
-		BufferAlternateIndex = { bg = theme.ui.tabline.bg, fg = palette.dragonPink, bold = true },
-		BufferAlternateNumber = { bg = theme.ui.tabline.bg, fg = palette.dragonPink, bold = true },
+		BufferAlternateModBtn = { bg = theme.ui.tabline.bg_alternate, fg = theme.vcs.changed },
+		BufferAlternateTarget = { bg = theme.ui.tabline.bg_alternate, fg = theme.ui.picker, bold = true },
+		BufferAlternateIndex = { bg = theme.ui.tabline.bg_alternate, fg = theme.ui.tabline.fg_alternate, bold = true },
+		BufferAlternateNumber = { bg = theme.ui.tabline.bg_alternate, fg = theme.ui.tabline.fg_alternate, bold = true },
 		BufferTabpages = { bg = theme.ui.tabline.bg, fg = theme.ui.tabline.fg_selected, bold = true },
 		BufferTabpageFill = { link = "BufferlineFill" },
 		BufferTabpagesSep = { link = "BufferTabpages" },
@@ -478,8 +477,8 @@ function M.setup(colors, opts)
 
 		-- Satellite
 		SatelliteBar = { bg = theme.ui.scrollbar },
-		SatelliteCursor = { fg = palette.fujiWhite },
-		SatelliteMark = { fg = palette.waveAqua2 },
+		SatelliteCursor = { fg = theme.ui.fg },
+		SatelliteMark = { fg = theme.ui.mark },
 
 		-- Whichkey
 		WhichKey = { fg = theme.ui.picker },
@@ -495,9 +494,9 @@ function M.setup(colors, opts)
 		SpectreFaint = { fg = theme.ui.fg_gray, italic = false },
 
 		-- grug-far
-		GrugFarHelpHeader = { fg = palette.dragonViolet },
+		GrugFarHelpHeader = { fg = theme.ui.header1 },
 		GrugFarHelpHeaderKey = { fg = theme.ui.picker },
-		GrugFarHelpWinHeader = { fg = palette.dragonOrange },
+		GrugFarHelpWinHeader = { fg = theme.ui.header2 },
 		GrugFarHelpWinActionPrefix = { link = "GrugFarHelpWinHeader" },
 		GrugFarHelpWinActionText = { link = "GrugFarHelpHeader" },
 		GrugFarHelpWinActionKey = { fg = theme.ui.picker },
@@ -625,7 +624,7 @@ function M.setup(colors, opts)
 		MiniStarterItem = { link = "Normal" },
 		MiniStarterItemBullet = { link = "Delimiter" },
 		MiniStarterItemPrefix = { fg = theme.diag.warning },
-		MiniStarterSection = { fg = palette.autumnGreen },
+		MiniStarterSection = { fg = theme.ui.header1 },
 		MiniStarterQuery = { fg = theme.diag.info },
 
 		MiniStatuslineDevinfo = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1 },

@@ -5,7 +5,6 @@ local M = {}
 function M.setup(colors, opts)
 	opts = opts or require("kanagawa-paper.config").options
 	local theme = colors.theme
-	local palette = colors.palette
 
 	return {
 		-- zsh

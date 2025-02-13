@@ -16,8 +16,8 @@ function M.load(opts)
 	vim.o.termguicolors = true
 
 	local colors = require("kanagawa-paper.colors").setup({ colors = config.options.colors })
-	local highlights = require("kanagawa-paper.highlights").setup(colors, config.options)
-	require("kanagawa-paper.highlights").highlight(highlights, config.terminalColors and colors.theme.term or {})
+	local groups = require("kanagawa-paper.groups.init").setup(colors, config.options)
+	require("kanagawa-paper.groups.init").highlight(groups, config.terminalColors and colors.theme.term or {})
 end
 
 M.setup = config.setup

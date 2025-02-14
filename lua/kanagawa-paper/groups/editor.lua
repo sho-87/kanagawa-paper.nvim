@@ -196,6 +196,11 @@ function M.setup(colors, opts)
 		diffChanged = { fg = theme.vcs.changed },
 		diffOldFile = { fg = theme.vcs.removed },
 		diffNewFile = { fg = theme.vcs.added },
+
+		-- health
+		healthError = { fg = theme.diag.error },
+		healthSuccess = { fg = theme.diag.ok },
+		healthWarning = { fg = theme.diag.warning },
 	}
 end
 

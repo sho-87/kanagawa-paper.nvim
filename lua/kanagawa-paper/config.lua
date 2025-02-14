@@ -22,6 +22,10 @@ local defaults = {
 	overrides = function()
 		return {}
 	end,
+	all_plugins = false,
+	plugins = {
+		grug_far = true,
+	},
 }
 
 ---@type KanagawaConfig

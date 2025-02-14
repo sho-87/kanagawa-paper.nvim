@@ -493,29 +493,6 @@ function M.setup(colors, opts)
 		-- Spectre
 		SpectreFaint = { fg = theme.ui.fg_gray, italic = false },
 
-		-- grug-far
-		GrugFarHelpHeader = { fg = theme.ui.header1 },
-		GrugFarHelpHeaderKey = { fg = theme.ui.picker },
-		GrugFarHelpWinHeader = { fg = theme.ui.header2 },
-		GrugFarHelpWinActionPrefix = { link = "GrugFarHelpWinHeader" },
-		GrugFarHelpWinActionText = { link = "GrugFarHelpHeader" },
-		GrugFarHelpWinActionKey = { fg = theme.ui.picker },
-		GrugFarHelpWinActionDescription = { link = "NormalFloat" },
-
-		GrugFarInputLabel = { link = "Identifier" },
-		GrugFarInputPlaceholder = { link = "Comment" },
-
-		GrugFarResultsHeader = { fg = theme.ui.fg_gray },
-		GrugFarResultsStats = { link = "Comment" },
-		GrugFarResultsActionMessage = { link = "ModeMsg" },
-
-		GrugFarResultsMatch = { link = "Substitute" },
-		GrugFarResultsPath = { link = "@string.special.path" },
-		GrugFarResultsLineNo = { link = "LineNr" },
-		GrugFarResultsLineColumn = { link = "LineNr" },
-		GrugFarResultsChangeIndicator = { link = "@diff.delta" },
-		GrugFarResultsRgCmdHeader = { link = "@text.uri" },
-
 		-- Noice
 		NoiceCmdline = { fg = theme.ui.bg_search },
 		NoiceVirtualText = { fg = theme.ui.bg_search },

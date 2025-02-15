@@ -7,6 +7,7 @@ local M = {}
 
 ---@class KanagawaConfig
 local defaults = {
+	theme = "ink",
 	undercurl = true,
 	transparent = false,
 	gutter = false,
@@ -22,14 +23,18 @@ local defaults = {
 	overrides = function()
 		return {}
 	end,
-	all_plugins = false,
+	all_plugins = true, -- enable highlights for all the plugins
 	plugins = {
-		grug_far = true,
+		-- manually enable/disable individual plugins
+		-- check the groups/plugins directory for the exact names
+		-- examples:
+		-- rainbow_delimiters = true
+		-- which_key = false
 	},
 }
 
 ---@type KanagawaConfig
-M.options = {}
+M.options = nil
 
 ---@param options? KanagawaConfig user configuration
 function M.setup(options)

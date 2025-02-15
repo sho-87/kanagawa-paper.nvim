@@ -131,9 +131,10 @@ local palette = {
 local M = {}
 --- Generate colors table:
 --- * opts:
+---   - theme: string, one of "ink", "canvas"
 ---   - colors: Table of personalized colors and/or overrides of existing ones.
 ---     Defaults to KanagawaConfig.colors.
----@param opts? { colors?: table }
+---@param opts? {theme: string, colors?: table }
 ---@return { theme: ThemeColors, palette: PaletteColors}
 function M.setup(opts)
 	opts = opts or {}
@@ -143,12 +144,12 @@ function M.setup(opts)
 	local updated_palette_colors = vim.tbl_extend("force", palette, override_colors.palette or {})
 
 	-- Generate the theme according to the updated palette colors
-	local theme_colors = require("kanagawa-paper.themes")(updated_palette_colors)
+	local theme_colors = require("kanagawa-paper.themes")[opts.theme](updated_palette_colors)
 
 	-- Add to and/or override theme_colors
-	local updated_theme_colors = vim.tbl_deep_extend("force", theme_colors, override_colors.theme or {})
+	local updated_theme_colors = vim.tbl_deep_extend("force", theme_colors, override_colors.theme[opts.theme] or {})
 
-	-- return palette_colors AND theme_colors
+	-- return palette_colors and theme_colors
 	return {
 		theme = updated_theme_colors,
 		palette = updated_palette_colors,

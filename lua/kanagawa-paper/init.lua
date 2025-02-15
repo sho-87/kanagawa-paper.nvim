@@ -7,17 +7,26 @@ function M.load(opts)
 	if opts then
 		config.extend(opts)
 	end
-
+	-- only needed to clear when not the default colorscheme
 	if vim.g.colors_name then
 		vim.cmd("hi clear")
 	end
 
-	vim.g.colors_name = "kanagawa-paper"
 	vim.o.termguicolors = true
+	vim.g.colors_name = "kanagawa-paper-" .. config.options.theme
+	if config.options.theme == "ink" then
+		vim.o.background = "dark"
+	elseif config.options.theme == "canvas" then
+		vim.o.background = "light"
+	else
+		vim.notify("Invalid theme: " .. config.options.theme, vim.log.levels.ERROR)
+	end
 
-	local colors = require("kanagawa-paper.colors").setup({ colors = config.options.colors })
+	local colors = require("kanagawa-paper.colors").setup(config.options)
 	local groups = require("kanagawa-paper.groups.init").setup(colors, config.options)
-	require("kanagawa-paper.groups.init").highlight(groups, config.terminalColors and colors.theme.term or {})
+
+	-- create terminal highlights
+	require("kanagawa-paper.groups.init").highlight(groups, config.options.terminalColors and colors.theme.term or {})
 end
 
 M.setup = config.setup

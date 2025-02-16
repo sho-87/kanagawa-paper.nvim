@@ -190,6 +190,9 @@ function M.setup(colors, opts)
 		},
 
 		-- vcs
+		Added = { fg = theme.vcs.added },
+		Removed = { fg = theme.vcs.removed },
+		Changed = { fg = theme.vcs.changed },
 		diffAdded = { fg = theme.vcs.added },
 		diffRemoved = { fg = theme.vcs.removed },
 		diffDeleted = { fg = theme.vcs.removed },

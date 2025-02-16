@@ -4,14 +4,14 @@ local theme = colors.theme
 local M = {}
 
 M.normal = {
-	a = { bg = theme.modes.normal, fg = theme.ui.bg_m3 },
-	b = { bg = theme.ui.bg_p2, fg = theme.modes.normal },
+	a = { bg = "#ffffff", fg = theme.ui.bg_m3 },
+	b = { bg = theme.ui.bg_p2, fg = theme.modes.insert },
 	c = { bg = theme.ui.bg_statusline, fg = theme.ui.fg_gray },
 }
 
 M.insert = {
-	a = { bg = theme.modes.insert, fg = theme.ui.bg },
-	b = { bg = theme.ui.bg_p2, fg = theme.modes.insert },
+	a = { bg = theme.modes.normal, fg = theme.ui.bg },
+	b = { bg = theme.ui.bg_p2, fg = theme.modes.normal },
 }
 
 M.command = {

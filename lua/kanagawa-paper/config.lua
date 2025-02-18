@@ -6,7 +6,7 @@
 local M = {}
 
 ---@class KanagawaConfig
-local defaults = {
+M.defaults = {
 	theme = "ink",
 	undercurl = true,
 	transparent = false,
@@ -38,13 +38,22 @@ M.options = nil
 
 ---@param options? KanagawaConfig user configuration
 function M.setup(options)
-	M.options = vim.tbl_deep_extend("force", {}, defaults, options or {})
+	M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {})
 end
 
 ---@param options? KanagawaConfig user configuration
 function M.extend(options)
-	M.options = vim.tbl_deep_extend("force", {}, M.options or defaults, options or {})
+	M.options = vim.tbl_deep_extend("force", {}, M.options, options or {})
+	return M.options
 end
+
+setmetatable(M, {
+	__index = function(_, k)
+		if k == "options" then
+			return M.options or M.defaults
+		end
+	end,
+})
 
 M.setup()
 

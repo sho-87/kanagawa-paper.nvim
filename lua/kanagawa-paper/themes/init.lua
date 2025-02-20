@@ -128,6 +128,26 @@
 ---@field accent4 ColorSpec
 ---@field accent5 ColorSpec
 
+---@class TermColors
+---@field black ColorSpec
+---@field red ColorSpec
+---@field green ColorSpec
+---@field yellow ColorSpec
+---@field blue ColorSpec
+---@field magenta ColorSpec
+---@field cyan ColorSpec
+---@field white ColorSpec
+---@field black_bright ColorSpec
+---@field red_bright ColorSpec
+---@field green_bright ColorSpec
+---@field yellow_bright ColorSpec
+---@field blue_bright ColorSpec
+---@field magenta_bright ColorSpec
+---@field cyan_bright ColorSpec
+---@field white_bright ColorSpec
+---@field indexed1 ColorSpec
+---@field indexed2 ColorSpec
+
 ---@class ThemeColors
 ---@field syn SyntaxElements
 ---@field diag DiagnosticsElements
@@ -137,7 +157,7 @@
 ---@field modes ModeElements
 ---@field rainbow RainbowColors
 ---@field accent AccentColors
----@field term ColorSpec[]
+---@field term TermColors
 
 local M = {}
 

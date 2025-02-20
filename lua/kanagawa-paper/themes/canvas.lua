@@ -1,5 +1,8 @@
 local M = {}
 
+---@param opts KanagawaConfig
+---@param palette PaletteColors
+---@return ThemeColors
 M.get = function(opts, palette)
 	return {
 		modes = {
@@ -130,24 +133,24 @@ M.get = function(opts, palette)
 			hint = palette.canvasAqua2,
 		},
 		term = {
-			palette.canvasInk0, -- black
-			palette.canvasRed, -- red
-			palette.canvasGreen, -- green
-			palette.canvasYellow, -- yellow
-			palette.canvasBlue4, -- blue
-			palette.canvasPink, -- magenta
-			palette.canvasAqua, -- cyan
-			palette.canvasInk1, -- white
-			palette.canvasGray3, -- bright black
-			palette.canvasRed2, -- bright red
-			palette.canvasGreen2, -- bright green
-			palette.canvasYellow2, -- bright yellow
-			palette.canvasTeal2, -- bright blue
-			palette.canvasViolet4, -- bright magenta
-			palette.canvasAqua2, -- bright cyan
-			palette.canvasInk2, -- bright white
-			palette.canvasOrange2, -- extended color 1
-			palette.canvasRed3, -- extended color 2
+			black = palette.canvasInk0,
+			red = palette.canvasRed,
+			green = palette.canvasGreen,
+			yellow = palette.canvasYellow,
+			blue = palette.canvasBlue4,
+			magenta = palette.canvasPink,
+			cyan = palette.canvasAqua,
+			white = palette.canvasInk1,
+			black_bright = palette.canvasGray3,
+			red_bright = palette.canvasRed2,
+			green_bright = palette.canvasGreen2,
+			yellow_bright = palette.canvasYellow2,
+			blue_bright = palette.canvasTeal2,
+			magenta_bright = palette.canvasViolet4,
+			cyan_bright = palette.canvasAqua2,
+			white_bright = palette.canvasInk2,
+			indexed1 = palette.canvasOrange,
+			indexed2 = palette.canvasRed,
 		},
 	}
 end

@@ -6,8 +6,31 @@ function M.highlight(groups, termcolors)
 	for hl, spec in pairs(groups) do
 		vim.api.nvim_set_hl(0, hl, spec)
 	end
-	for i, tcolor in ipairs(termcolors) do
-		vim.g["terminal_color_" .. i - 1] = tcolor
+
+	if termcolors and next(termcolors) then
+		local ordered_keys = {
+			"black",
+			"red",
+			"green",
+			"yellow",
+			"blue",
+			"magenta",
+			"cyan",
+			"white",
+			"black_bright",
+			"red_bright",
+			"green_bright",
+			"yellow_bright",
+			"blue_bright",
+			"magenta_bright",
+			"cyan_bright",
+			"white_bright",
+			"indexed1",
+			"indexed2",
+		}
+		for i, key in ipairs(ordered_keys) do
+			vim.g["terminal_color_" .. (i - 1)] = termcolors[key]
+		end
 	end
 end
 

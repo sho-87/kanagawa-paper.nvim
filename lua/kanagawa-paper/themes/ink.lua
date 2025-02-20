@@ -1,5 +1,8 @@
 local M = {}
 
+---@param opts KanagawaConfig
+---@param palette PaletteColors
+---@return ThemeColors
 M.get = function(opts, palette)
 	return {
 		modes = {
@@ -130,25 +133,26 @@ M.get = function(opts, palette)
 			hint = palette.waveAqua1,
 		},
 		term = {
-			palette.dragonBlack0, -- black
-			palette.dragonRed, -- red
-			palette.dragonGreen2, -- green
-			palette.dragonYellow, -- yellow
-			palette.dragonBlue2, -- blue
-			palette.dragonPink, -- magenta
-			palette.dragonAqua, -- cyan
-			palette.oldWhite, -- white
-			palette.dragonGray, -- bright black
-			palette.waveRed, -- bright red
-			palette.dragonGreen, -- bright green
-			palette.carpYellow, -- bright yellow
-			palette.springBlue, -- bright blue
-			palette.springViolet1, -- bright magenta
-			palette.waveAqua2, -- bright cyan
-			palette.dragonWhite, -- bright white
-			palette.dragonOrange, -- extended color 1
-			palette.dragonOrange2, -- extended color 2
+			black = palette.dragonBlack0,
+			red = palette.dragonRed,
+			green = palette.dragonGreen2,
+			yellow = palette.dragonYellow,
+			blue = palette.dragonBlue2,
+			magenta = palette.dragonPink,
+			cyan = palette.dragonAqua,
+			white = palette.oldWhite,
+			black_bright = palette.dragonGray,
+			red_bright = palette.waveRed,
+			green_bright = palette.springGreen,
+			yellow_bright = palette.carpYellow,
+			blue_bright = palette.springBlue,
+			magenta_bright = palette.springViolet1,
+			cyan_bright = palette.waveAqua2,
+			white_bright = palette.dragonWhite,
+			indexed1 = palette.dragonOrange,
+			indexed2 = palette.dragonRed,
 		},
 	}
 end
+
 return M

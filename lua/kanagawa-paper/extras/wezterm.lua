@@ -2,55 +2,65 @@ local util = require("kanagawa-paper.lib.util")
 
 local M = {}
 
---- @param colors ColorScheme
+--- @param colors ThemeColors
 function M.generate(colors)
 	local wezterm = util.template(
 		[[
-[colors]
-foreground = "${fg}"
-background = "${bg}"
-cursor_bg = "${fg}"
-cursor_border = "${fg}"
-cursor_fg = "${bg}"
-selection_bg = "${bg_visual}"
-selection_fg = "${fg}"
-split = "${blue}"
-compose_cursor = "${orange}"
-scrollbar_thumb = "${bg_highlight}"
+# -----------------------------------------------------------------------------
+# ${_style_name}
+# Upstream: ${_upstream_url}
+# -----------------------------------------------------------------------------
 
-ansi = ["${terminal.black}", "${terminal.red}", "${terminal.green}", "${terminal.yellow}", "${terminal.blue}", "${terminal.magenta}", "${terminal.cyan}", "${terminal.white}"]
-brights = ["${terminal.black_bright}", "${terminal.red_bright}", "${terminal.green_bright}", "${terminal.yellow_bright}", "${terminal.blue_bright}", "${terminal.magenta_bright}", "${terminal.cyan_bright}", "${terminal.white_bright}"]
+[colors]
+foreground = "${ui.fg}"
+background = "${ui.bg}"
+cursor_bg = "${modes.normal}"
+cursor_border = "${modes.normal}"
+cursor_fg = "${ui.bg}"
+selection_bg = "${ui.bg_visual}"
+selection_fg = "${ui.fg_gray}"
+split = "${ui.win_separator}"
+compose_cursor = "${ui.special}"
+scrollbar_thumb = "${ui.scrollbar}"
+
+ansi = ["${term.black}", "${term.red}", "${term.green}", "${term.yellow}", "${term.blue}", "${term.magenta}", "${term.cyan}", "${term.white}"]
+brights = ["${term.black_bright}", "${term.red_bright}", "${term.green_bright}", "${term.yellow_bright}", "${term.blue_bright}", "${term.magenta_bright}", "${term.cyan_bright}", "${term.white_bright}"]
+
+[colors.indexed]
+16 = "${term.indexed1}"
+17 = "${term.indexed2}"
 
 [colors.tab_bar]
-inactive_tab_edge = "${bg_dark}"
-background = "${bg}"
+background = "${ui.bg_statusline}"
+inactive_tab_edge = "${ui.tabline.indicator}"
 
 [colors.tab_bar.active_tab]
-fg_color = "${bg_dark}"
-bg_color = "${blue}"
-
-[colors.tab_bar.inactive_tab]
-fg_color = "${dark3}"
-bg_color = "${bg_highlight}"
-
-[colors.tab_bar.inactive_tab_hover]
-fg_color = "${blue}"
-bg_color = "${bg_highlight}"
-# intensity = "Bold"
-
-[colors.tab_bar.new_tab_hover]
-fg_color = "${blue}"
-bg_color = "${bg}"
+fg_color = "${modes.normal}"
+bg_color = "${ui.tabline.bg_selected}"
 intensity = "Bold"
 
+[colors.tab_bar.inactive_tab]
+fg_color = "${ui.fg_gray}"
+bg_color = "${ui.bg_statusline}"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "${ui.tabline.fg_alternate}"
+bg_color = "${ui.tabline.bg_selected}"
+
 [colors.tab_bar.new_tab]
-fg_color = "${blue}"
-bg_color = "${bg}"
+fg_color = "${ui.fg_gray}"
+bg_color = "${ui.bg_statusline}"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "${ui.tabline.fg_alternate}"
+bg_color = "${ui.tabline.bg_selected}"
+intensity = "Bold"
 
 [metadata]
-aliases = []
-author = "folke"
-name = "${_name}"]],
+name = "${_name}"
+author = "Simon Ho"
+origin_url = "${_upstream_url}"
+]],
 		colors
 	)
 	return wezterm

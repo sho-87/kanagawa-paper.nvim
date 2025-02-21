@@ -1,4 +1,5 @@
 images/
 /doc/tags
 scripts/.extras
+/extras/**
 .DS_Store

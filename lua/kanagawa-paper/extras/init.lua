@@ -72,6 +72,7 @@ function M.setup()
 			fname = string.gsub(fname, "%.$", "") -- remove trailing dot when no extension
 			local path = vim.fn.expand("%:p:h:h") .. "/extras/" .. fname
 
+			colors.theme["_url"] = info.url
 			colors.theme["_upstream_url"] = "https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/" .. fname
 			colors.theme["_package_name"] = "Kanagawa Paper"
 			colors.theme["_style_name"] = "Kanagawa Paper " .. theme_name

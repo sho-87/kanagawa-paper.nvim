@@ -1,3 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
+set -e
 
-nvim -u minit.lua --headless +"lua require('kanagawa-paper.extras').setup()" +qa
+nvim -u scripts/minit.lua --headless +"lua require('kanagawa-paper.extras').setup()" +qa

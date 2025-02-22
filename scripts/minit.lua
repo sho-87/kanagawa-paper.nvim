@@ -7,7 +7,7 @@ load(vim.fn.system("curl -s https://raw.githubusercontent.com/folke/lazy.nvim/ma
 require("lazy.minit").setup({
 	spec = {
 		{
-			dir = vim.fn.expand("%:p:h:h"),
+			dir = vim.uv.cwd(),
 			opts = {},
 		},
 	},

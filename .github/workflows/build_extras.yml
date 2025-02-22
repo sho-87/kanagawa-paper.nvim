@@ -1,0 +1,31 @@
+name: Build Extras
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "**/*.lua"
+      - "lua/kanagawa-paper/extras/**"
+  pull_request:
+    paths:
+      - "**/*.lua"
+      - "lua/kanagawa-paper/extras/**"
+jobs:
+  extras:
+    name: Build Extras
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+      - name: Set permissions
+        run: chmod +x scripts/build.sh
+      - name: Run build script
+        run: |
+          scripts/build.sh || { echo "❌ Build script failed!"; exit 1; }
+          git add -f ./extras/
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(extras): auto build themes for extras"

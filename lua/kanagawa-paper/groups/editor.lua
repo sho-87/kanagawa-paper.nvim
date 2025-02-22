@@ -204,6 +204,8 @@ function M.setup(colors, opts)
 		healthError = { fg = theme.diag.error },
 		healthSuccess = { fg = theme.diag.ok },
 		healthWarning = { fg = theme.diag.warning },
+
+		helpExample = { fg = theme.ui.fg_gray },
 	}
 end
 

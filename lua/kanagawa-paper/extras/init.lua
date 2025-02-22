@@ -16,7 +16,7 @@ M.extras = {
   -- foot             = { ext = "ini", url = "https://codeberg.org/dnkl/foot", label = "Foot" },
   -- fuzzel           = { ext = "ini", url = "https://codeberg.org/dnkl/fuzzel", label = "Fuzzel" },
   fzf              = { ext = "sh", url = "https://github.com/junegunn/fzf/tree/master#environment-variables", label = "Fzf" },
-  -- ghostty          = { ext = "", url = "https://github.com/ghostty-org/ghostty", label = "Ghostty" },
+  ghostty          = { ext = "", url = "https://github.com/ghostty-org/ghostty", label = "Ghostty" },
   -- gitui            = { ext = "ron", url = "https://github.com/extrawurst/gitui", label = "GitUI" },
   -- gnome_terminal   = { ext = "dconf", url = "https://gitlab.gnome.org/GNOME/gnome-terminal", label = "GNOME Terminal" },
   -- helix            = { ext = "toml", url = "https://helix-editor.com/", label = "Helix" },

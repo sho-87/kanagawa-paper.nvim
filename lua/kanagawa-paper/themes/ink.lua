@@ -1,3 +1,5 @@
+local color = require("kanagawa-paper.lib.color")
+
 local M = {}
 
 ---@param opts KanagawaConfig
@@ -108,29 +110,34 @@ M.get = function(opts, palette)
 			special3 = palette.springViolet1,
 		},
 		vcs = {
-			added = palette.autumnGreen,
-			addedDark = palette.winterGreen,
-			removed = palette.autumnRed,
-			removedDark = palette.winterRed,
-			changed = palette.autumnYellow,
-			changedDark = palette.winterYellow,
+			added = palette.dragonGreen,
+			added_light = color(palette.dragonGreen):brighten(-0.7):saturate(-0.4):to_hex(),
+			removed = palette.dragonRed,
+			removed_light = color(palette.dragonRed):brighten(-0.7):saturate(-0.4):to_hex(),
+			changed = palette.dragonYellow,
+			changed_light = color(palette.dragonYellow):brighten(-0.7):saturate(-0.4):to_hex(),
 		},
 		diff = {
-			add = palette.autumnGreen,
-			addDark = palette.winterGreen,
-			delete = palette.autumnRed,
-			deleteDark = palette.winterRed,
+			add = palette.dragonGreen,
+			add_light = color(palette.dragonGreen):brighten(-0.7):saturate(-0.4):to_hex(),
+			delete = palette.dragonRed,
+			delete_light = color(palette.dragonRed):brighten(-0.7):saturate(-0.4):to_hex(),
 			change = palette.dragonYellow,
-			changeDark = palette.winterYellow,
+			change_light = color(palette.dragonYellow):brighten(-0.7):saturate(-0.4):to_hex(),
 			text = palette.dragonBlue,
-			textDark = palette.winterBlue,
+			text_light = color(palette.dragonBlue):brighten(-0.7):saturate(-0.4):to_hex(),
 		},
 		diag = {
-			error = palette.samuraiRed,
-			ok = palette.springGreen,
-			warning = palette.roninYellow,
+			error = palette.dragonRed,
+			error_light = color(palette.dragonRed):brighten(-0.7):saturate(-0.4):to_hex(),
+			ok = palette.dragonGreen,
+			ok_light = color(palette.dragonGreen):brighten(-0.7):saturate(-0.4):to_hex(),
+			warning = palette.dragonYellow,
+			warning_light = color(palette.dragonYellow):brighten(-0.7):saturate(-0.4):to_hex(),
 			info = palette.dragonBlue,
-			hint = palette.waveAqua1,
+			info_light = color(palette.dragonBlue):brighten(-0.7):saturate(-0.4):to_hex(),
+			hint = palette.dragonAqua,
+			hint_light = color(palette.dragonAqua):brighten(-0.7):saturate(-0.4):to_hex(),
 		},
 		term = {
 			black = palette.dragonBlack0,

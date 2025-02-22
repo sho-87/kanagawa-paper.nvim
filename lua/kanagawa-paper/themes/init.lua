@@ -28,24 +28,29 @@
 ---@field warning ColorSpec
 ---@field info ColorSpec
 ---@field hint ColorSpec
+---@field error_light ColorSpec
+---@field ok_light ColorSpec
+---@field warning_light ColorSpec
+---@field info_light ColorSpec
+---@field hint_light ColorSpec
 --
 ---@class DiffElements
 ---@field add ColorSpec
 ---@field delete ColorSpec
 ---@field change ColorSpec
 ---@field text ColorSpec
----@field addDark ColorSpec
----@field deleteDark ColorSpec
----@field changeDark ColorSpec
----@field textDark ColorSpec
+---@field add_light ColorSpec
+---@field delete_light ColorSpec
+---@field change_light ColorSpec
+---@field text_light ColorSpec
 
 ---@class VCSElements
 ---@field added ColorSpec
 ---@field removed ColorSpec
 ---@field changed ColorSpec
----@field addedDark ColorSpec
----@field removedDark ColorSpec
----@field changedDark ColorSpec
+---@field added_light ColorSpec
+---@field removed_light ColorSpec
+---@field changed_light ColorSpec
 
 ---@class ModeElements
 ---@field normal ColorSpec

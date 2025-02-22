@@ -27,13 +27,13 @@ function M.setup(colors, opts)
 		-- Directory	Directory names (and other special names in listings).
 		Directory = { fg = theme.syn.fun },
 		-- DiffAdd		Diff mode: Added line. |diff.txt|
-		DiffAdd = { bg = theme.diff.addDark },
+		DiffAdd = { bg = theme.diff.add_light },
 		-- DiffChange	Diff mode: Changed line. |diff.txt|
-		DiffChange = { bg = theme.diff.changeDark },
+		DiffChange = { bg = theme.diff.change_light },
 		-- DiffDelete	Diff mode: Deleted line. |diff.txt|
-		DiffDelete = { fg = theme.vcs.removed, bg = theme.diff.deleteDark },
+		DiffDelete = { bg = theme.diff.delete_light, fg = theme.vcs.removed },
 		-- DiffText	Diff mode: Changed text within a changed line. |diff.txt|
-		DiffText = { bg = theme.diff.changeDark, fg = theme.diff.change, bold = true },
+		DiffText = { bg = theme.diff.change_light, fg = theme.diff.change, bold = true },
 		-- EndOfBuffer	Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
 		EndOfBuffer = { fg = theme.ui.bg },
 		-- TermCursor	Cursor in a focused terminal.
@@ -163,10 +163,10 @@ function M.setup(colors, opts)
 		DiagnosticSignInfo = { fg = theme.diag.info, bg = theme.ui.bg_gutter },
 		DiagnosticSignHint = { fg = theme.diag.hint, bg = theme.ui.bg_gutter },
 
-		DiagnosticVirtualTextError = { link = "DiagnosticError" },
-		DiagnosticVirtualTextWarn = { link = "DiagnosticWarn" },
-		DiagnosticVirtualTextInfo = { link = "DiagnosticInfo" },
-		DiagnosticVirtualTextHint = { link = "DiagnosticHint" },
+		DiagnosticVirtualTextError = { fg = theme.diag.error, bg = theme.diag.error_light },
+		DiagnosticVirtualTextWarn = { fg = theme.diag.warning, bg = theme.diag.warning_light },
+		DiagnosticVirtualTextInfo = { fg = theme.diag.info, bg = theme.diag.info_light },
+		DiagnosticVirtualTextHint = { fg = theme.diag.hint, bg = theme.diag.hint_light },
 
 		DiagnosticUnderlineError = {
 			undercurl = opts.undercurl,

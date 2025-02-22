@@ -1,4 +1,5 @@
 local color = require("kanagawa-paper.lib.color")
+
 local M = {}
 
 ---@param opts KanagawaConfig
@@ -110,33 +111,33 @@ M.get = function(opts, palette)
 		},
 		vcs = {
 			added = palette.canvasGreen2,
-			added_light = color(palette.canvasGreen2):brighten(0.6):saturate(-0.5):to_hex(),
+			added_light = color(palette.canvasGreen2):blend(palette.canvasWhite3, 0.9):to_hex(),
 			removed = palette.canvasRed2,
-			removed_light = color(palette.canvasRed2):brighten(0.6):saturate(-0.5):to_hex(),
+			removed_light = color(palette.canvasRed2):blend(palette.canvasWhite3, 0.9):to_hex(),
 			changed = palette.canvasYellow2,
-			changed_light = color(palette.canvasYellow2):brighten(0.6):saturate(-0.5):to_hex(),
+			changed_light = color(palette.canvasYellow2):blend(palette.canvasWhite3, 0.9):to_hex(),
 		},
 		diff = {
 			add = palette.canvasGreen3,
-			add_light = color(palette.canvasGreen3):brighten(0.6):saturate(-0.5):to_hex(),
+			add_light = color(palette.canvasGreen3):blend(palette.canvasWhite3, 0.9):to_hex(),
 			delete = palette.canvasRed4,
-			delete_light = color(palette.canvasRed4):brighten(0.6):saturate(-0.5):to_hex(),
+			delete_light = color(palette.canvasRed4):blend(palette.canvasWhite3, 0.9):to_hex(),
 			change = palette.canvasYellow2,
-			change_light = color(palette.canvasYellow2):brighten(0.6):saturate(-0.5):to_hex(),
+			change_light = color(palette.canvasYellow2):blend(palette.canvasWhite3, 0.9):to_hex(),
 			text = palette.canvasTeal1,
-			text_light = color(palette.canvasTeal1):brighten(0.6):saturate(-0.5):to_hex(),
+			text_light = color(palette.canvasTeal1):blend(palette.canvasWhite3, 0.9):to_hex(),
 		},
 		diag = {
 			error = palette.canvasRed3,
-			error_light = color(palette.canvasRed3):brighten(0.6):saturate(-0.5):to_hex(),
+			error_light = color(palette.canvasRed3):blend(palette.canvasWhite3, 0.9):to_hex(),
 			ok = palette.canvasGreen,
-			ok_light = color(palette.canvasGreen):brighten(0.6):saturate(-0.5):to_hex(),
+			ok_light = color(palette.canvasGreen):blend(palette.canvasWhite3, 0.9):to_hex(),
 			warning = palette.canvasOrange2,
-			warning_light = color(palette.canvasOrange2):brighten(0.6):saturate(-0.5):to_hex(),
+			warning_light = color(palette.canvasOrange2):blend(palette.canvasWhite3, 0.9):to_hex(),
 			info = palette.canvasTeal3,
-			info_light = color(palette.canvasTeal3):brighten(0.6):saturate(-0.5):to_hex(),
+			info_light = color(palette.canvasTeal3):blend(palette.canvasWhite3, 0.9):to_hex(),
 			hint = palette.canvasAqua2,
-			hint_light = color(palette.canvasAqua2):brighten(0.6):saturate(-0.5):to_hex(),
+			hint_light = color(palette.canvasAqua2):blend(palette.canvasWhite3, 0.9):to_hex(),
 		},
 		term = {
 			black = palette.canvasInk0,

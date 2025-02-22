@@ -5,8 +5,8 @@ function M.setup(colors, opts)
 	opts = opts or require("kanagawa-paper.config").options
 	local theme = colors.theme
 	return {
-		LspReferenceText = { bg = theme.ui.bg_cursorline, bold = false },
-		LspReferenceRead = { link = "LspReferenceText" },
+		LspReferenceText = { bg = "none", bold = false },
+		LspReferenceRead = { bg = theme.ui.bg_cursorline, bold = false },
 		LspReferenceWrite = { bg = theme.ui.bg_cursorline, bold = false },
 		LspInlayHint = { fg = theme.ui.fg_gray, bg = theme.ui.bg_dim, italic = true },
 		LspSignatureActiveParameter = { fg = theme.diag.hint },

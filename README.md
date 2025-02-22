@@ -49,7 +49,8 @@ vim.cmd("colorscheme kanagawa-paper")
 #### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 ```lua
-local kanagawa_paper = require("lualine.themes.kanagawa-paper")
+local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
+-- local kanagawa_paper = require("lualine.themes.kanagawa-paper-canvas")
 
 require('lualine').setup {
   options = {
@@ -65,6 +66,7 @@ require('lualine').setup {
 
 ```lua
 require('kanagawa-paper').setup({
+  theme = "ink", -- one of "ink" or "canvas"
   undercurl = true,
   transparent = false,
   gutter = false,
@@ -79,6 +81,14 @@ require('kanagawa-paper').setup({
   overrides = function()  -- override highlight groups
     return {}
   end,
+  all_plugins = true, -- enable highlights for all the plugins
+  plugins = {
+  -- manually enable/disable individual plugins
+  -- check the groups/plugins directory for the exact names
+  -- examples:
+  -- rainbow_delimiters = true
+  -- which_key = false
+  },
 })
 
 -- setup must be called before loading
@@ -204,17 +214,18 @@ end,
 
 ## 🍭 Extras
 
-- [alacritty](extras/alacritty_kanagawa_paper.yml)
-- [fish](extras/kanagawa_paper.fish)
-- [kitty](extras/kitty_kanagawa_paper.conf)
-- [pywal](extras/pywal-theme.json)
-- [ghostty](extras/ghostty.conf)
+- [alacritty](extras/alacritty)
+- [kitty](extras/kitty)
+- [ghostty](extras/ghostty)
+- [terminator](extras/terminator)
+- [termux](extras/termux)
+- [tilix](extras/tilix)
 - [vscode](https://github.com/thesimonho/kanagawa-paper.vscode) (official port)
-- [vscode terminal](extras/vscode_terminal.json) (guide: [Visual Studio Code Theme Color](https://code.visualstudio.com/api/references/theme-color))
-- [fzf](extras/fzf.rc) (guide: [fzf color schemes](https://github.com/junegunn/fzf/wiki/Color-schemes))
-- [wezterm](extras/wezterm.lua) (guide: [Defining a Color Scheme in a separate file](https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file))
-- [wezterm tabline](extras/wezterm_tabline.lua) (guide: [tabline.wez](https://github.com/michaelbrusegard/tabline.wez))
-- [windows terminal](extras/windows_terminal.json) (guide: [Color schemes in Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes))
+- [vscode terminal](extras/vscode_terminal) (guide: [Visual Studio Code Theme Color](https://code.visualstudio.com/api/references/theme-color))
+- [fzf](extras/fzf) (guide: [fzf color schemes](https://github.com/junegunn/fzf/wiki/Color-schemes))
+- [wezterm](extras/wezterm) (guide: [Defining a Color Scheme in a separate file](https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file))
+- [wezterm tabline](extras/wezterm_tabline) (guide: [tabline.wez](https://github.com/michaelbrusegard/tabline.wez))
+- [windows terminal](extras/windows_terminal) (guide: [Color schemes in Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes))
 
 PRs are welcome if you want to add an extra for a specific application.
 

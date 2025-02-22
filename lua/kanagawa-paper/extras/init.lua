@@ -41,6 +41,7 @@ M.extras = {
   -- yazi             = { ext = "toml", url = "https://github.com/sxyazi/yazi", label = "Yazi" },
   -- vim              = { ext = "vim", url = "https://vimhelp.org/", label = "Vim", subdir = "colors", sep = "-" },
   -- vimium           = { ext = "css", url = "https://vimium.github.io/", label = "Vimium" },
+  vscode_terminal           = { ext = "jsonc", url = "https://code.visualstudio.com/api/references/theme-color", label = "VSCode Terminal" },
   -- zathura          = { ext = "zathurarc", url = "https://pwmt.org/projects/zathura/", label = "Zathura" },
   -- zellij           = { ext = "kdl", url = "https://zellij.dev/", label = "Zellij" },
 }

@@ -24,8 +24,26 @@ split = "${ui.win_separator}"
 compose_cursor = "${ui.special}"
 scrollbar_thumb = "${ui.scrollbar}"
 
-ansi = ["${term.black}", "${term.red}", "${term.green}", "${term.yellow}", "${term.blue}", "${term.magenta}", "${term.cyan}", "${term.white}"]
-brights = ["${term.black_bright}", "${term.red_bright}", "${term.green_bright}", "${term.yellow_bright}", "${term.blue_bright}", "${term.magenta_bright}", "${term.cyan_bright}", "${term.white_bright}"]
+ansi = [
+  "${term.black}",
+  "${term.red}",
+  "${term.green}",
+  "${term.yellow}",
+  "${term.blue}",
+  "${term.magenta}",
+  "${term.cyan}",
+  "${term.white}"
+]
+brights = [
+  "${term.black_bright}",
+  "${term.red_bright}",
+  "${term.green_bright}",
+  "${term.yellow_bright}",
+  "${term.blue_bright}",
+  "${term.magenta_bright}",
+  "${term.cyan_bright}",
+  "${term.white_bright}"
+]
 
 [colors.indexed]
 16 = "${term.indexed1}"

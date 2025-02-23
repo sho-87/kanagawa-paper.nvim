@@ -32,6 +32,11 @@ M.theme_overrides = {
     b = { fg = "#b8805e", bg = "#ecece8" },
     c = { fg = "#ecece8", bg = "#cbc8bc" },
   },
+  tab = {
+    active = { fg = '#618bb6', bg = '#e1e1de', bold = true },
+    inactive = { fg = '#ecece8', bg = '#cbc8bc' },
+    inactive_hover = { fg = '#a85b76', bg = '#e1e1de' },
+  }
 }
 
 return M

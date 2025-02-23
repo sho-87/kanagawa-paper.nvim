@@ -52,12 +52,25 @@ vim.cmd("colorscheme kanagawa-paper")
 local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
 -- local kanagawa_paper = require("lualine.themes.kanagawa-paper-canvas")
 
-require('lualine').setup {
+require('lualine').setup({
   options = {
     theme = kanagawa_paper
     -- ... your lualine config
   }
-}
+})
+```
+
+If you want to set the lualine theme dynamically to match the Neovim theme, you can do something like this:
+
+```lua
+require('lualine').setup({
+  options = {
+    theme = function()
+      return require("lualine.themes." .. vim.g.colors_name)
+    end,
+    -- ...
+  }
+})
 ```
 
 ## ⚙️ Configuration

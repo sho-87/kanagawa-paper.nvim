@@ -40,6 +40,11 @@ M.theme_overrides = {
     b = { fg = "${accent.accent2}", bg = "${ui.bg_p2}" },
     c = { fg = "${ui.fg_gray}", bg = "${ui.bg_statusline}" },
   },
+  tab = {
+    active = { fg = '${modes.normal}', bg = '${ui.tabline.bg_selected}', bold = true },
+    inactive = { fg = '${ui.fg_gray}', bg = '${ui.bg_statusline}' },
+    inactive_hover = { fg = '${ui.tabline.fg_alternate}', bg = '${ui.tabline.bg_selected}' },
+  }
 }
 
 return M

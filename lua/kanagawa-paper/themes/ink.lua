@@ -16,7 +16,7 @@ M.get = function(opts, palette)
 		},
 		ui = {
 			fg = palette.fujiWhite,
-			fg_gray = palette.fujiGray,
+			fg_gray = palette.dragonGray2,
 			fg_dark = palette.dragonBlack3,
 			fg_dim = palette.dragonBlack5,
 			fg_reverse = palette.waveBlue1,
@@ -31,7 +31,7 @@ M.get = function(opts, palette)
 			bg_gutter = opts.gutter and palette.sumiInk4 or "none",
 			bg_search = palette.springViolet1,
 			bg_cursorline = palette.sumiInk5,
-			bg_visual = palette.lotusInk0,
+			bg_visual = palette.dragonViolet,
 			bg_statusline = palette.sumiInk4,
 			header1 = palette.dragonViolet,
 			header2 = palette.dragonOrange,

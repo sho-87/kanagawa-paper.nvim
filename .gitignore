@@ -2,5 +2,5 @@ images/
 /doc/tags
 .extras
 /extras/**
-!/extras/.gitkeep
+!/extras/README.md
 .DS_Store

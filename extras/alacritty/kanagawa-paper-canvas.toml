@@ -1,0 +1,45 @@
+# -----------------------------------------------------------------------------
+# Kanagawa Paper Canvas
+# Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/alacritty/kanagawa-paper-canvas.toml
+# URL: https://github.com/alacritty/alacritty
+# -----------------------------------------------------------------------------
+
+[colors.primary]
+background = '#e1e1de'
+foreground = '#54546b'
+
+[colors.cursor]
+cursor = '#618bb6'
+text = '#e1e1de'
+
+[colors.selection]
+background = '#c4cbdc'
+foreground = '#ecece8'
+
+[colors.normal]
+black = '#3e3e5a'
+red = '#ba4e5a'
+green = '#738859'
+yellow = '#a67337'
+blue = '#526994'
+magenta = '#a85b76'
+cyan = '#597b75'
+white = '#54546b'
+
+[colors.bright]
+black = '#b5b5ae'
+red = '#c95556'
+green = '#709062'
+yellow = '#c08a48'
+blue = '#618bb6'
+magenta = '#6f4f9d'
+cyan = '#5f847c'
+white = '#444466'
+
+[[colors.indexed_colors]]
+index = 16
+color = '#b8805e'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#ba4e5a'

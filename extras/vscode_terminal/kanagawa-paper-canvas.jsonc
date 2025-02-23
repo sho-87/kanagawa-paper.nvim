@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// Kanagawa Paper Canvas
+// Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/vscode_terminal/kanagawa-paper-canvas.jsonc
+// URL: https://code.visualstudio.com/api/references/theme-color
+// -----------------------------------------------------------------------------
+{
+  "terminal.background": "#e1e1de",
+  "terminal.foreground": "#54546b",
+  "terminalCursor.background": "#618bb6",
+  "terminalCursor.foreground": "#e1e1de",
+  "terminal.ansiBlack": "#3e3e5a",
+  "terminal.ansiBlue": "#526994",
+  "terminal.ansiCyan": "#597b75",
+  "terminal.ansiGreen": "#738859",
+  "terminal.ansiMagenta": "#a85b76",
+  "terminal.ansiRed": "#ba4e5a",
+  "terminal.ansiWhite": "#54546b",
+  "terminal.ansiYellow": "#a67337",
+  "terminal.ansiBrightBlack": "#b5b5ae",
+  "terminal.ansiBrightBlue": "#618bb6",
+  "terminal.ansiBrightCyan": "#5f847c",
+  "terminal.ansiBrightGreen": "#709062",
+  "terminal.ansiBrightMagenta": "#6f4f9d",
+  "terminal.ansiBrightRed": "#c95556",
+  "terminal.ansiBrightWhite": "#444466",
+  "terminal.ansiBrightYellow": "#c08a48"
+}

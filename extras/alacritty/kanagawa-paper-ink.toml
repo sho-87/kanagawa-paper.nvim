@@ -1,0 +1,45 @@
+# -----------------------------------------------------------------------------
+# Kanagawa Paper Ink
+# Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/alacritty/kanagawa-paper-ink.toml
+# URL: https://github.com/alacritty/alacritty
+# -----------------------------------------------------------------------------
+
+[colors.primary]
+background = '#1F1F28'
+foreground = '#DCD7BA'
+
+[colors.cursor]
+cursor = '#c4b28a'
+text = '#1F1F28'
+
+[colors.selection]
+background = '#766b90'
+foreground = '#9e9b93'
+
+[colors.normal]
+black = '#0d0c0c'
+red = '#c4746e'
+green = '#8a9a7b'
+yellow = '#c4b28a'
+blue = '#8ba4b0'
+magenta = '#a292a3'
+cyan = '#8ea4a2'
+white = '#C8C093'
+
+[colors.bright]
+black = '#a6a69c'
+red = '#E46876'
+green = '#98BB6C'
+yellow = '#E6C384'
+blue = '#7FB4CA'
+magenta = '#938AA9'
+cyan = '#7AA89F'
+white = '#c5c9c5'
+
+[[colors.indexed_colors]]
+index = 16
+color = '#b6927b'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#c4746e'

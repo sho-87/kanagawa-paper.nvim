@@ -163,10 +163,22 @@ function M.setup(colors, opts)
 		DiagnosticSignInfo = { fg = theme.diag.info, bg = theme.ui.bg_gutter },
 		DiagnosticSignHint = { fg = theme.diag.hint, bg = theme.ui.bg_gutter },
 
-		DiagnosticVirtualTextError = { fg = theme.diag.error, bg = theme.diag.error_light },
-		DiagnosticVirtualTextWarn = { fg = theme.diag.warning, bg = theme.diag.warning_light },
-		DiagnosticVirtualTextInfo = { fg = theme.diag.info, bg = theme.diag.info_light },
-		DiagnosticVirtualTextHint = { fg = theme.diag.hint, bg = theme.diag.hint_light },
+		DiagnosticVirtualTextError = {
+			fg = theme.diag.error,
+			bg = opts.diagBackground and theme.diag.error_light or "none",
+		},
+		DiagnosticVirtualTextWarn = {
+			fg = theme.diag.warning,
+			bg = opts.diagBackground and theme.diag.warning_light or "none",
+		},
+		DiagnosticVirtualTextInfo = {
+			fg = theme.diag.info,
+			bg = opts.diagBackground and theme.diag.info_light or "none",
+		},
+		DiagnosticVirtualTextHint = {
+			fg = theme.diag.hint,
+			bg = opts.diagBackground and theme.diag.hint_light or "none",
+		},
 
 		DiagnosticUnderlineError = {
 			undercurl = opts.undercurl,

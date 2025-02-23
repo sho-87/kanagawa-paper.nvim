@@ -11,6 +11,7 @@ M.defaults = {
 	undercurl = true,
 	transparent = false,
 	gutter = false,
+	diagBackground = true, -- background for diagnostic virtual text
 	dimInactive = true, -- disabled when transparent
 	terminalColors = true,
 	commentStyle = { italic = true },

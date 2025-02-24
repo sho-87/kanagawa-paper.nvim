@@ -3,4 +3,5 @@ images/
 .extras
 /extras/**
 !/extras/README.md
+tests/languages/
 .DS_Store

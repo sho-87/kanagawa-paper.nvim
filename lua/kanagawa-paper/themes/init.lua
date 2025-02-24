@@ -132,6 +132,7 @@
 ---@field accent3 ColorSpec
 ---@field accent4 ColorSpec
 ---@field accent5 ColorSpec
+---@field invert ColorSpec Highlight color that is a lighter/darker shade of the background
 
 ---@class TermColors
 ---@field black ColorSpec

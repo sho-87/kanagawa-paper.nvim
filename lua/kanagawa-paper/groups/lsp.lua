@@ -8,7 +8,7 @@ function M.setup(colors, opts)
 		LspReferenceText = { bg = "none", bold = false },
 		LspReferenceRead = { bg = theme.ui.bg_cursorline, bold = false },
 		LspReferenceWrite = { bg = theme.ui.bg_cursorline, bold = false },
-		LspInlayHint = { fg = theme.ui.fg_gray, bg = theme.ui.bg_dim, italic = true },
+		LspInlayHint = { fg = theme.ui.fg_gray, bg = theme.accent.invert, italic = true },
 		LspSignatureActiveParameter = { fg = theme.diag.hint },
 		LspCodeLens = { fg = theme.syn.comment, bg = "None", italic = false },
 

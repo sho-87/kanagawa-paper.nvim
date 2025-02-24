@@ -75,6 +75,7 @@ M.get = function(opts, palette)
 			accent3 = palette.canvasAqua,
 			accent4 = palette.canvasGreen2,
 			accent5 = palette.canvasRed,
+			invert = palette.canvasWhite2,
 		},
 		rainbow = {
 			rainbow1 = palette.canvasRed,

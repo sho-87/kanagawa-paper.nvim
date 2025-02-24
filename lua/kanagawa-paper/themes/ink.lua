@@ -24,8 +24,8 @@ M.get = function(opts, palette)
 			bg_m3 = palette.sumiInk0,
 			bg_m2 = palette.sumiInk1,
 			bg_m1 = palette.sumiInk2,
-			bg = palette.sumiInk3,
 			bg_dim = palette.sumiInk1,
+			bg = palette.sumiInk3,
 			bg_p1 = palette.sumiInk4,
 			bg_p2 = palette.sumiInk5,
 			bg_gutter = opts.gutter and palette.sumiInk4 or "none",
@@ -75,6 +75,7 @@ M.get = function(opts, palette)
 			accent3 = palette.waveAqua1,
 			accent4 = palette.dragonGray3,
 			accent5 = palette.dragonRed,
+			invert = palette.sumiInk4,
 		},
 		rainbow = {
 			rainbow1 = palette.dragonRed,

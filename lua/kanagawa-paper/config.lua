@@ -19,7 +19,7 @@ M.defaults = {
 	keywordStyle = { italic = false, bold = false },
 	statementStyle = { italic = false, bold = false },
 	typeStyle = { italic = false },
-	colors = { theme = {}, palette = {} },
+	colors = { palette = {}, theme = { ink = {}, canvas = {} } },
 	---@type fun(colors: KanagawaColorsSpec): table<string, table>
 	overrides = function()
 		return {}

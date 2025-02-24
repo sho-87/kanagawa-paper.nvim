@@ -52,24 +52,24 @@ vim.cmd("colorscheme kanagawa-paper")
 local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
 -- local kanagawa_paper = require("lualine.themes.kanagawa-paper-canvas")
 
-require('lualine').setup({
-  options = {
-    theme = kanagawa_paper
-    -- ... your lualine config
-  }
+require("lualine").setup({
+ options = {
+  theme = kanagawa_paper,
+  -- ... your lualine config
+ },
 })
 ```
 
 If you want to set the lualine theme dynamically to match the Neovim theme, you can do something like this:
 
 ```lua
-require('lualine').setup({
-  options = {
-    theme = function()
-      return require("lualine.themes." .. vim.g.colors_name)
-    end,
-    -- ...
-  }
+require("lualine").setup({
+ options = {
+  theme = function()
+   return require("lualine.themes." .. vim.g.colors_name)
+  end,
+  -- ...
+ },
 })
 ```
 
@@ -78,31 +78,35 @@ require('lualine').setup({
 > ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme kanagawa-paper`.
 
 ```lua
-require('kanagawa-paper').setup({
-  theme = "ink", -- one of "ink" or "canvas"
-  undercurl = true,
-  transparent = false,
-  gutter = false,
-  diagBackground = true, -- background for diagnostic virtual text
-  dimInactive = true, -- disabled when transparent
-  terminalColors = true,
-  commentStyle = { italic = true },
-  functionStyle = { italic = false },
-  keywordStyle = { italic = false, bold = false },
-  statementStyle = { italic = false, bold = false },
-  typeStyle = { italic = false },
-  colors = { theme = {}, palette = {} }, -- override default palette and theme colors
-  overrides = function()  -- override highlight groups
-    return {}
-  end,
-  all_plugins = true, -- enable highlights for all the plugins
-  plugins = {
+require("kanagawa-paper").setup({
+ theme = "ink", -- one of "ink" or "canvas"
+
+ undercurl = true,
+ transparent = false,
+ gutter = false,
+ diagBackground = true, -- background for diagnostic virtual text
+ dimInactive = true, -- disabled when transparent
+ terminalColors = true,
+
+ commentStyle = { italic = true },
+ functionStyle = { italic = false },
+ keywordStyle = { italic = false, bold = false },
+ statementStyle = { italic = false, bold = false },
+ typeStyle = { italic = false },
+
+ colors = { palette = {}, theme = {ink = {}, canvas = {}} }, -- override default palette and theme colors
+ overrides = function() -- override highlight groups
+  return {}
+ end,
+
+ all_plugins = true, -- enable highlights for all the plugins
+ plugins = {
   -- manually enable/disable individual plugins
   -- check the groups/plugins directory for the exact names
   -- examples:
   -- rainbow_delimiters = true
   -- which_key = false
-  },
+ },
 })
 
 -- setup must be called before loading
@@ -124,25 +128,30 @@ to specific `ThemeColors` and the same palette color may be assigned to multiple
 
 You can change _both_ theme or palette colors using `config.colors`.
 All the palette color names can be found [here](lua/kanagawa-paper/colors.lua),
-while their usage by each theme can be found [here](lua/kanagawa-paper/themes.lua).
+while their usage by each theme can be found [here](lua/kanagawa-paper/themes).
 
 ```lua
 require('kanagawa-paper').setup({
-    colors = {
-        palette = {
-            -- change all usages of these color names
-            sumiInk0 = "#000000",
-            fujiWhite = "#FFFFFF",
-        },
-        theme = {
-          -- change specific usages for a certain theme
-          ui = {
-              float = {
-                  bg = colors.palette.sumiInk0,
-              },
-          },
-        }
+  colors = {
+    palette = {
+      -- change all usages of these color names
+      sumiInk0 = "#000000",
+      fujiWhite = "#FFFFFF",
     },
+    theme = {
+      -- change specific usages for a specific theme
+      ink = {
+        ui = {
+          float = {
+            fg = "#ff0000,
+          },
+        },
+      },
+      canvas = {
+      -- ...
+      }
+    },
+  }
 })
 ```
 
@@ -150,15 +159,15 @@ You can also conveniently add/modify `hlgroups` using the `config.overrides` opt
 Supported keywords are the same for `:h nvim_set_hl` `{val}` parameter.
 
 ```lua
-require('kanagawa-paper').setup({
-    overrides = function(colors)
-        return {
-            -- Assign a static color to strings
-            String = { fg = colors.palette.carpYellow, italic = true },
-            -- theme colors will update dynamically when you change theme!
-            SomePluginHl = { fg = colors.theme.syn.type, bold = true },
-        }
-    end,
+require("kanagawa-paper").setup({
+ overrides = function(colors)
+  return {
+   -- Assign a static color to strings
+   String = { fg = colors.palette.carpYellow, italic = true },
+   -- theme colors will update dynamically when you change theme!
+   SomePluginHl = { fg = colors.theme.syn.type, bold = true },
+  }
+ end,
 })
 ```
 
@@ -183,23 +192,23 @@ For this to work, make sure you've set winblend to a non-zero value in your conf
 
 ```lua
 overrides = function(colors)
-    local theme = colors.theme
-    return {
-        NormalFloat = { bg = "none" },
-        FloatBorder = { bg = "none" },
-        FloatTitle = { bg = "none" },
+  local theme = colors.theme
+  return {
+    NormalFloat = { bg = "none" },
+    FloatBorder = { bg = "none" },
+    FloatTitle = { bg = "none" },
 
-        -- Save a hlgroup with dark background and dimmed foreground
-        -- so that you can use it where you still want darker windows.
-        -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
-        NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+    -- Save a hlgroup with dark background and dimmed foreground
+    -- so that you can use it where you still want darker windows.
+    -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
+    NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
 
-        -- Popular plugins that open floats will link to NormalFloat by default;
-        -- set their background accordingly if you wish to keep them dark and borderless
-        LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-        MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-    }
-end,
+    -- Popular plugins that open floats will link to NormalFloat by default;
+    -- set their background accordingly if you wish to keep them dark and borderless
+    LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+    MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+  },
+end
 ```
 
 If you'd like to keep the floating windows darker, but you're unhappy with how
@@ -216,21 +225,21 @@ More uniform colors for the popup menu.
 
 ```lua
 overrides = function(colors)
-    local theme = colors.theme
-    return {
-        Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },  -- add `blend = vim.o.pumblend` to enable transparency
-        PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
-        PmenuSbar = { bg = theme.ui.bg_m1 },
-        PmenuThumb = { bg = theme.ui.bg_p2 },
-    }
+  local theme = colors.theme
+  return {
+    Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },  -- add `blend = vim.o.pumblend` to enable transparency
+    PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+    PmenuSbar = { bg = theme.ui.bg_m1 },
+    PmenuThumb = { bg = theme.ui.bg_p2 },
+  }
 end,
 ```
 
 ## 🍭 Extras
 
 - [alacritty](extras/alacritty)
-- [kitty](extras/kitty)
 - [ghostty](extras/ghostty)
+- [kitty](extras/kitty)
 - [terminator](extras/terminator)
 - [termux](extras/termux)
 - [tilix](extras/tilix)

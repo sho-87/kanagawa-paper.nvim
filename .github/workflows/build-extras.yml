@@ -6,6 +6,7 @@ on:
       - "**/*.lua"
       - "lua/kanagawa-paper/extras/**"
   pull_request:
+    types: [closed]
     paths:
       - "**/*.lua"
       - "lua/kanagawa-paper/extras/**"
@@ -13,6 +14,7 @@ jobs:
   extras:
     name: Build Extras
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
     permissions:
       contents: write
     steps:
@@ -28,4 +30,4 @@ jobs:
           git add -f extras/
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(extras): auto build themes for extras"
+          commit_message: "build(extras): auto build themes for extras"

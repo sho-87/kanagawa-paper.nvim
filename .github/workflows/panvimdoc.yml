@@ -5,12 +5,14 @@ on:
     paths:
       - "README.md"
   pull_request:
+    types: [closed]
     paths:
       - "README.md"
 jobs:
   docs:
     name: pandoc to vimdoc
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
     permissions:
       contents: write
     steps:

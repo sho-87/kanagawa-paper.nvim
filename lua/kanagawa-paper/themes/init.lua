@@ -1,3 +1,5 @@
+---@alias ColorSpec string RGB Hex string
+
 ---@class SyntaxElements
 ---@field string ColorSpec
 ---@field symbol ColorSpec
@@ -59,37 +61,37 @@
 ---@field replace ColorSpec
 ---@field command ColorSpec
 
----@class UiElements
+---@class UIElements
 ---@field fg ColorSpec Default foreground
 ---@field fg_gray ColorSpec Slightly darker, offwhite
 ---@field fg_dim ColorSpec Dimmed foreground
 ---@field fg_dark ColorSpec Dark foreground text
----@field fg_reverse ColorSpec
+---@field fg_reverse ColorSpec Reversed foreground text
 ---@field bg_dim ColorSpec Dimmed background
 ---@field bg_m4 ColorSpec Darkest background
 ---@field bg_m3 ColorSpec Darker background
 ---@field bg_m2 ColorSpec
----@field bg_m1 ColorSpec Darkest background
+---@field bg_m1 ColorSpec Dark background
 ---@field bg ColorSpec Default background
 ---@field bg_p1 ColorSpec Lighter background ColorColumn, Folded, Gutter
 ---@field bg_p2 ColorSpec Lighter background Cursor{Line,Column}, TabLineSel (Selected Items)
 ---@field bg_gutter ColorSpec {Sign,Fold}Column, LineNr
----@field bg_search ColorSpec
----@field bg_cursorline ColorSpec
----@field bg_visual ColorSpec
----@field bg_statusline ColorSpec
----@field header1 ColorSpec
----@field header2 ColorSpec
+---@field bg_search ColorSpec Search background
+---@field bg_cursorline ColorSpec CursorLine background
+---@field bg_visual ColorSpec Visual selection background
+---@field bg_statusline ColorSpec Statusline background
+---@field header1 ColorSpec Header1 text
+---@field header2 ColorSpec Header2 text
 ---@field special ColorSpec SpecialKey
 ---@field nontext ColorSpec LineNr, NonText
 ---@field whitespace ColorSpec Whitespace
----@field win_separator ColorSpec
+---@field win_separator ColorSpec Separator for dividers
 ---@field indent ColorSpec Indent line character
 ---@field indent_scope ColorSpec Indent scope character
 ---@field picker ColorSpec Color of picker letters e.g. bufferline pick buffer
 ---@field mark ColorSpec Color of mark indicators
 ---@field scrollbar ColorSpec Color of scrollbar
----@field tabline TabElements
+---@field tabline TabElements Tabline colors
 ---@field pmenu MenuElements
 ---@field float FloatElements
 
@@ -155,15 +157,15 @@
 ---@field indexed2 ColorSpec
 
 ---@class ThemeColors
----@field syn SyntaxElements
----@field diag DiagnosticsElements
----@field vcs VCSElements
----@field diff DiffElements
----@field ui UiElements
----@field modes ModeElements
----@field rainbow RainbowColors
----@field accent AccentColors
----@field term TermColors
+---@field syn? SyntaxElements
+---@field diag? DiagnosticsElements
+---@field vcs? VCSElements
+---@field diff? DiffElements
+---@field ui? UIElements
+---@field modes? ModeElements
+---@field rainbow? RainbowColors
+---@field accent? AccentColors
+---@field term? TermColors
 
 local M = {}
 

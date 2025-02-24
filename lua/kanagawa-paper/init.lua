@@ -3,6 +3,8 @@ local config = require("kanagawa-paper.config")
 local M = {}
 
 --- load the colorscheme
+---@param opts? KanagawaConfig
+---@return KanagawaColors, KanagawaGroups, KanagawaConfig
 function M.load(opts)
 	if opts then
 		config.extend(opts)

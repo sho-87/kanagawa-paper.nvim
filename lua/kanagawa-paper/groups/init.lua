@@ -1,7 +1,10 @@
+---@class KanagawaGroups
+---@field [string] vim.api.keyset.highlight
+
 local M = {}
 
----@param groups table
----@param termcolors table
+---@param groups KanagawaGroups
+---@param termcolors TermColors
 function M.highlight(groups, termcolors)
 	for hl, spec in pairs(groups) do
 		vim.api.nvim_set_hl(0, hl, spec)
@@ -36,9 +39,11 @@ end
 
 ---@param colors KanagawaColors
 ---@param opts? KanagawaConfig
+---@return KanagawaGroups
 function M.setup(colors, opts)
 	opts = opts or require("kanagawa-paper.config").options
 
+	---@type KanagawaGroups
 	local groups = {}
 
 	-- add base groups

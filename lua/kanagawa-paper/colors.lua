@@ -165,14 +165,13 @@ local palette = {
 	canvasYellow4 = "#e0be6d",
 }
 
+---@class KanagawaColors
+---@field palette PaletteColors
+---@field theme ThemeColors
+
 local M = {}
---- Generate colors table:
---- * opts:
----   - theme: string, one of "ink", "canvas"
----   - colors: Table of personalized colors and/or overrides of existing ones.
----     Defaults to KanagawaConfig.colors.
----@param opts? {theme: string, colors?: table }
----@return { theme: ThemeColors, palette: PaletteColors}
+---@param opts KanagawaConfig
+---@return KanagawaColors
 function M.setup(opts)
 	opts = require("kanagawa-paper.config").extend(opts) or {}
 

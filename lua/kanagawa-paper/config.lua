@@ -1,11 +1,22 @@
----@alias ColorSpec string RGB Hex string
----@alias ColorTable table<string, ColorSpec>
----@alias KanagawaColorsSpec { palette: ColorTable, theme: ColorTable }
----@alias KanagawaColors { palette: PaletteColors, theme: ThemeColors }
-
 local M = {}
 
 ---@class KanagawaConfig
+---@field theme string
+---@field undercurl? boolean
+---@field transparent? boolean
+---@field gutter? boolean
+---@field diagBackground? boolean
+---@field dimInactive? boolean
+---@field terminalColors? boolean
+---@field commentStyle? vim.api.keyset.highlight
+---@field functionStyle? vim.api.keyset.highlight
+---@field keywordStyle? vim.api.keyset.highlight
+---@field statementStyle? vim.api.keyset.highlight
+---@field typeStyle? vim.api.keyset.highlight
+---@field colors? KanagawaColors
+---@field overrides? fun(colors: KanagawaColors): table<string, vim.api.keyset.highlight>
+---@field all_plugins? boolean
+---@field plugins? table<string, boolean>
 M.defaults = {
 	theme = "ink",
 	undercurl = true,
@@ -20,7 +31,7 @@ M.defaults = {
 	statementStyle = { italic = false, bold = false },
 	typeStyle = { italic = false },
 	colors = { palette = {}, theme = { ink = {}, canvas = {} } },
-	---@type fun(colors: KanagawaColorsSpec): table<string, table>
+	---@type fun(colors: KanagawaColors): table<string, vim.api.keyset.highlight>
 	overrides = function()
 		return {}
 	end,

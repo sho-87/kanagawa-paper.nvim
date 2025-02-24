@@ -6,6 +6,7 @@ local M = {}
 ---@param palette PaletteColors
 ---@return ThemeColors
 M.get = function(opts, palette)
+	---@type ThemeColors
 	return {
 		modes = {
 			normal = palette.dragonYellow,

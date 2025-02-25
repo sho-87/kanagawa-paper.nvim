@@ -218,6 +218,9 @@ function M.setup(colors, opts)
 		healthWarning = { fg = theme.diag.warning },
 
 		helpExample = { fg = theme.ui.fg_gray },
+
+		qfLineNr = { link = "lineNr" },
+		qfFileName = { link = "Directory" },
 	}
 end
 

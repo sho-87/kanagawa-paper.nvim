@@ -7,7 +7,7 @@ local M = {
 }
 
 function M.reset()
-	local colors = require("kanagawa-paper.colors").setup()
+	local colors = require("kanagawa-paper.colors").setup({ theme = M.opts.theme })
 	M.globals.theme = colors.theme
 	M.globals.palette = colors.palette
 end

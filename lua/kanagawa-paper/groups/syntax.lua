@@ -77,23 +77,9 @@ function M.setup(colors, opts)
 		Error = { fg = theme.diag.error },
 
 		-- *Todo		anything that needs extra attention; mostly the keywords TODO FIXME WARNING and XXX
-		Todo = { fg = theme.ui.fg_reverse, bg = theme.diag.info, bold = true },
+		Todo = { fg = theme.ui.fg_dim, bg = theme.diag.info, bold = true },
 
-		qfLineNr = { link = "lineNr" },
-		qfFileName = { link = "Directory" },
-
-		-- htmlH1 = {},
-		-- htmlH2 = {},
-
-		-- mkdHeading = {},
-		-- mkdCode = {},
-		-- mkdCodeDelimiter = {},
-		-- mkdCodeStart = {},
-		-- mkdCodeEnd = {},
-		-- mkdLink = {},
-
-		-- markdownHeadingDelimiter = {},
-		-- markdownLinkText = {},
+		-- Markdown
 		markdownCode = { fg = theme.syn.string },
 		markdownCodeBlock = { fg = theme.syn.string },
 		markdownEscape = { fg = theme.syn.symbol },

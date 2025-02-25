@@ -80,6 +80,7 @@
 ---@field bg_cursorline ColorSpec CursorLine background
 ---@field bg_visual ColorSpec Visual selection background
 ---@field bg_statusline ColorSpec Statusline background
+---@field border ColorSpec Border color
 ---@field header1 ColorSpec Header1 text
 ---@field header2 ColorSpec Header2 text
 ---@field special ColorSpec SpecialKey

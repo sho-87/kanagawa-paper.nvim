@@ -10,6 +10,7 @@ M.extras = {
   fzf              = { ext = "sh", url = "https://github.com/junegunn/fzf/tree/master#environment-variables", label = "Fzf" },
   ghostty          = { ext = "", url = "https://github.com/ghostty-org/ghostty", label = "Ghostty" },
   kitty            = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty" },
+  lazygit          = { ext = "yml", url = "https://github.com/jesseduffield/lazygit", label = "lazygit" },
   terminator       = { ext = "conf", url = "https://gnome-terminator.readthedocs.io/en/latest/config.html", label = "Terminator" },
   termux           = { ext = "properties", url = "https://termux.dev/", label = "Termux" },
   tilix            = { ext = "jsonc", url = "https://github.com/gnunn1/tilix", label = "Tilix" },

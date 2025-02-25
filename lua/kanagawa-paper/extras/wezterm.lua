@@ -19,7 +19,7 @@ cursor_bg = "${modes.normal}"
 cursor_border = "${modes.normal}"
 cursor_fg = "${ui.bg}"
 selection_bg = "${ui.bg_visual}"
-selection_fg = "${ui.fg_gray}"
+selection_fg = "${ui.fg_dim}"
 split = "${ui.win_separator}"
 compose_cursor = "${ui.special}"
 scrollbar_thumb = "${ui.scrollbar}"
@@ -32,7 +32,7 @@ ansi = [
   "${term.blue}",
   "${term.magenta}",
   "${term.cyan}",
-  "${term.white}"
+  "${term.white}",
 ]
 brights = [
   "${term.black_bright}",
@@ -42,7 +42,7 @@ brights = [
   "${term.blue_bright}",
   "${term.magenta_bright}",
   "${term.cyan_bright}",
-  "${term.white_bright}"
+  "${term.white_bright}",
 ]
 
 [colors.indexed]

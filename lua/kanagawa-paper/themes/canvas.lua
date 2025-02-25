@@ -10,7 +10,7 @@ M.get = function(opts, palette)
 		modes = {
 			normal = palette.canvasTeal2,
 			insert = palette.canvasRed,
-			visual = palette.canvasBlue5,
+			visual = palette.canvasViolet2,
 			replace = palette.canvasRed,
 			command = palette.canvasTeal2,
 		},
@@ -37,7 +37,7 @@ M.get = function(opts, palette)
 			header2 = palette.canvasOrange,
 			special = palette.canvasTeal1,
 			nontext = palette.canvasGray2,
-			whitespace = palette.canvasViolet1,
+			whitespace = palette.canvasGray2,
 			win_separator = palette.canvasViolet1,
 			indent = palette.canvasWhite1,
 			indent_scope = palette.canvasGray2,
@@ -52,7 +52,7 @@ M.get = function(opts, palette)
 				bg_inactive = palette.canvasWhite1,
 				fg_alternate = palette.canvasPink,
 				bg_alternate = palette.canvasWhite1,
-				indicator = palette.canvasBlue3,
+				indicator = palette.canvasBlue4,
 			},
 			pmenu = {
 				fg = palette.canvasInk1,

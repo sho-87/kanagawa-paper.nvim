@@ -97,14 +97,12 @@ function M.setup(colors, opts)
 		--
 		-- @comment                line and block comments
 		-- @comment.documentation  comments documenting code
-		--
 		-- @comment.error          error-type comments (e.g. `ERROR`, `FIXME`, `DEPRECATED`)
-		["@comment.error"] = { fg = theme.ui.fg, bg = theme.diag.error, bold = true },
+		["@comment.error"] = { fg = theme.ui.fg_dim, bg = theme.diag.error, bold = true },
 		-- @comment.warning        warning-type comments (e.g. `WARNING`, `FIX`, `HACK`)
-		["@comment.warning"] = { fg = theme.ui.fg_reverse, bg = theme.diag.warning, bold = true },
-		-- @comment.todo           todo-type comments (e.g. `TODO`, `WIP`)
+		["@comment.warning"] = { fg = theme.ui.fg_dim, bg = theme.diag.warning, bold = true },
 		-- @comment.note           note-type comments (e.g. `NOTE`, `INFO`, `XXX`)
-		["@comment.note"] = { fg = theme.ui.fg_reverse, bg = theme.diag.hint, bold = true },
+		["@comment.note"] = { fg = theme.ui.fg_dim, bg = theme.diag.info, bold = true },
 		--
 		-- @markup.strong          bold text
 		["@markup.strong"] = { bold = true },

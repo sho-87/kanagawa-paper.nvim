@@ -27,7 +27,7 @@ function M.setup(colors, opts)
 		-- ["@lsp.type.type"] = { link = "Type" },
 		-- ["@lsp.type.typeParameter"] = { link = "TypeDef" },
 		["@lsp.type.variable"] = { fg = theme.syn.variable }, -- Identifier
-		["@lsp.type.comment"] = { fg = theme.syn.comment }, -- Comment
+		["@lsp.type.comment"] = { fg = "none" }, -- Allow TODO notes to be shown in comments
 		["@lsp.type.const"] = { fg = theme.syn.constant },
 		["@lsp.type.punctuation"] = { fg = theme.syn.punct },
 		["@lsp.type.comparison"] = { fg = theme.syn.operator },

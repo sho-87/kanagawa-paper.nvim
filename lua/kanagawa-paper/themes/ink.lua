@@ -80,7 +80,7 @@ M.get = function(opts, palette)
 		},
 		rainbow = {
 			rainbow1 = palette.dragonRed,
-			rainbow2 = palette.dragonYellow,
+			rainbow2 = palette.dragonPink,
 			rainbow3 = palette.dragonBlue,
 			rainbow4 = palette.dragonOrange2,
 			rainbow5 = palette.dragonGreen,

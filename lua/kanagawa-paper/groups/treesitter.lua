@@ -114,14 +114,14 @@ function M.setup(colors, opts)
 		["@markup.underline"] = { underline = true },
 		--
 		-- @markup.heading         headings, titles (including markers)
-		["@markup.heading"] = { fg = theme.ui.special },
-		["@markup.heading.1"] = { fg = theme.ui.header1 },
-		["@markup.heading.2"] = { fg = theme.ui.header2 },
-		-- @markup.heading.3       subsection heading
-		-- @markup.heading.4       and so on
-		-- @markup.heading.5       and so forth
-		-- @markup.heading.6       six levels ought to be enough for anybody
-		--
+		["@markup.heading"] = { fg = theme.rainbow.rainbow1 },
+		["@markup.heading.1"] = { fg = theme.rainbow.rainbow1 },
+		["@markup.heading.2"] = { fg = theme.rainbow.rainbow2 },
+		["@markup.heading.3"] = { fg = theme.rainbow.rainbow3 },
+		["@markup.heading.4"] = { fg = theme.rainbow.rainbow4 },
+		["@markup.heading.5"] = { fg = theme.rainbow.rainbow5 },
+		["@markup.heading.6"] = { fg = theme.rainbow.rainbow6 },
+
 		-- @markup.quote           block quotes
 		["@markup.quote"] = { fg = theme.syn.punct },
 		-- @markup.math            math environments (e.g. `$ ... $` in LaTeX)

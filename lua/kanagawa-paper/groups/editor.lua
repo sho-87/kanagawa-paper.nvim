@@ -130,7 +130,7 @@ function M.setup(colors, opts)
 		-- TabLineSel	Tab pages line, active tab page label.
 		TabLineSel = { fg = theme.ui.tabline.fg_selected, bg = theme.ui.tabline.bg_selected },
 		-- Title		Titles for output from ":set all", ":autocmd" etc.
-		Title = { fg = theme.syn.fun, bold = true },
+		Title = { fg = theme.ui.special, bold = true },
 		-- Visual		Visual mode selection.
 		Visual = { bg = theme.ui.bg_visual, fg = theme.ui.fg_dim },
 		-- VisualNOS	Visual mode selection when vim is "Not Owning the Selection".

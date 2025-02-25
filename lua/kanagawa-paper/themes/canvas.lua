@@ -33,7 +33,7 @@ M.get = function(opts, palette)
 			bg_cursorline = palette.canvasWhite1,
 			bg_visual = palette.canvasViolet1,
 			bg_statusline = palette.canvasWhite0,
-			header1 = palette.canvasViolet1,
+			header1 = palette.canvasBlue3,
 			header2 = palette.canvasOrange,
 			special = palette.canvasTeal1,
 			nontext = palette.canvasGray2,
@@ -70,7 +70,7 @@ M.get = function(opts, palette)
 			},
 		},
 		accent = {
-			accent1 = palette.canvasBlue3,
+			accent1 = palette.canvasBlue4,
 			accent2 = palette.canvasOrange,
 			accent3 = palette.canvasAqua,
 			accent4 = palette.canvasGreen2,

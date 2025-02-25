@@ -16,11 +16,11 @@
   "terminal.ansiRed": "#ba4e5a",
   "terminal.ansiWhite": "#54546b",
   "terminal.ansiYellow": "#a67337",
-  "terminal.ansiBrightBlack": "#b5b5ae",
+  "terminal.ansiBrightBlack": "#54546b",
   "terminal.ansiBrightBlue": "#618bb6",
   "terminal.ansiBrightCyan": "#5f847c",
   "terminal.ansiBrightGreen": "#709062",
-  "terminal.ansiBrightMagenta": "#6f4f9d",
+  "terminal.ansiBrightMagenta": "#7967a2",
   "terminal.ansiBrightRed": "#c95556",
   "terminal.ansiBrightWhite": "#444466",
   "terminal.ansiBrightYellow": "#c08a48"

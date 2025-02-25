@@ -14,7 +14,7 @@ text = '#e1e1de'
 
 [colors.selection]
 background = '#c4cbdc'
-foreground = '#ecece8'
+foreground = '#858479'
 
 [colors.normal]
 black = '#3e3e5a'
@@ -27,12 +27,12 @@ cyan = '#597b75'
 white = '#54546b'
 
 [colors.bright]
-black = '#b5b5ae'
+black = '#54546b'
 red = '#c95556'
 green = '#709062'
 yellow = '#c08a48'
 blue = '#618bb6'
-magenta = '#6f4f9d'
+magenta = '#7967a2'
 cyan = '#5f847c'
 white = '#444466'
 

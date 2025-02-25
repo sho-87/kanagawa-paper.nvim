@@ -13,7 +13,7 @@ cursor_fg = "#1F1F28"
 selection_bg = "#766b90"
 selection_fg = "#9e9b93"
 split = "#8992a7"
-compose_cursor = "#938AA9"
+compose_cursor = "#8ea4a2"
 scrollbar_thumb = "#363646"
 
 ansi = [

@@ -11,7 +11,7 @@ cursor_bg = "#c4b28a"
 cursor_border = "#c4b28a"
 cursor_fg = "#1F1F28"
 selection_bg = "#766b90"
-selection_fg = "#9e9b93"
+selection_fg = "#393836"
 split = "#8992a7"
 compose_cursor = "#8ea4a2"
 scrollbar_thumb = "#363646"
@@ -24,7 +24,7 @@ ansi = [
   "#8ba4b0",
   "#a292a3",
   "#8ea4a2",
-  "#C8C093"
+  "#C8C093",
 ]
 brights = [
   "#a6a69c",
@@ -34,7 +34,7 @@ brights = [
   "#7FB4CA",
   "#938AA9",
   "#7AA89F",
-  "#c5c9c5"
+  "#c5c9c5",
 ]
 
 [colors.indexed]

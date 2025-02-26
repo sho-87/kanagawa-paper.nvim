@@ -115,10 +115,12 @@
 ---@class MenuElements
 ---@field bg ColorSpec
 ---@field fg ColorSpec
+---@field fg_border ColorSpec
 ---@field fg_sel ColorSpec
 ---@field bg_sel ColorSpec
 ---@field bg_sbar ColorSpec
 ---@field bg_thumb ColorSpec
+---@field bg_border ColorSpec
 
 ---@class RainbowColors
 ---@field rainbow1 ColorSpec

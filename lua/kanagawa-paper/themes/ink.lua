@@ -59,16 +59,18 @@ M.get = function(opts, palette)
 			pmenu = {
 				fg = palette.fujiWhite,
 				fg_sel = "none", -- This is important to make highlights pass-through
+				fg_border = palette.sumiInk5,
+				bg_border = palette.sumiInk4,
 				bg = palette.sumiInk4,
-				bg_sel = palette.sumiInk6,
-				bg_sbar = palette.sumiInk5,
+				bg_sel = palette.sumiInk5,
+				bg_sbar = palette.sumiInk4,
 				bg_thumb = palette.sumiInk6,
 			},
 			float = {
 				fg = palette.oldWhite,
 				bg = palette.sumiInk4,
-				fg_border = palette.sumiInk6,
-				bg_border = "none",
+				fg_border = palette.sumiInk5,
+				bg_border = palette.sumiInk4,
 			},
 		},
 		accent = {

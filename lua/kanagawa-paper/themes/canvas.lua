@@ -58,16 +58,18 @@ M.get = function(opts, palette)
 			pmenu = {
 				fg = palette.canvasInk1,
 				fg_sel = "none", -- This is important to make highlights pass-through
-				bg = palette.canvasWhite2,
-				bg_sel = palette.canvasViolet1,
-				bg_sbar = palette.canvasWhite2,
-				bg_thumb = palette.canvasBlue2,
+				fg_border = palette.canvasWhite2,
+				bg_border = palette.canvasWhite5,
+				bg = palette.canvasWhite5,
+				bg_sel = palette.canvasWhite1,
+				bg_sbar = palette.canvasWhite5,
+				bg_thumb = palette.canvasGray2,
 			},
 			float = {
 				fg = palette.canvasInk1,
-				bg = palette.canvasWhite3,
-				fg_border = palette.canvasGray3,
-				bg_border = palette.canvasWhite3,
+				bg = palette.canvasWhite5,
+				fg_border = palette.canvasWhite2,
+				bg_border = palette.canvasWhite5,
 			},
 		},
 		accent = {

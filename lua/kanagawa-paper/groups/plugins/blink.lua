@@ -5,9 +5,9 @@ function M.get(colors, opts)
 
 	return {
 		BlinkCmpMenu = { link = "Pmenu" },
-		BlinkCmpMenuBorder = { fg = theme.ui.bg_search, bg = theme.ui.pmenu.bg },
+		BlinkCmpMenuBorder = { fg = theme.ui.pmenu.fg_border, bg = theme.ui.pmenu.bg_border },
 		BlinkCmpMenuSelection = { link = "PmenuSel" },
-		BlinkCmpScrollBarThumb = { bg = theme.ui.scrollbar },
+		BlinkCmpScrollBarThumb = { bg = theme.ui.pmenu.bg_thumb },
 		BlinkCmpScrollBarGutter = { bg = theme.ui.fg },
 		BlinkCmpLabel = { fg = theme.ui.pmenu.fg },
 		BlinkCmpLabelMatch = { fg = theme.syn.fun },

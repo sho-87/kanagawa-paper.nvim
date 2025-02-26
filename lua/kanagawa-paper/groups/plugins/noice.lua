@@ -6,7 +6,7 @@ function M.get(colors, opts)
 	return {
 		NoiceCmdline = { fg = theme.ui.bg_search },
 		NoiceVirtualText = { fg = theme.ui.bg_search },
-		NoicePopupBorder = { fg = theme.ui.bg_p2, bg = theme.ui.bg_p1 },
+		NoicePopupBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.float.bg_border },
 		NoiceLspProgressTitle = { fg = theme.ui.fg_gray },
 	}
 end

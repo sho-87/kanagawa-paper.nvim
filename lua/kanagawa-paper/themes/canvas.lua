@@ -144,7 +144,7 @@ M.get = function(opts, palette)
 			hint_light = color(palette.canvasAqua2):blend(palette.canvasWhite3, 0.9):to_hex(),
 		},
 		term = {
-			black = palette.canvasInk1,
+			black = palette.canvasInk0,
 			red = palette.canvasRed,
 			green = palette.canvasAqua,
 			yellow = palette.canvasYellow,
@@ -156,7 +156,7 @@ M.get = function(opts, palette)
 			red_bright = color(palette.canvasRed):brighten(0.1):to_hex(),
 			green_bright = color(palette.canvasAqua):brighten(0.1):to_hex(),
 			yellow_bright = color(palette.canvasYellow):brighten(0.1):to_hex(),
-			blue_bright = color(palette.canvasBlue2):brighten(0.1):to_hex(),
+			blue_bright = color(palette.canvasBlue2):brighten(0.2):to_hex(),
 			magenta_bright = color(palette.canvasPink):brighten(0.1):to_hex(),
 			cyan_bright = color(palette.canvasTeal3):brighten(0.1):to_hex(),
 			white_bright = color(palette.canvasGray1):brighten(0.1):to_hex(),
